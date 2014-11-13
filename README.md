@@ -1,6 +1,10 @@
-#opengov-meetings
+#opengov-meetings [![Build Status](https://travis-ci.org/zrrrzzt/opengov-meetings.svg?branch=master)](https://travis-ci.org/zrrrzzt/opengov-meetings)
 
-Connect to 360 OpenGov Meetings
+A Node.js module for connecting to the [360 OpenGov Meetings](http://www.software-innovation.com/no/produkter/360offentlig/digitalforvaltning/pages/Politiskagenda.aspx) solution from [Software Innovation](http://www.software-innovation.com/).
+
+This API is based on screenscraping and far from rock solid.
+
+It is however the best solution I've found so far to integrate 360 OpenGov Meetings with other systems.
 
 ##Installation
 
@@ -69,4 +73,60 @@ function cb(err, data){
 }
 
 ogm.getMeetings(opts, cb);
+```
+
+###getAgenda
+
+List agenda for a given meeting.
+
+**meetingId** id for the meeting
+
+```
+'use strict';
+
+var ogm = require('./index')
+  , opts = {
+      host: 'http://opengov.cloudapp.net',
+      path: '/Meetings/tfk',
+      meetingId: '203235'
+    }
+  ;
+
+function cb(err, data){
+  if(err){
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+}
+
+ogm.getAgenda(opts, cb);
+```
+
+###getDetails
+
+Get details and documents for a given agendaItem
+
+**agendaId** id for the item
+
+```
+'use strict';
+
+var ogm = require('./index')
+  , opts = {
+      host: 'http://opengov.cloudapp.net',
+      path: '/Meetings/tfk',
+      agendaId: '200262'
+    }
+  ;
+
+function cb(err, data){
+  if(err){
+    console.error(err);
+  } else {
+    console.log(data);
+  }
+}
+
+ogm.getDetails(opts, cb);
 ```
