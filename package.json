@@ -1,0 +1,37 @@
+{
+  "name": "opengov-meetings",
+  "description": "Connect to 360 OpenGov Meetings",
+  "version": "1.0.0",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec test/*.js"
+  },
+  "keywords": [
+    "opengov",
+    "360",
+    "360 opengov meetings"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zrrrzzt/opengov-meetings.git"
+  },
+  "bugs": {
+    "url": "http://github.com/zrrrzzt/opengov-meetings/issues"
+  },
+  "dependencies": {
+    "cheerio": "^0.18.0",
+    "request": "^2.48.0",
+    "valid-url": "^1.0.9"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  }
+}
