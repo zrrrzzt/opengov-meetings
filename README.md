@@ -26,25 +26,24 @@ Every call returns error or a data object
 
 List all boards.
 
-```
-'use strict';
+```JavaScript
+'use strict'
 
 var ogm = require('opengov-meetings')
-  , opts = {
-      host: 'http://opengov.cloudapp.net',
-      path: '/Meetings/tfk'
-    }
-  ;
+var opts = {
+  host: 'http://opengov.cloudapp.net',
+  path: '/Meetings/tfk'
+}
 
-function cb(err, data){
-  if(err){
-    console.error(err);
+function cb (err, data) {
+  if (err) {
+    console.error(err)
   } else {
-    console.log(data);
+    console.log(data)
   }
 }
 
-ogm.getBoards(opts, cb);
+ogm.getBoards(opts, cb)
 ```
 
 ###getMeetings
@@ -81,26 +80,25 @@ List agenda for a given meeting.
 
 **meetingId** id for the meeting
 
-```
-'use strict';
+```JavaScript
+'use strict'
 
-var ogm = require('./index')
-  , opts = {
-      host: 'http://opengov.cloudapp.net',
-      path: '/Meetings/tfk',
-      meetingId: '203235'
-    }
-  ;
+const ogm = require('opengov-meetings')
+const opts = {
+  host: 'http://opengov.cloudapp.net',
+  path: '/Meetings/tfk',
+  meetingId: '203235'
+}
 
-function cb(err, data){
-  if(err){
-    console.error(err);
+function cb (err, data) {
+  if (err) {
+    console.error(err)
   } else {
-    console.log(data);
+    console.log(data)
   }
 }
 
-ogm.getAgenda(opts, cb);
+ogm.getAgenda(opts, cb)
 ```
 
 ###getDetails
