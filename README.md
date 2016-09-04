@@ -52,26 +52,25 @@ List all meetings for a given board
 
 **boardId** id for the board
 
-```
-'use strict';
+```JavaScript
+'use strict'
 
-var ogm = require('./index')
-  , opts = {
-      host: 'http://opengov.cloudapp.net',
-      path: '/Meetings/tfk',
-      boardId: '200151'
-    }
-  ;
+const ogm = require('opengov-meetings')
+const opts = {
+  host: 'http://opengov.cloudapp.net',
+  path: '/Meetings/tfk',
+  boardId: '200151'
+}
 
-function cb(err, data){
-  if(err){
-    console.error(err);
+function cb (err, data) {
+  if (err) {
+    console.error(err)
   } else {
-    console.log(data);
+    console.log(data)
   }
 }
 
-ogm.getMeetings(opts, cb);
+ogm.getMeetings(opts, cb)
 ```
 
 ###getAgenda
