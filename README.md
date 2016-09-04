@@ -107,24 +107,23 @@ Get details and documents for a given agendaItem
 
 **agendaId** id for the item
 
-```
-'use strict';
+```JavaScript
+'use strict'
 
-var ogm = require('./index')
-  , opts = {
-      host: 'http://opengov.cloudapp.net',
-      path: '/Meetings/tfk',
-      agendaId: '200262'
-    }
-  ;
+const ogm = require('opengov-meetings')
+const opts = {
+  host: 'http://opengov.cloudapp.net',
+  path: '/Meetings/tfk',
+  agendaId: '200262'
+}
 
-function cb(err, data){
-  if(err){
-    console.error(err);
+function cb (err, data) {
+  if (err) {
+    console.error(err)
   } else {
-    console.log(data);
+    console.log(data)
   }
 }
 
-ogm.getDetails(opts, cb);
+ogm.getDetails(opts, cb)
 ```
