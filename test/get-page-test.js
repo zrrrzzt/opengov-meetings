@@ -20,3 +20,23 @@ tap.test('It requires url to be valid', test => {
     test.done()
   })
 })
+
+tap.test('It gets page from valid url', test => {
+  const url = 'https://www.google.com'
+  getPage(url, (error, data) => {
+    if (error) {
+      throw error
+    } else {
+      tap.ok(data, 'Data exists')
+    }
+    test.done()
+  })
+})
+
+tap.test('Returns error as expected', function (test) {
+  const url = 'http://detteerenurlsomsannsynligviseikkefinnes.no'
+  getPage(url, (error, data) => {
+    tap.ok(error, 'Got error, indeed')
+    test.done()
+  })
+})
