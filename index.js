@@ -1,9 +1,9 @@
 'use strict'
 
 var getBoards = require('./lib/getBoards')
-  , getMeetings = require('./lib/getMeetings')
-  , getAgenda = require('./lib/getAgenda')
-  , getDetails = require('./lib/getDetails')
+var getMeetings = require('./lib/getMeetings')
+var getAgenda = require('./lib/getAgenda')
+var getDetails = require('./lib/getDetails')
 
 module.exports.getBoards = getBoards
 

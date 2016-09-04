@@ -38,7 +38,7 @@
     "tap": "7.0.0"
   },
   "dependencies": {
-    "valid-url": "1.0.9",
-    "x-ray": "2.3.0"
+    "cheerio": "0.22.0",
+    "valid-url": "1.0.9"
   }
 }
