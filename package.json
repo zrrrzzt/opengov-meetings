@@ -2,6 +2,7 @@
   "name": "opengov-meetings",
   "description": "Connect to 360 OpenGov Meetings",
   "version": "1.0.0",
+  "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
@@ -30,15 +31,13 @@
   "bugs": {
     "url": "http://github.com/zrrrzzt/opengov-meetings/issues"
   },
-  "dependencies": {
-    "cheerio": "^0.18.0",
-    "request": "^2.48.0",
-    "valid-url": "^1.0.9"
-  },
   "devDependencies": {
     "coveralls": "2.11.12",
     "nsp": "2.6.1",
     "standard": "8.0.0",
     "tap": "7.0.0"
+  },
+  "dependencies": {
+    "valid-url": "1.0.9"
   }
 }
