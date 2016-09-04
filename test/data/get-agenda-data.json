@@ -1,0 +1,55 @@
+{
+  "details": {
+    "board": "Administrasjonsutvalet 2011-2015",
+    "place": "",
+    "date": "10.11.2014",
+    "status": "Offentlig"
+  },
+  "documents": [
+    {
+      "fileUrl": "http://opengov.cloudapp.net/Meetings/tfk/File/Details/208934.PDF?fileName=Protokoll%20Administrasjonsutvalet%2010.11.2014",
+      "title": "Protokoll Administrasjonsutvalet 10.11.2014"
+    },
+    {
+      "fileUrl": "http://opengov.cloudapp.net/Meetings/tfk/File/Details/206329.PDF?fileName=M%C3%B8teinnkalling%20Administrasjonsutvalet%2010.11.2014",
+      "title": "Møteinnkalling Administrasjonsutvalet 10.11.2014"
+    }
+  ],
+  "agenda": [
+    {
+      "agendanumber": "8/14",
+      "title": "Mål- og budsjettdokument 2015-2018",
+      "id": "200267"
+    },
+    {
+      "agendanumber": "9/14",
+      "title": "Disponering av unytta lønsmidlar knytt til streiken hausten 2014",
+      "id": "200264"
+    },
+    {
+      "agendanumber": "10/14",
+      "title": "Oppdragsverksemd ved dei vidaregåande skulane i Telemark",
+      "id": "200263"
+    },
+    {
+      "agendanumber": "11/14",
+      "title": "Fritt skuleval",
+      "id": "200265"
+    },
+    {
+      "agendanumber": "12/14",
+      "title": "Skuletilbodet 2015-2016",
+      "id": "200266"
+    },
+    {
+      "agendanumber": "13/14",
+      "title": "Administrasjonsutvalet - møteplan 2015",
+      "id": "200268"
+    },
+    {
+      "agendanumber": "14/14",
+      "title": "Eventuelt - Administrasjonsutvalet 10.11.2014",
+      "id": "200262"
+    }
+  ]
+}

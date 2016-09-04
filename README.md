@@ -1,4 +1,6 @@
-#opengov-meetings [![Build Status](https://travis-ci.org/zrrrzzt/opengov-meetings.svg?branch=master)](https://travis-ci.org/zrrrzzt/opengov-meetings)
+[![Build Status](https://travis-ci.org/zrrrzzt/opengov-meetings.svg?branch=master)](https://travis-ci.org/zrrrzzt/opengov-meetings)
+[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+# opengov-meetings
 
 A Node.js module for connecting to the [360 OpenGov Meetings](http://www.software-innovation.com/no/produkter/360offentlig/digitalforvaltning/pages/Politiskagenda.aspx) solution from [Software Innovation](http://www.software-innovation.com/).
 
@@ -6,13 +8,13 @@ This API is based on screenscraping and far from rock solid.
 
 It is however the best solution I've found so far to integrate 360 OpenGov Meetings with other systems.
 
-##Installation
+## Installation
 
-```
+```sh
 $ npm install opengov-meetings
 ```
 
-##API
+## API
 
 Every call requires an opts object with host and path set.
 
@@ -22,15 +24,15 @@ Every call requires an opts object with host and path set.
 
 Every call returns error or a data object
 
-###getBoards
+### getBoards
 
 List all boards.
 
 ```JavaScript
 'use strict'
 
-var ogm = require('opengov-meetings')
-var opts = {
+const ogm = require('opengov-meetings')
+const opts = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk'
 }
@@ -46,7 +48,7 @@ function cb (err, data) {
 ogm.getBoards(opts, cb)
 ```
 
-###getMeetings
+### getMeetings
 
 List all meetings for a given board
 
@@ -73,7 +75,7 @@ function cb (err, data) {
 ogm.getMeetings(opts, cb)
 ```
 
-###getAgenda
+### getAgenda
 
 List agenda for a given meeting.
 
@@ -100,7 +102,7 @@ function cb (err, data) {
 ogm.getAgenda(opts, cb)
 ```
 
-###getDetails
+### getDetails
 
 Get details and documents for a given agendaItem
 

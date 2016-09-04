@@ -1,0 +1,20 @@
+{
+  "board": "Administrasjonsutvalet 2011-2015",
+  "meetings": [
+    {
+      "date": "19. mars",
+      "status": "Offentlig",
+      "id": "212860"
+    },
+    {
+      "date": "8. juni",
+      "status": "Offentlig",
+      "id": "212864"
+    },
+    {
+      "date": "21. september",
+      "status": "Avlyst",
+      "id": ""
+    }
+  ]
+}
