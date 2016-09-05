@@ -59,13 +59,28 @@ tap.test('It requires options.boardId', test => {
   })
 })
 
+tap.test('It requires options.year', test => {
+  const options = {
+    host: 'http://opengov.cloudapp.net',
+    path: '/Meetings/tfk',
+    boardId: '200151',
+    year: false
+  }
+  const expectedErrorMessage = 'Missing required input: options.year'
+  getMeetings(options, (error, data) => {
+    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+    test.done()
+  })
+})
+
 tap.test('It returns expected results', test => {
   const options = {
     host: 'http://opengov.cloudapp.net',
     path: '/Meetings/tfk',
-    boardId: '200151'
+    boardId: '200151',
+    year: '2015'
   }
-  const expectedResult = require('./data/get-meetings-data.json')
+  const expectedResult = require('./data/get-meetings-data-full.json')
   getMeetings(options, (error, data) => {
     if (error) {
       throw error
@@ -81,7 +96,8 @@ tap.test('It returns error on error', test => {
   const options = {
     host: 'http://detteerenurlsomsannsynligviseikkefinnes.no',
     path: '/Meetings/tfk',
-    boardId: '200151'
+    boardId: '200151',
+    year: '2015'
   }
   getMeetings(options, (error, data) => {
     tap.ok(error, 'Error returned for meetings')
