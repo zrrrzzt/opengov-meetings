@@ -70,9 +70,21 @@ tap.test('It returns expected results', test => {
     if (error) {
       throw error
     } else {
-
+      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned details OK')
     }
-    tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned details OK')
+
+    test.done()
+  })
+})
+
+tap.test('It returns error on error', test => {
+  const options = {
+    host: 'http://detteerenurlsomsannsynligviseikkefinnes.no',
+    path: '/Meetings/tfk',
+    agendaId: '200262'
+  }
+  getDetails(options, (error, data) => {
+    tap.ok(error, 'Error returned for details')
     test.done()
   })
 })
