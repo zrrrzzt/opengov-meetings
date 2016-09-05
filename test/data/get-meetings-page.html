@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        Politiske m&#248;ter
+    </title>
+    <link href="/Meetings/Content/css?v=03z2eu_fy0WNC_ujLXKhgb7lpOViX7noGzQEhd5Pvas1" rel="stylesheet"/>
+
+    <link href="/Content/carouselCSS?v=eLLEJaK5BL_OmYuDCDiKZWlTfgS30WEnDkYbZT9-TL41" rel="stylesheet"/>
+
+    <style type="text/css">
+        a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
+        {
+            color:#e51400;
+        }
+        .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
+        {
+            background-color:#e51400;
+        }
+        .calendar .currentMonth
+        {
+            background:#e51400 !important;
+        }
+        #boards.SideBarItem a:hover, .tabs a:hover
+        {
+            border-bottom-color: #e51400;
+        }
+        .highlightTabs
+        {
+            border-bottom-color: #e51400 !important;
+        }
+    </style>
+    <script src="/Scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
+
+    <script src="/Scripts/jqueryals?v=-qnb2jmETXGPoNwb4NLwYURDCRw_MqIEAg1D5z0FDSE1"></script>
+
+    <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-37639147-1']);
+        _gaq.push(['_gat._anonymizeIp']);
+        _gaq.push(['_set', 'title', 'Administrasjonsutvalet 2011-2015']); // override page title
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        function GaTrackEvent(category, value) {
+            _gaq.push(['_trackEvent', category, value]);
+        }
+
+        function GaTrackEventWithLabel(category, value, label) {
+            _gaq.push(['_trackEvent', category, value, label]);
+        }
+
+        function TFD(type) {
+            GaTrackEvent('FileDownload', type);
+        }
+
+        function TTC(value) {
+            GaTrackEventWithLabel('Tile', 'Click', value);
+        }
+
+        function THBLC(type) {
+            GaTrackEvent('Home.BoardsList', 'ItemClick');
+        }
+
+        function THMC(type) {
+            GaTrackEvent('Home.MeetingsList', 'ItemClick');
+        }
+
+        function TMVCC(type) {
+            GaTrackEvent('Home.MostViewedCases', 'ItemClick');
+        }
+
+        function THLMCC(type) {
+            GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
+        }
+
+        function THLWCC(type) {
+            GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
+        }
+
+        function THMMFC(value) {
+            GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
+        }
+
+    </script>
+    <script type="text/javascript">
+
+        function TrackFileDownload(type) {
+            if (typeof (TFD) != "undefined")
+                TFD(type);
+        }
+
+        function TrackTileClick(value) {
+            if (typeof (TTC) != "undefined")
+                TTC(value);
+        }
+
+        function TrackHomeMeetingsLinkClick(type) {
+            if (typeof (THMC) != "undefined")
+                THMC(type);
+        }
+
+        function TrackMostViewedCasesClick(type) {
+            if (typeof (TMVCC) != "undefined")
+                TMVCC(type);
+        }
+
+        function TrackHomeBoardLinkClick(type) {
+            if (typeof (THBLC) != "undefined")
+                THBLC(type);
+        }
+
+        //
+        function TrackRecentAgendasLastMonthClick(type) {
+            if (typeof (THLMCC) != "undefined")
+                THLMCC(type);
+        }
+
+
+        function TrackRecentAgendasLastWeekClick(type) {
+            if (typeof (THLWCC) != "undefined")
+                THLWCC(type);
+        }
+
+        function TrackMeetingsMonthFilterClick(value) {
+            if (typeof (THMMFC) != "undefined")
+                THMMFC(value);
+        }
+
+
+
+        $('document').ready(function () {
+            $('.tile').on({
+                'mouseenter': function () {
+                    var top = ($(this).hasClass('rlp')) ? '275' : '180';
+                    $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+                },
+                'mouseleave': function () {
+                    var top = ($(this).hasClass('rlp')) ? '66' : '0';
+                    $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+                }
+            });
+
+            $('.pretty_date').each(function (index, element) {
+                $(element).html(prettyDate($(element).html()));
+            });
+
+            attachAnimations('.tilepost');
+        });
+
+        function attachAnimations(selector) {
+            $(selector).each(function (i) {
+                setOffAnimation($(this), i);
+            });
+        }
+
+        function setOffAnimation(tile, count) {
+            var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+            if (count % 2 != 0) {
+                $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
+            }
+
+            setTimeout(function () {
+                setInterval(function () {
+                    if (tile.hasClass('viewing')) return;
+                    var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                    $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                    setTimeout(function () {
+                        if (tile.hasClass('viewing')) return;
+                        var top = ($(tile).hasClass('rlp')) ? '66' : '0';
+                        $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                    }, 5000);
+                }, 5000);
+            }, 40000 * Math.random());
+        }
+
+        function prettyDate(date_str) {
+            var time_formats = [
+                [120, 'a minute ago', 'a minute from now'],
+                [3600, 'minutes', 60],
+                [7200, 'an hour ago', 'an hour from now'],
+                [86400, 'hours', 3600],
+                [172800, 'a day ago', 'a day from now'],
+                [604800, 'days', 86400],
+                [1209600, 'a week ago', 'a week from now'],
+                [2419200, 'weeks', 604800],
+                [4838400, 'a month ago', 'a month from now'],
+                [29030400, 'months', 2419200],
+                [58060800, 'a year ago', 'a year from now'],
+                [2903040000, 'years', 29030400]
+            ];
+
+            var seconds = (new Date - new Date(date_str)) / 1000;
+            var token = 'ago', list_choice = 1;
+            if (seconds < 0) {
+                seconds = Math.abs(seconds);
+                token = 'from now';
+                list_choice = 2;
+            }
+            var i = 0, format;
+            while (format = time_formats[i++]) {
+                if (seconds < format[0]) {
+                    if (typeof format[2] == 'string') {
+                        return format[list_choice];
+                    }
+                    else {
+                        return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+                    }
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="skip">
+        <a href="#content">G&#229; til hovedinnhold</a>
+    </div>
+    <div class="header">
+        <div class="siteLogo">
+
+            <a href="/Meetings/tfk">
+                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Site Logo." /></a>
+        </div>
+        <div class="siteTitle">Politiske m&#248;ter</div>
+        <div class="search">
+            <form name="searchForm" action="/Meetings/tfk/AgendaItems/Search" method="get">
+                <label title="Search" class="uihide" for="q">
+                    Search</label>
+                <input id="q" name="q" type="text" tabindex="1" value="S&#248;k" onfocus="value=''" size="20"  />
+
+                <input title="Submit" type="submit" value="SearchButton" id="SearchButton" class="button"
+                       style="display: none;" />
+                <a title="Submit" href="javascript:this.document.forms[0].submit()">
+                    <img src="/Content/Images/search-icon.png" alt="Search" class="searchImage" /></a>
+            </form>
+        </div>
+        <div class="tabs">
+            <a href="/Meetings/tfk">Hjem</a>
+            <a href="/Meetings/tfk/Boards">Utvalg</a>
+            <div class="fontSize">
+            </div>
+        </div>
+    </div>
+    <h1>
+        Administrasjonsutvalet 2011-2015
+    </h1>
+    <div class="twoColumns">
+        <div id="content" class="content">
+
+
+
+
+            <div class="calendarContainer">
+                <div class="yearDisplay">
+                    <div class="previousYear">
+                        <a href="/Meetings/tfk/Boards/Details/200151?Year=2014">Previous</a>            </div>
+                    <h2>M&#248;ter, 2015</h2>
+                    <div class="nextYear">
+                    </div>
+                </div>
+                <table class="calendar">
+                    <caption style="display:none">M&#248;ter, 2015</caption>
+                    <thead>
+                    <tr>
+                        <th title="januar">jan</th>
+                        <th title="februar">feb</th>
+                        <th title="mars">mar</th>
+                        <th title="april">apr</th>
+                        <th title="mai">mai</th>
+                        <th title="juni">jun</th>
+                        <th title="juli">jul</th>
+                        <th title="august">aug</th>
+                        <th title="september">sep</th>
+                        <th title="oktober">okt</th>
+                        <th title="november">nov</th>
+                        <th title="desember">des</th>
+
+                    </tr>
+                    </thead>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><a href="/Meetings/tfk/Meetings/Details/212860" title="Offentlig">19</a></td>
+                        <td></td>
+                        <td></td>
+                        <td><a href="/Meetings/tfk/Meetings/Details/212864" title="Offentlig">8</a></td>
+                        <td></td>
+                        <td></td>
+                        <td title="Avlyst">21</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+
+        </div>
+        <div class="sidebar">
+
+            <div id="members" class="SideBarItem">
+                <h3>Medlemmer / varamedlemmer</h3>
+                <ul>
+                    <li>Elisabeth A. Nilsen<pre class="roleDescList">Arbeiderpartiet - Leder i utvalg</pre></li><li>Helle Hogner<pre class="roleDescList">Sosialistisk Venstreparti - Utvalgsmedlem</pre></li><li>Tor Erik Baksås<pre class="roleDescList">Senterpartiet - Utvalgsmedlem</pre></li><li>Gunn Marit Helgesen<pre class="roleDescList">Høyre - Utvalgsmedlem</pre></li><li>Thorleif Fluer Vikre<pre class="roleDescList">Fremskrittspartiet - Utvalgsmedlem</pre></li><li>Jorunn Tisjø<pre class="roleDescList">Utvalgsmedlem</pre></li><li>Morten Kleiv<pre class="roleDescList">Utvalgsmedlem</pre></li><li>Tom Egil Flata<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Lise Wiik<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Jørund A. Ruud<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Beate Marie Dahl Eide<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Olav Seltveit Urbø<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Gunhild Lurås<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Steinar A. Miland<pre class="roleDescList">Sosialistisk Venstreparti - Varamedlem i utvalg</pre></li><li>Mari Anne Sannes<pre class="roleDescList">Sosialistisk Venstreparti - Varamedlem i utvalg</pre></li><li>Kristian Espeland<pre class="roleDescList">Kristelig Folkeparti - Varamedlem i utvalg</pre></li><li>Nina Vibeke Five<pre class="roleDescList">Høyre - Varamedlem i utvalg</pre></li><li>Jarl-Håvard Borgen<pre class="roleDescList">Høyre - Varamedlem i utvalg</pre></li><li>Gry Anette Rekanes Amundsen<pre class="roleDescList">Fremskrittspartiet - Varamedlem i utvalg</pre></li><li>Karianne Hansen<pre class="roleDescList">Fremskrittspartiet - Varamedlem i utvalg</pre></li><li>Geir Olav Tveit<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Mona Galåen<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Morten Røgeberg Cowles<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Jon Helge Bergane<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Helén Andersen<pre class="roleDescList">Møtesekretær</pre></li>        </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footerLogo">
+            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Footer%20Icon.jpg" alt="Site Footer Logo." />
+            <p>
+                &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
