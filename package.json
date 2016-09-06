@@ -35,7 +35,7 @@
     "coveralls": "2.11.12",
     "nsp": "2.6.1",
     "standard": "8.0.0",
-    "tap": "7.0.0"
+    "tap": "7.0.1"
   },
   "dependencies": {
     "cheerio": "0.22.0",
