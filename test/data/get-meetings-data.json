@@ -4,21 +4,21 @@
     {
       "date": "19. mars",
       "day": "19",
-      "month": 3,
+      "month": "03",
       "status": "Offentlig",
       "id": "212860"
     },
     {
       "date": "8. juni",
-      "day": "8",
-      "month": 6,
+      "day": "08",
+      "month": "06",
       "status": "Offentlig",
       "id": "212864"
     },
     {
       "date": "21. september",
       "day": "21",
-      "month": 9,
+      "month": "09",
       "status": "Avlyst",
       "id": ""
     }
