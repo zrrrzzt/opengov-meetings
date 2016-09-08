@@ -62,7 +62,8 @@ const ogm = require('opengov-meetings')
 const opts = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
-  boardId: '200151'
+  boardId: '200151',
+  year: 2015
 }
 
 function cb (err, data) {

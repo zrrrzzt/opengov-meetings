@@ -3,18 +3,24 @@
   "meetings": [
     {
       "date": "19. mars",
+      "day": "19",
+      "month": 3,
       "status": "Offentlig",
       "id": "212860",
       "year": "2015"
     },
     {
       "date": "8. juni",
+      "day": "8",
+      "month": 6,
       "status": "Offentlig",
       "id": "212864",
       "year": "2015"
     },
     {
       "date": "21. september",
+      "day": "21",
+      "month": 9,
       "status": "Avlyst",
       "id": "",
       "year": "2015"
