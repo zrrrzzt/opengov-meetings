@@ -7,7 +7,8 @@
       "month": "03",
       "status": "Offentlig",
       "id": "212860",
-      "year": "2015"
+      "year": "2015",
+      "yearMonthDay": 20150319
     },
     {
       "date": "8. juni",
@@ -15,7 +16,8 @@
       "month": "06",
       "status": "Offentlig",
       "id": "212864",
-      "year": "2015"
+      "year": "2015",
+      "yearMonthDay": 20150608
     },
     {
       "date": "21. september",
@@ -23,7 +25,8 @@
       "month": "09",
       "status": "Avlyst",
       "id": "",
-      "year": "2015"
+      "year": "2015",
+      "yearMonthDay": 20150921
     }
   ]
 }
