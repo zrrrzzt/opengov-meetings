@@ -1,7 +1,7 @@
 {
   "name": "opengov-meetings",
   "description": "Connect to 360 OpenGov Meetings",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=4.6.1"
+    "node": ">=4.6.2"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
