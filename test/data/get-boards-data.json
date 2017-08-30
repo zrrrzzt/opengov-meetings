@@ -8,10 +8,6 @@
     "id": "200151"
   },
   {
-    "name": "Arbeidsutvalet for Hovudutvalet for kompetanse",
-    "id": "217340"
-  },
-  {
     "name": "Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015",
     "id": "209335"
   },
@@ -48,6 +44,10 @@
     "id": "200147"
   },
   {
+    "name": "Fylkesvalstyret",
+    "id": "228300"
+  },
+  {
     "name": "Fylkesvalstyret 2011-2015",
     "id": "209066"
   },
@@ -68,12 +68,12 @@
     "id": "200146"
   },
   {
-    "name": "Hovudutval for kultur",
-    "id": "217339"
-  },
-  {
     "name": "Hovudutval for kultur 2011-2015",
     "id": "200148"
+  },
+  {
+    "name": "Hovudutval for kultur, idrett og folkehelse",
+    "id": "217339"
   },
   {
     "name": "Hovudutval for næringsutvikling",
@@ -126,6 +126,10 @@
   {
     "name": "Telemark kontrollutval",
     "id": "217261"
+  },
+  {
+    "name": "Telemark ungdomsråd - styre",
+    "id": "231335"
   },
   {
     "name": "Yrkesopplæringsnemnda",
