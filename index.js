@@ -1,5 +1,3 @@
-'use strict'
-
 module.exports.getAgenda = require('./lib/get-agenda')
 
 module.exports.getBoards = require('./lib/get-boards')
