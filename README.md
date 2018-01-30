@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/zrrrzzt/opengov-meetings.svg?branch=master)](https://travis-ci.org/zrrrzzt/opengov-meetings)
 [![Coverage Status](https://coveralls.io/repos/zrrrzzt/opengov-meetings/badge.svg?branch=master&service=github)](https://coveralls.io/github/zrrrzzt/opengov-meetings?branch=master)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+
 # opengov-meetings
 
 A Node.js module for connecting to the [360 OpenGov Meetings](http://www.software-innovation.com/no/produkter/360offentlig/digitalforvaltning/pages/Politiskagenda.aspx) solution from [Software Innovation](http://www.software-innovation.com/).

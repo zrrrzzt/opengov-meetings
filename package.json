@@ -10,14 +10,14 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=4.8.4"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install",
-    "standard-fix": "standard --fix"
+    "standard-fix": "standard --fix",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "opengov",
@@ -26,11 +26,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/opengov-meetings.git"
+    "url": "git+https://github.com/zrrrzzt/opengov-meetings.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/opengov-meetings/issues"
+    "url": "https://github.com/zrrrzzt/opengov-meetings/issues"
   },
+  "url": "https://github.com/zrrrzzt/opengov-meetings#readme",
   "devDependencies": {
     "coveralls": "3.0.0",
     "nsp": "3.1.0",
