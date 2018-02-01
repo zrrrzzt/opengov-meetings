@@ -1,12 +1,12 @@
-'use strict'
-
 const tap = require('tap')
 const getDetails = require('../lib/get-details')
 
 tap.test('It requires an options object', test => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -17,7 +17,9 @@ tap.test('It requires options.host', test => {
     host: false
   }
   const expectedErrorMessage = 'Missing required input: options.host'
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -28,7 +30,9 @@ tap.test('It requires options.host to be a valid url', test => {
     host: 'pysjepreik'
   }
   const expectedErrorMessage = 'Input error: options.host is not a valid url'
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -40,7 +44,9 @@ tap.test('It requires options.path', test => {
     path: false
   }
   const expectedErrorMessage = 'Missing required input: options.path'
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -53,7 +59,9 @@ tap.test('It requires options.agendaId', test => {
     agendaId: false
   }
   const expectedErrorMessage = 'Missing required input: options.agendaId'
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -66,14 +74,13 @@ tap.test('It returns expected results', test => {
     agendaId: '200262'
   }
   const expectedResult = require('./data/get-details-data-full.json')
-  getDetails(options, (error, data) => {
-    if (error) {
-      throw error
-    } else {
-      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned details OK')
-    }
-
+  return getDetails(options)
+  .then(data => {
+    tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
     test.done()
+  })
+  .catch(error => {
+    throw error
   })
 })
 
@@ -83,7 +90,9 @@ tap.test('It returns error on error', test => {
     path: '/Meetings/tfk',
     agendaId: '200262'
   }
-  getDetails(options, (error, data) => {
+  return getDetails(options)
+  .then(console.log)
+  .catch(error => {
     tap.ok(error, 'Error returned for details')
     test.done()
   })

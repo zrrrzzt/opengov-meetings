@@ -1,12 +1,12 @@
-'use strict'
-
 const tap = require('tap')
 const getMeetings = require('../lib/get-meetings')
 
 tap.test('It requires an options object', test => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -17,7 +17,9 @@ tap.test('It requires options.host', test => {
     host: false
   }
   const expectedErrorMessage = 'Missing required input: options.host'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -28,7 +30,9 @@ tap.test('It requires options.host to be a valid url', test => {
     host: 'pysjepreik'
   }
   const expectedErrorMessage = 'Input error: options.host is not a valid url'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -40,7 +44,9 @@ tap.test('It requires options.path', test => {
     path: false
   }
   const expectedErrorMessage = 'Missing required input: options.path'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -53,7 +59,9 @@ tap.test('It requires options.boardId', test => {
     boardId: false
   }
   const expectedErrorMessage = 'Missing required input: options.boardId'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -67,7 +75,9 @@ tap.test('It requires options.year', test => {
     year: false
   }
   const expectedErrorMessage = 'Missing required input: options.year'
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
     test.done()
   })
@@ -81,14 +91,13 @@ tap.test('It returns expected results', test => {
     year: '2015'
   }
   const expectedResult = require('./data/get-meetings-data-full.json')
-  getMeetings(options, (error, data) => {
-    if (error) {
-      throw error
-    } else {
-      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned meetings OK')
-    }
-
+  return getMeetings(options)
+  .then(data => {
+    tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
     test.done()
+  })
+  .catch(error => {
+    throw error
   })
 })
 
@@ -99,7 +108,9 @@ tap.test('It returns error on error', test => {
     boardId: '200151',
     year: '2015'
   }
-  getMeetings(options, (error, data) => {
+  return getMeetings(options)
+  .then(console.log)
+  .catch(error => {
     tap.ok(error, 'Error returned for meetings')
     test.done()
   })

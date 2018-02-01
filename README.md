@@ -31,23 +31,15 @@ Every call returns error or a data object
 List all boards.
 
 ```JavaScript
-'use strict'
-
 const ogm = require('opengov-meetings')
-const opts = {
+const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk'
 }
 
-function cb (err, data) {
-  if (err) {
-    console.error(err)
-  } else {
-    console.log(data)
-  }
-}
-
-ogm.getBoards(opts, cb)
+ogm.getBoards(options)
+.then(console.log)
+.catch(console.error)
 ```
 
 ### getMeetings
@@ -57,25 +49,17 @@ List all meetings for a given board
 **boardId** id for the board
 
 ```JavaScript
-'use strict'
-
 const ogm = require('opengov-meetings')
-const opts = {
+const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
   boardId: '200151',
   year: 2015
 }
 
-function cb (err, data) {
-  if (err) {
-    console.error(err)
-  } else {
-    console.log(data)
-  }
-}
-
-ogm.getMeetings(opts, cb)
+ogm.getMeetings(options)
+.then(console.log)
+.catch(console.error)
 ```
 
 ### getAgenda
@@ -85,24 +69,16 @@ List agenda for a given meeting.
 **meetingId** id for the meeting
 
 ```JavaScript
-'use strict'
-
 const ogm = require('opengov-meetings')
-const opts = {
+const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
   meetingId: '203235'
 }
 
-function cb (err, data) {
-  if (err) {
-    console.error(err)
-  } else {
-    console.log(data)
-  }
-}
-
-ogm.getAgenda(opts, cb)
+ogm.getAgenda(options)
+.then(console.log)
+.catch(console.error)
 ```
 
 ### getDetails
@@ -112,22 +88,19 @@ Get details and documents for a given agendaItem
 **agendaId** id for the item
 
 ```JavaScript
-'use strict'
-
 const ogm = require('opengov-meetings')
-const opts = {
+const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
   agendaId: '200262'
 }
 
-function cb (err, data) {
-  if (err) {
-    console.error(err)
-  } else {
-    console.log(data)
-  }
-}
-
-ogm.getDetails(opts, cb)
+ogm.getDetails(options)
+.then(console.log)
+.catch(console.error)
 ```
+
+## License
+[MIT](LICENSE)
+
+![Robohash image of opengov-meetings](https://robots.kebabstudios.party/opengov-meetings.png "Robohash image of opengov-meetings")
