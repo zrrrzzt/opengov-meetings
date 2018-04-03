@@ -5,11 +5,11 @@ tap.test('It requires an options object', test => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.host', test => {
@@ -18,11 +18,11 @@ tap.test('It requires options.host', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.host'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.host to be a valid url', test => {
@@ -31,11 +31,11 @@ tap.test('It requires options.host to be a valid url', test => {
   }
   const expectedErrorMessage = 'Input error: options.host is not a valid url'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.path', test => {
@@ -45,11 +45,11 @@ tap.test('It requires options.path', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.path'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.boardId', test => {
@@ -60,11 +60,11 @@ tap.test('It requires options.boardId', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.boardId'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.year', test => {
@@ -76,11 +76,11 @@ tap.test('It requires options.year', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.year'
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It returns expected results', test => {
@@ -92,13 +92,13 @@ tap.test('It returns expected results', test => {
   }
   const expectedResult = require('./data/get-meetings-data-full.json')
   return getMeetings(options)
-  .then(data => {
-    tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
-    test.done()
-  })
-  .catch(error => {
-    throw error
-  })
+    .then(data => {
+      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
+      test.done()
+    })
+    .catch(error => {
+      throw error
+    })
 })
 
 tap.test('It returns error on error', test => {
@@ -109,9 +109,9 @@ tap.test('It returns error on error', test => {
     year: '2015'
   }
   return getMeetings(options)
-  .then(console.log)
-  .catch(error => {
-    tap.ok(error, 'Error returned for meetings')
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.ok(error, 'Error returned for meetings')
+      test.done()
+    })
 })

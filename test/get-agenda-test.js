@@ -5,11 +5,11 @@ tap.test('It requires an options object', test => {
   const options = false
   const expectedErrorMessage = 'Missing required input: options object'
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.host', test => {
@@ -18,11 +18,11 @@ tap.test('It requires options.host', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.host'
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.host to be a valid url', test => {
@@ -31,11 +31,11 @@ tap.test('It requires options.host to be a valid url', test => {
   }
   const expectedErrorMessage = 'Input error: options.host is not a valid url'
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.path', test => {
@@ -45,11 +45,11 @@ tap.test('It requires options.path', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.path'
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It requires options.meetingId', test => {
@@ -60,11 +60,11 @@ tap.test('It requires options.meetingId', test => {
   }
   const expectedErrorMessage = 'Missing required input: options.meetingId'
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
+      test.done()
+    })
 })
 
 tap.test('It returns expected results', test => {
@@ -75,13 +75,13 @@ tap.test('It returns expected results', test => {
   }
   const expectedResult = require('./data/get-agenda-data-full.json')
   return getAgenda(options)
-  .then(data => {
-    tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
-    test.done()
-  })
-  .catch(error => {
-    throw error
-  })
+    .then(data => {
+      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
+      test.done()
+    })
+    .catch(error => {
+      throw error
+    })
 })
 
 tap.test('It returns error on error', test => {
@@ -91,9 +91,9 @@ tap.test('It returns error on error', test => {
     meetingId: '203235'
   }
   return getAgenda(options)
-  .then(console.log)
-  .catch(error => {
-    tap.ok(error, 'Error returned for agenda')
-    test.done()
-  })
+    .then(console.log)
+    .catch(error => {
+      tap.ok(error, 'Error returned for agenda')
+      test.done()
+    })
 })
