@@ -1,34 +1,150 @@
 [
-  {"name":"Administrasjonsutvalet","id":"217642"},
-  {"name":"Administrasjonsutvalet 2011-2015","id":"200151"},
-  {"name":"Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015","id":"209335"},
-  {"name":"Forhandlingsutvalet","id":"200173"},
-  {"name":"Forhandlingsutvalet","id":"220291"},
-  {"name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne","id":"217345"},
-  {"name":"Fylkeskommunalt råd for personer med nedsatt funksjonsevne 2011-2015","id":"200178"},
-  {"name":"Fylkestinget","id":"216162"},{"name":"Fylkestinget 2011 - 2015","id":"200145"},
-  {"name":"Fylkesutvalet","id":"216167"},{"name":"Fylkesutvalet 2011-2015","id":"200147"},
-  {"name":"Fylkesvalstyret","id":"228300"},{"name":"Fylkesvalstyret 2011-2015","id":"209066"},
-  {"name":"Fylkets Trafikksikkerhetsutval","id":"225118"},
-  {"name":"Hovudutval for administrasjonssaker","id":"218688"},
-  {"name":"Hovudutval for kompetanse","id":"217336"},
-  {"name":"Hovudutval for kompetanse 2011-2015","id":"200146"},
-  {"name":"Hovudutval for kultur 2011-2015","id":"200148"},
-  {"name":"Hovudutval for kultur, idrett og folkehelse","id":"217339"},
-  {"name":"Hovudutval for næringsutvikling","id":"217335"},
-  {"name":"Hovudutval for næringsutvikling 2011-2015","id":"200144"},
-  {"name":"Hovudutvalfor samferdsel","id":"217337"},
-  {"name":"Hovudutval for samferdsel 2011-2015","id":"200149"},
-  {"name":"Klagenemnda for skolesaker 2011-2015","id":"200150"},
-  {"name":"Telemark fylkeskommunale eldreråd","id":"217344"},
-  {"name":"Telemark fylkeskommunale eldreråd 2011-2015","id":"200177"},
-  {"name":"Telemark fylkeskommunale klagenemnd","id":"217338"},
-  {"name":"Telemark fylkeskommunale klagenemnd 2011 - 2015","id":"200175"},
-  {"name":"Telemark fylkeskommunale klagenemnda for skolesaker","id":"217341"},
-  {"name":"Telemark interkommunale næringsfond","id":"208883"},
-  {"name":"Telemark interkommunale næringsfond","id":"222101"},
-  {"name":"Telemark kontrollutval","id":"217261"},
-  {"name":"Telemark ungdomsråd - styre","id":"231335"},
-  {"name":"Yrkesopplæringsnemnda","id":"217342"},
-  {"name":"Yrkesopplæringsnemnda 2012 - 2015","id":"200176"}
+  {
+    "name": "Administrasjonsutvalet",
+    "id": "217642"
+  },
+  {
+    "name": "Administrasjonsutvalet 2011-2015",
+    "id": "200151"
+  },
+  {
+    "name": "Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015",
+    "id": "209335"
+  },
+  {
+    "name": "Fellesnemnda",
+    "id": "236944"
+  },
+  {
+    "name": "Forhandlingsutvalet",
+    "id": "200173"
+  },
+  {
+    "name": "Forhandlingsutvalet",
+    "id": "220291"
+  },
+  {
+    "name": "Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
+    "id": "217345"
+  },
+  {
+    "name": "Fylkeskommunalt råd for personer med nedsatt funksjonsevne 2011-2015",
+    "id": "200178"
+  },
+  {
+    "name": "Fylkestinget",
+    "id": "216162"
+  },
+  {
+    "name": "Fylkestinget 2011 - 2015",
+    "id": "200145"
+  },
+  {
+    "name": "Fylkesutvalet",
+    "id": "216167"
+  },
+  {
+    "name": "Fylkesutvalet 2011-2015",
+    "id": "200147"
+  },
+  {
+    "name": "Fylkesvalstyret",
+    "id": "228300"
+  },
+  {
+    "name": "Fylkesvalstyret 2011-2015",
+    "id": "209066"
+  },
+  {
+    "name": "Fylkets Trafikksikkerhetsutval",
+    "id": "225118"
+  },
+  {
+    "name": "Hovudutval for administrasjonssaker",
+    "id": "218688"
+  },
+  {
+    "name": "Hovudutval for kompetanse",
+    "id": "217336"
+  },
+  {
+    "name": "Hovudutval for kompetanse 2011-2015",
+    "id": "200146"
+  },
+  {
+    "name": "Hovudutval for kultur 2011-2015",
+    "id": "200148"
+  },
+  {
+    "name": "Hovudutval for kultur, idrett og folkehelse",
+    "id": "217339"
+  },
+  {
+    "name": "Hovudutval for næringsutvikling",
+    "id": "217335"
+  },
+  {
+    "name": "Hovudutval for næringsutvikling 2011-2015",
+    "id": "200144"
+  },
+  {
+    "name": "Hovudutval for samferdsel",
+    "id": "217337"
+  },
+  {
+    "name": "Hovudutval for samferdsel 2011-2015",
+    "id": "200149"
+  },
+  {
+    "name": "Klagenemnda for skolesaker 2011-2015",
+    "id": "200150"
+  },
+  {
+    "name": "Partssammensatt utvalg",
+    "id": "236946"
+  },
+  {
+    "name": "Telemark fylkeskommunale eldreråd",
+    "id": "217344"
+  },
+  {
+    "name": "Telemark fylkeskommunale eldreråd 2011-2015",
+    "id": "200177"
+  },
+  {
+    "name": "Telemark fylkeskommunale klagenemnd",
+    "id": "217338"
+  },
+  {
+    "name": "Telemark fylkeskommunale klagenemnd 2011 - 2015",
+    "id": "200175"
+  },
+  {
+    "name": "Telemark fylkeskommunale klagenemnda for skolesaker",
+    "id": "217341"
+  },
+  {
+    "name": "Telemark interkommunale næringsfond",
+    "id": "208883"
+  },
+  {
+    "name": "Telemark interkommunale næringsfond",
+    "id": "222101"
+  },
+  {
+    "name": "Telemark kontrollutval",
+    "id": "217261"
+  },
+  {
+    "name": "Telemark ungdomsråd - styre",
+    "id": "231335"
+  },
+  {
+    "name": "Yrkesopplæringsnemnda",
+    "id": "217342"
+  },
+  {
+    "name": "Yrkesopplæringsnemnda 2012 - 2015",
+    "id": "200176"
+  }
 ]

@@ -4,7 +4,7 @@
 
 # opengov-meetings
 
-A Node.js module for connecting to the [360 OpenGov Meetings](http://www.software-innovation.com/no/produkter/360offentlig/digitalforvaltning/pages/Politiskagenda.aspx) solution from [Software Innovation](http://www.software-innovation.com/).
+A Node.js module for connecting to the [360 OpenGov Meetings](https://campaigns.tieto.com/nb/360#public) solution from [Tieto](https://www.tieto.no).
 
 This API is based on screenscraping and far from rock solid.
 
