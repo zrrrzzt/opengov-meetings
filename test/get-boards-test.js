@@ -1,5 +1,6 @@
 const tap = require('tap')
 const getBoards = require('../lib/get-boards')
+const host = 'http://opengov.cloudapp.net'
 
 tap.test('It requires an options object', test => {
   const options = false
@@ -40,7 +41,7 @@ tap.test('It requires options.host to be a valid url', test => {
 
 tap.test('It requires options.path', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: false
   }
   const expectedErrorMessage = 'Missing required input: options.path'
@@ -54,7 +55,7 @@ tap.test('It requires options.path', test => {
 
 tap.test('It returns expected results', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk'
   }
   const expectedResult = require('./data/get-boards-data.json')

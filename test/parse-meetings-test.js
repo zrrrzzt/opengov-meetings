@@ -1,5 +1,3 @@
-'use strict'
-
 const tap = require('tap')
 const fs = require('fs')
 const parseMeetings = require('../lib/parse-meetings')

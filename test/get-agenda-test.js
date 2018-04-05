@@ -1,5 +1,6 @@
 const tap = require('tap')
 const getAgenda = require('../lib/get-agenda')
+const host = 'http://opengov.cloudapp.net'
 
 tap.test('It requires an options object', test => {
   const options = false
@@ -40,7 +41,7 @@ tap.test('It requires options.host to be a valid url', test => {
 
 tap.test('It requires options.path', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: false
   }
   const expectedErrorMessage = 'Missing required input: options.path'
@@ -54,7 +55,7 @@ tap.test('It requires options.path', test => {
 
 tap.test('It requires options.meetingId', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk',
     meetingId: false
   }
@@ -69,9 +70,9 @@ tap.test('It requires options.meetingId', test => {
 
 tap.test('It returns expected results', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk',
-    meetingId: '203235'
+    meetingId: '644324'
   }
   const expectedResult = require('./data/get-agenda-data-full.json')
   return getAgenda(options)
@@ -88,7 +89,7 @@ tap.test('It returns error on error', test => {
   const options = {
     host: 'http://detteerenurlsomsannsynligviseikkefinnes.no',
     path: '/Meetings/tfk',
-    meetingId: '203235'
+    meetingId: '644324'
   }
   return getAgenda(options)
     .then(console.log)

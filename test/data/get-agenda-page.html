@@ -2,379 +2,558 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
     <title>
-        Politiske m&#248;ter
+             Politiske m&#248;ter
     </title>
-    <link href="/Meetings/Content/css?v=SZbbl4V9Bdltr6ZG4Iiyk13WLzPK_kMKoqGQpVtnoKQ1" rel="stylesheet"/>
+    <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    <link href="/Content/carouselCSS?v=eLLEJaK5BL_OmYuDCDiKZWlTfgS30WEnDkYbZT9-TL41" rel="stylesheet"/>
-
-    <style type="text/css">
-        a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
-        {
-            color:#e51400;
-        }
-        .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
-        {
-            background-color:#e51400;
-        }
-        .calendar .currentMonth
-        {
-            background:#e51400 !important;
-        }
-        #boards.SideBarItem a:hover, .tabs a:hover
-        {
-            border-bottom-color: #e51400;
-        }
-        .highlightTabs
-        {
-            border-bottom-color: #e51400 !important;
-        }
-    </style>
+    
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+        <style type="text/css">
+            a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
+            {
+                color:#58595b;
+            }
+            .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
+            {
+                background-color:#58595b;
+            }
+            .calendar .currentMonth
+            {
+                background:#58595b !important;
+            }
+            #boards.SideBarItem a:hover, .tabs a:hover
+            {   
+                border-bottom-color: #58595b;
+            }
+            .highlightTabs
+            {
+                border-bottom-color: #58595b !important;
+            }
+        </style>
     <script src="/Scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
 
     <script src="/Scripts/jqueryals?v=-qnb2jmETXGPoNwb4NLwYURDCRw_MqIEAg1D5z0FDSE1"></script>
 
     <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-37639147-1']);
-      _gaq.push(['_gat._anonymizeIp']);
-      _gaq.push(['_set', 'title', 'Administrasjonsutvalet (10.11.2014)']); // override page title
-      _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37639147-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_set', 'title', 'Fylkestinget (05.03.2018)']); // override page title
+            _gaq.push(['_trackPageview']);
 
-      (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
 
-      function GaTrackEvent(category, value) {
-        _gaq.push(['_trackEvent', category, value]);
-      }
+            function GaTrackEvent(category, value) {
+                _gaq.push(['_trackEvent', category, value]);
+            }
 
-      function GaTrackEventWithLabel(category, value, label) {
-        _gaq.push(['_trackEvent', category, value, label]);
-      }
+            function GaTrackEventWithLabel(category, value, label) {
+                _gaq.push(['_trackEvent', category, value, label]);
+            }
 
-      function TFD(type) {
-        GaTrackEvent('FileDownload', type);
-      }
+            function TFD(type) {
+                GaTrackEvent('FileDownload', type);
+            }
 
-      function TTC(value) {
-        GaTrackEventWithLabel('Tile', 'Click', value);
-      }
+            function TTC(value) {
+                GaTrackEventWithLabel('Tile', 'Click', value);
+            }
 
-      function THBLC(type) {
+    function THBLC(type) {
         GaTrackEvent('Home.BoardsList', 'ItemClick');
-      }
+    }
 
-      function THMC(type) {
+    function THMC(type) {
         GaTrackEvent('Home.MeetingsList', 'ItemClick');
-      }
+    }
 
-      function TMVCC(type) {
+    function TMVCC(type) {
         GaTrackEvent('Home.MostViewedCases', 'ItemClick');
-      }
+    }
 
-      function THLMCC(type) {
+    function THLMCC(type) {
         GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
-      }
+    }
 
-      function THLWCC(type) {
+    function THLWCC(type) {
         GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
-      }
+    }
 
-      function THMMFC(value) {
+    function THMMFC(value) {
         GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
-      }
+    }
 
-    </script>
+      </script>
     <script type="text/javascript">
 
-      function TrackFileDownload(type) {
+    function TrackFileDownload(type) {
         if (typeof (TFD) != "undefined")
-          TFD(type);
-      }
+            TFD(type);
+    }
 
-      function TrackTileClick(value) {
+    function TrackTileClick(value) {
         if (typeof (TTC) != "undefined")
-          TTC(value);
-      }
+            TTC(value);
+    }
 
-      function TrackHomeMeetingsLinkClick(type) {
+    function TrackHomeMeetingsLinkClick(type) {
         if (typeof (THMC) != "undefined")
-          THMC(type);
-      }
+            THMC(type);
+    }
 
-      function TrackMostViewedCasesClick(type) {
+    function TrackMostViewedCasesClick(type) {
         if (typeof (TMVCC) != "undefined")
-          TMVCC(type);
-      }
+            TMVCC(type);
+    }
 
-      function TrackHomeBoardLinkClick(type) {
+    function TrackHomeBoardLinkClick(type) {
         if (typeof (THBLC) != "undefined")
-          THBLC(type);
-      }
+            THBLC(type);
+    }
 
-      //
-      function TrackRecentAgendasLastMonthClick(type) {
+
+    function TrackRecentAgendasLastMonthClick(type) {
         if (typeof (THLMCC) != "undefined")
-          THLMCC(type);
-      }
+            THLMCC(type);
+    }
 
 
-      function TrackRecentAgendasLastWeekClick(type) {
+    function TrackRecentAgendasLastWeekClick(type) {
         if (typeof (THLWCC) != "undefined")
-          THLWCC(type);
-      }
+            THLWCC(type);
+    }
 
-      function TrackMeetingsMonthFilterClick(value) {
+    function TrackMeetingsMonthFilterClick(value) {
         if (typeof (THMMFC) != "undefined")
-          THMMFC(value);
-      }
+            THMMFC(value);
+    }
 
 
 
-      $('document').ready(function () {
+    $('document').ready(function () {
         $('.tile').on({
-          'mouseenter': function () {
-            var top = ($(this).hasClass('rlp')) ? '275' : '180';
-            $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-          },
-          'mouseleave': function () {
-            var top = ($(this).hasClass('rlp')) ? '66' : '0';
-            $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-          }
+            'mouseenter': function () {
+                var top = ($(this).hasClass('rlp')) ? '275' : '180';
+                $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            },
+            'mouseleave': function () {
+                var top = ($(this).hasClass('rlp')) ? '66' : '0';
+                $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            }
         });
 
         $('.pretty_date').each(function (index, element) {
-          $(element).html(prettyDate($(element).html()));
+            $(element).html(prettyDate($(element).html()));
         });
 
         attachAnimations('.tilepost');
-      });
 
-      function attachAnimations(selector) {
-        $(selector).each(function (i) {
-          setOffAnimation($(this), i);
+
+        $("#searchButton").on('click', function () {
+            var searchQuery = document.getElementById('q').value;
+            searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+            window.location.href = searchQuery;
         });
-      }
+        $("#q").on("keydown", function (e) {
+            if (e.keyCode === 13) {
+                var searchQuery = document.getElementById('q').value;
+                searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+                window.location.href = searchQuery;
+            }
+        });
+    });
+    function attachAnimations(selector) {
+        $(selector).each(function (i) {
+            setOffAnimation($(this), i);
+        });
+    }
 
-      function setOffAnimation(tile, count) {
+    function setOffAnimation(tile, count) {
         var top = ($(tile).hasClass('rlp')) ? '275' : '180';
         if (count % 2 != 0) {
-          $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
+            $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
         }
 
         setTimeout(function () {
-          setInterval(function () {
-            if (tile.hasClass('viewing')) return;
-            var top = ($(tile).hasClass('rlp')) ? '275' : '180';
-            $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
-            setTimeout(function () {
-              if (tile.hasClass('viewing')) return;
-              var top = ($(tile).hasClass('rlp')) ? '66' : '0';
-              $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+            setInterval(function () {
+                if (tile.hasClass('viewing')) return;
+                var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                setTimeout(function () {
+                    if (tile.hasClass('viewing')) return;
+                    var top = ($(tile).hasClass('rlp')) ? '66' : '0';
+                    $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                }, 5000);
             }, 5000);
-          }, 5000);
         }, 40000 * Math.random());
-      }
+    }
 
-      function prettyDate(date_str) {
+    function prettyDate(date_str) {
         var time_formats = [
-          [120, 'a minute ago', 'a minute from now'],
-          [3600, 'minutes', 60],
-          [7200, 'an hour ago', 'an hour from now'],
-          [86400, 'hours', 3600],
-          [172800, 'a day ago', 'a day from now'],
-          [604800, 'days', 86400],
-          [1209600, 'a week ago', 'a week from now'],
-          [2419200, 'weeks', 604800],
-          [4838400, 'a month ago', 'a month from now'],
-          [29030400, 'months', 2419200],
-          [58060800, 'a year ago', 'a year from now'],
-          [2903040000, 'years', 29030400]
+      [120, 'a minute ago', 'a minute from now'],
+      [3600, 'minutes', 60],
+      [7200, 'an hour ago', 'an hour from now'],
+      [86400, 'hours', 3600],
+      [172800, 'a day ago', 'a day from now'],
+      [604800, 'days', 86400],
+      [1209600, 'a week ago', 'a week from now'],
+      [2419200, 'weeks', 604800],
+      [4838400, 'a month ago', 'a month from now'],
+      [29030400, 'months', 2419200],
+      [58060800, 'a year ago', 'a year from now'],
+      [2903040000, 'years', 29030400]
         ];
 
         var seconds = (new Date - new Date(date_str)) / 1000;
         var token = 'ago', list_choice = 1;
         if (seconds < 0) {
-          seconds = Math.abs(seconds);
-          token = 'from now';
-          list_choice = 2;
+            seconds = Math.abs(seconds);
+            token = 'from now';
+            list_choice = 2;
         }
         var i = 0, format;
         while (format = time_formats[i++]) {
-          if (seconds < format[0]) {
-            if (typeof format[2] == 'string') {
-              return format[list_choice];
+            if (seconds < format[0]) {
+                if (typeof format[2] == 'string') {
+                    return format[list_choice];
+                }
+                else {
+                    return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+                }
+            }
+        }
+    }
+        function SetMeetingsHtml(data) {
+            $("#meetingslistDiv").html(data);
+            var instructionLabel = $(data).find('li').length;
+            if (instructionLabel !== 0) {
+                $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
             }
             else {
-              return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+                $("#searchResultMeeting").html("Ingen m&#248;ter funnet");
             }
-          }
+            $('#viewMoreMeetings').css('display', 'none');
         }
-      }
 
+        function TrackClickedMonth(url,trimresults) {
+            var selectedMonth = $("#ulMonths option:selected").val();
+            var selectedYear = $("#ulYear option:selected").val();
+            TrackMeetingsMonthFilterClick('PositionFromCurrentMonth.' + ((new Date().getMonth() + 1) - selectedMonth) * -1);
+            $.ajax({
+                url: url,
+                data: { month: selectedMonth.toString(), year: selectedYear.toString(), trimResult: trimresults},
+                cache: false,
+                type: "GET",
+                dataType: "html",
+                beforeSend: function (xhr, opts) {
+                    $("#meetingscontentLoad").addClass("contentMask");
+                },
+                complete: function () {
+                    $("#meetingscontentLoad").removeClass("contentMask");
+                },
+                success: function (data, textStatus, XMLHttpRequest) {
+                    SetMeetingsHtml(data);
+                    var instructionLabel = $(data).find('li').length;
+                    if (instructionLabel !== 0) {
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter funnet for " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $(".meetingsHeader img").css('display', 'block');
+                        $(".homePageSelectedDateString").css('display', 'block');
+                    }
+                    else {
+                        $("#instructionLabel").html("");
+                        $(".meetingsHeader img").css('display', 'none');
+                        $("#mainPageFindMeetings img").css('display', 'block');
+                        $("#mainPageLatestMeetings img").css('display', 'block');
+                        $("#mainPageBoards img").css('display', 'block');
+                    }
+                }
+            });
+        }
     </script>
 </head>
 <body>
-<div class="container">
-    <div id="skip">
-        <a href="#content">G&#229; til hovedinnhold</a>
-    </div>
-    <div class="header">
-        <div class="siteLogo">
+    <div id="loader"></div>
+    <div class="">
+                    
+        <div class="headerSection" style="background-color: #FFD520">
+            <div class="containerFluid">
+                <header class="header">
+                    <div class="siteLogo">
 
-            <a href="/Meetings/tfk">
-                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Site Logo." /></a>
-        </div>
-        <div class="siteTitle">Politiske m&#248;ter</div>
-        <div class="search">
-            <form name="searchForm" action="/Meetings/tfk/AgendaItems/Search" method="get">
-                <label title="Search" class="uihide" for="q">
-                    Search</label>
-                <input id="q" name="q" type="text" tabindex="1" value="S&#248;k" onfocus="value=''" size="20"  />
-
-                <input title="Submit" type="submit" value="SearchButton" id="SearchButton" class="button"
-                       style="display: none;" />
-                <a title="Submit" href="javascript:this.document.forms[0].submit()">
-                    <img src="/Content/Images/search-icon.png" alt="Search" class="searchImage" /></a>
-            </form>
-        </div>
-        <div class="tabs">
-            <a href="/Meetings/tfk">Hjem</a>
-            <a href="/Meetings/tfk/Boards">Utvalg</a>
-            <div class="fontSize">
+                            <a href="/Meetings/tfk">
+                                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Hjem" />
+                            </a>
+                    </div>
+                    <div class="siteTitle">
+                        <h1>Politiske m&#248;ter</h1>
+                    </div>
+                    <div class="siteSearch">
+                        <div class="searchForm">
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-label="S&#248;k">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            </button>
+                        </div>
+                    </div>
+                </header>
             </div>
-        </div>
-    </div>
-    <ul class="breadcrumb">
-        <li><a href="/Meetings/tfk/Boards/Details/200151">Administrasjonsutvalet 2011-2015</a></li>
-    </ul>
-    <h1>
-        Administrasjonsutvalet (10.11.2014)
-    </h1>
-    <div class="twoColumns">
-        <div id="content" class="content">
-
-
-
-            <table>
-
-
-
-                <caption>Saker til behandling</caption>
-                <tr class="on">
-                    <td class="caseNumber">
-                        8/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200267">M&#229;l- og budsjettdokument 2015-2018</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        9/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200264">Disponering av unytta l&#248;nsmidlar knytt til streiken hausten 2014</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        10/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200263">Oppdragsverksemd ved dei vidareg&#229;ande skulane i Telemark</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        11/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200265">Fritt skuleval</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        12/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200266">Skuletilbodet 2015-2016</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        13/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200268">Administrasjonsutvalet - m&#248;teplan 2015</a>
-                    </td>
-                </tr>
-                <tr class="on">
-                    <td class="caseNumber">
-                        14/14                    </td>
-
-                    <td>
-                        <a href="/Meetings/tfk/AgendaItems/Details/200262">Eventuelt - Administrasjonsutvalet 10.11.2014</a>
-                    </td>
-                </tr>
-            </table>
-
-
-        </div>
-        <div class="sidebar">
-
-            <div id="about" class="SideBarItem">
-                <h3>Detaljer</h3>
-                <div class="label">Utvalg</div>
-                <div class="value" title="Administrasjonsutvalet 2011-2015">Administrasjonsutvalet 2011-2015</div>
-                <div class="label">Sted</div>
-                <div class="value"></div>
-                <div class="label">Dato</div>
-                <div class="value">10.11.2014</div>
-
-                <div class="label">Status</div>
-                <div class="value">Offentlig</div>
             </div>
+        <div class="containerFluid">
+            <div class="mainContainer">
+                    <div class="breadcrumb">
+                        <ul>
+                                <li> <a href="/Meetings/tfk">Hjem</a></li>
+                                <li> ></li>
+                                <li> <a href="/Meetings/tfk/Boards/Details/216162">Fylkestinget</a></li>
+                                <li> ></li>
+                                <li> Fylkestinget (05.03.2018)</li>
+                            <li>
+                        </ul>
+                    </div>
 
-            <div id="documents" class="SideBarItem">
 
-                <h3>Dokumenter</h3>
-                <ul>
-                    <li class="fileInfo">
 
-                        <a class="normal-file" href="/Meetings/tfk/File/Details/208934.PDF?fileName=Protokoll%20Administrasjonsutvalet%2010.11.2014&amp;fileSize=843579" onclick="TrackFileDownload('Meeting')" >
-                            Protokoll Administrasjonsutvalet 10.11.2014
-                        </a>
-                    </li>
-                    <li class="fileInfo">
-
-                        <a class="normal-file" href="/Meetings/tfk/File/Details/206329.PDF?fileName=M%C3%B8teinnkalling%20Administrasjonsutvalet%2010.11.2014&amp;fileSize=1371817" onclick="TrackFileDownload('Meeting')" >
-                            M&#248;teinnkalling Administrasjonsutvalet 10.11.2014
-                        </a>
-                    </li>
-                </ul>
+<div class="goBackSection detailsPage">
+    <div class="goBackButton">
+        <button onclick="window.location.href = '/Meetings/tfk/Boards/Details/216162'">
+            <div class="buttonImage">
+                <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
             </div>
-
-        </div>
+            <div class="buttonLink">	<span aria-hidden="true"> G&#229; til utvalget </span> </div>
+        </button>
     </div>
-    <div class="footer">
-        <div class="footerLogo">
-            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Footer%20Icon.jpg" alt="Site Footer Logo." width="28" height="28" />
-            <p>
-                &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
-            </p>
+    <div class="meetingTitle">
+        <div class="meetingsHeaderSec">
+            <div class="meetingTitleIcon">
+                <img class="images" src="/Areas/Meetings/Content/Images/meeting.png" alt="">
+            </div>
+            <div class="meetingTitleHeader">
+                <h2>Fylkestinget (05.03.2018)</h2>
+            </div>
         </div>
     </div>
 </div>
+<section class="meetingsAgendaSection">
+    <div class="meetingsAgenda">        
+            <div class="meetingsHeader">
+                <h2>Saksliste</h2>
+            </div>
+            <div class="meetingAgendaList">
+                <ul>
+                                <div class="agendaItemHeader ">
+                                    <h3>M&#248;teinnkalling</h3>
+                                </div>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211242" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242','211242')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242', '211242')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>1/18 - M&#248;teinnkalling Fylkestinget 05.03.2018</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211242" class="panel"></div>
+                                </li>
+                                <div class="agendaItemHeader agendaHeader">
+                                    <h3>M&#248;teprotokoll</h3>
+                                </div>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211191" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191','211191')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191', '211191')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>1/18 - Godkjenning - M&#248;teprotokoll fylkestinget 6.-7. 12. 2017</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211191" class="panel"></div>
+                                </li>
+                                <div class="agendaItemHeader agendaHeader">
+                                    <h3>Saker til behandling</h3>
+                                </div>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211236" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236','211236')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236', '211236')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>1/18 - Ny Skien videreg&#229;ende skole utgreiing om Inventar</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211236" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211237" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237','211237')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237', '211237')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>2/18 - H&#248;ring -  Regionreformen. Rapport fra ekspertutvalg</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211237" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211238" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238','211238')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238', '211238')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>3/18 - Reglement for fellesnemnda mv.</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211238" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211239" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239','211239')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239', '211239')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>4/18 - Godtgjering for medlemmene i fellesnemnda mv.</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211239" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211240" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240','211240')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240', '211240')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>5/18 - S&#248;knad om permisjon - Knut Morten Johansen</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211240" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211268" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268','211268')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268', '211268')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>6/18 - Gea Norvegica Geopark IKS – revidert selskapsavtale</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211268" class="panel"></div>
+                                </li>
+                                <li>
+                                    <a class="accordion" tabindex="0" id="agendaItem_211269" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269','211269')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269', '211269')">
+                                        <div class="accordionImage">
+                                        </div>
+                                        <div class="accordionTitle">
+                                            <h4>7/18 - Oppnevning av medlem til representantskapet for nasjonal digital l&#230;ringsarena (NDLA)</h4>
+                                        </div>
+                                    </a>
+                                    <div id="211269" class="panel"></div>
+                                </li>
+</ul>
+            </div>
+      </div>
+</section>
+
+
+
+    <aside id="about" class="meetingsDocumentSection">
+
+            <div class="meetingsDocumentDiv">
+                <div class="meetingsHeader">
+                    <h2>Dokumenter</h2>
+                </div>
+                <div class="documentDetails">
+                    <div class="filesList">
+                        <ul>
+<li class="boardLink " title="M&#248;teinnkalling Fylkestinget 05.03.2018">
+                                                <a href="/Meetings/tfk/File/Details/845680.PDF?fileName=M%C3%B8teinnkalling%20Fylkestinget%2005.03.2018&amp;fileSize=881562" onclick="TrackFileDownload('Meeting')">
+                                                    <div class="table">
+                                                        <div class="xfileIcon table-cell">
+                                                            <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
+                                                        </div>
+                                                        <div class="xfileName table-cell">
+                                                            M&#248;teinnkalling Fylkestinget 05.03.2018
+                                                        </div>
+                                                        <div class="xfileType table-cell">
+                                                            <span class="size">861KB</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+<li class="boardLink " title="Protokoll Fylkestinget 05.03.2018">
+                                                <a href="/Meetings/tfk/File/Details/849355.PDF?fileName=Protokoll%20Fylkestinget%2005.03.2018&amp;fileSize=582829" onclick="TrackFileDownload('Meeting')">
+                                                    <div class="table">
+                                                        <div class="xfileIcon table-cell">
+                                                            <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
+                                                        </div>
+                                                        <div class="xfileName table-cell">
+                                                            Protokoll Fylkestinget 05.03.2018
+                                                        </div>
+                                                        <div class="xfileType table-cell">
+                                                            <span class="size">569KB</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <div class="meetingsDetailsDiv">
+            <div class="meetingsHeader">
+                <h2>Detaljer</h2>
+            </div>
+            <div class="details">
+                <div class="detailsList">
+                    <div class="detailHeader">
+                        <span>Utvalg</span>
+                    </div>
+                    <div class="detailContent">
+                        <p>Fylkestinget</p>
+                    </div>
+                </div>
+                <div class="detailsList">
+                    <div class="detailHeader">
+                        <span>Sted</span>
+                    </div>
+                    <div class="detailContent">
+                        <p></p>
+                    </div>
+                </div>
+
+                <div class="detailsList">
+                    <div class="detailHeader">
+                            <span>Dato</span>
+                    </div>
+                    <div class="detailContent">
+                        <p>05.03.2018</p>
+                    </div>
+                </div>
+                <div class="detailsList">
+                    <div class="detailHeader">
+                        <span>Status</span>
+                    </div>
+                    <div class="detailContent">
+                        <p>Offentlig</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+                <div class="bannerImage">
+                        <img src="/Areas/Meetings/Content/Images/meetings-bg.jpg" alt="Omr&#229;debanner" />
+                </div>
+
+                <footer class="footer">
+                    <p>
+&nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+     </div>
 </body>
 </html>

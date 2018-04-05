@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
     <title>
              Politiske m&#248;ter
     </title>
-    <link href="/Meetings/Content/css?v=pYolvphgQ11zrCWqUYwk1l5zDGJttCEydoVoTN_YJEY1" rel="stylesheet"/>
+    <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    <link href="/Content/carouselCSS?v=eLLEJaK5BL_OmYuDCDiKZWlTfgS30WEnDkYbZT9-TL41" rel="stylesheet"/>
-
-            <style type="text/css">
+    
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+        <style type="text/css">
             a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
             {
-                color:#e51400;
+                color:#58595b;
             }
             .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
             {
-                background-color:#e51400;
+                background-color:#58595b;
             }
             .calendar .currentMonth
             {
-                background:#e51400 !important;
+                background:#58595b !important;
             }
             #boards.SideBarItem a:hover, .tabs a:hover
-            {    
-                border-bottom-color: #e51400;
+            {   
+                border-bottom-color: #58595b;
             }
             .highlightTabs
             {
-                border-bottom-color: #e51400 !important;
+                border-bottom-color: #58595b !important;
             }
         </style>
     <script src="/Scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
@@ -41,10 +43,10 @@
 
         <script type="text/javascript">
 
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-37639147-1']);
-            _gaq.push(['_gat._anonymizeIp']);
-            _gaq.push(['_set', 'title', 'AllBoards']); // override page title
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37639147-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_set', 'title', 'AllBoards']); // override page title
             _gaq.push(['_trackPageview']);
 
             (function () {
@@ -69,612 +71,704 @@
                 GaTrackEventWithLabel('Tile', 'Click', value);
             }
 
-            function THBLC(type) {
-                GaTrackEvent('Home.BoardsList', 'ItemClick');
-            }
+    function THBLC(type) {
+        GaTrackEvent('Home.BoardsList', 'ItemClick');
+    }
 
-            function THMC(type) {
-                GaTrackEvent('Home.MeetingsList', 'ItemClick');
-            }
+    function THMC(type) {
+        GaTrackEvent('Home.MeetingsList', 'ItemClick');
+    }
 
-            function TMVCC(type) {
-                GaTrackEvent('Home.MostViewedCases', 'ItemClick');
-            }
+    function TMVCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'ItemClick');
+    }
 
-            function THLMCC(type) {
-                GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
-            }
+    function THLMCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
+    }
 
-            function THLWCC(type) {
-                GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
-            }
+    function THLWCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
+    }
 
-            function THMMFC(value) {
-                GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
-            }
+    function THMMFC(value) {
+        GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
+    }
 
-        </script>
+      </script>
     <script type="text/javascript">
 
-        function TrackFileDownload(type) {
-            if (typeof (TFD) != "undefined")
-                TFD(type);
-        }
+    function TrackFileDownload(type) {
+        if (typeof (TFD) != "undefined")
+            TFD(type);
+    }
 
-        function TrackTileClick(value) {
-            if (typeof (TTC) != "undefined")
-                TTC(value);
-        }
+    function TrackTileClick(value) {
+        if (typeof (TTC) != "undefined")
+            TTC(value);
+    }
 
-        function TrackHomeMeetingsLinkClick(type) {
-            if (typeof (THMC) != "undefined")
-                THMC(type);
-        }
+    function TrackHomeMeetingsLinkClick(type) {
+        if (typeof (THMC) != "undefined")
+            THMC(type);
+    }
 
-        function TrackMostViewedCasesClick(type) {
-            if (typeof (TMVCC) != "undefined")
-                TMVCC(type);
-        }
+    function TrackMostViewedCasesClick(type) {
+        if (typeof (TMVCC) != "undefined")
+            TMVCC(type);
+    }
 
-        function TrackHomeBoardLinkClick(type) {
-            if (typeof (THBLC) != "undefined")
-                THBLC(type);
-        }
-
-        //
-        function TrackRecentAgendasLastMonthClick(type) {
-            if (typeof (THLMCC) != "undefined")
-                THLMCC(type);
-        }
+    function TrackHomeBoardLinkClick(type) {
+        if (typeof (THBLC) != "undefined")
+            THBLC(type);
+    }
 
 
-        function TrackRecentAgendasLastWeekClick(type) {
-            if (typeof (THLWCC) != "undefined")
-                THLWCC(type);
-        }
-
-        function TrackMeetingsMonthFilterClick(value) {
-            if (typeof (THMMFC) != "undefined")
-                THMMFC(value);
-        }
+    function TrackRecentAgendasLastMonthClick(type) {
+        if (typeof (THLMCC) != "undefined")
+            THLMCC(type);
+    }
 
 
+    function TrackRecentAgendasLastWeekClick(type) {
+        if (typeof (THLWCC) != "undefined")
+            THLWCC(type);
+    }
 
-        $('document').ready(function () {
-            $('.tile').on({
-                'mouseenter': function () {
-                    var top = ($(this).hasClass('rlp')) ? '275' : '180';
-                    $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-                },
-                'mouseleave': function () {
-                    var top = ($(this).hasClass('rlp')) ? '66' : '0';
-                    $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-                }
-            });
+    function TrackMeetingsMonthFilterClick(value) {
+        if (typeof (THMMFC) != "undefined")
+            THMMFC(value);
+    }
 
-            $('.pretty_date').each(function (index, element) {
-                $(element).html(prettyDate($(element).html()));
-            });
 
-            attachAnimations('.tilepost');
+
+    $('document').ready(function () {
+        $('.tile').on({
+            'mouseenter': function () {
+                var top = ($(this).hasClass('rlp')) ? '275' : '180';
+                $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            },
+            'mouseleave': function () {
+                var top = ($(this).hasClass('rlp')) ? '66' : '0';
+                $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            }
         });
 
-        function attachAnimations(selector) {
-            $(selector).each(function (i) {
-                setOffAnimation($(this), i);
-            });
-        }
+        $('.pretty_date').each(function (index, element) {
+            $(element).html(prettyDate($(element).html()));
+        });
 
-        function setOffAnimation(tile, count) {
-            var top = ($(tile).hasClass('rlp')) ? '275' : '180';
-            if (count % 2 != 0) {
-                $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
+        attachAnimations('.tilepost');
+
+
+        $("#searchButton").on('click', function () {
+            var searchQuery = document.getElementById('q').value;
+            searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+            window.location.href = searchQuery;
+        });
+        $("#q").on("keydown", function (e) {
+            if (e.keyCode === 13) {
+                var searchQuery = document.getElementById('q').value;
+                searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+                window.location.href = searchQuery;
             }
+        });
+    });
+    function attachAnimations(selector) {
+        $(selector).each(function (i) {
+            setOffAnimation($(this), i);
+        });
+    }
 
-            setTimeout(function () {
-                setInterval(function () {
-                    if (tile.hasClass('viewing')) return;
-                    var top = ($(tile).hasClass('rlp')) ? '275' : '180';
-                    $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
-                    setTimeout(function () {
-                        if (tile.hasClass('viewing')) return;
-                        var top = ($(tile).hasClass('rlp')) ? '66' : '0';
-                        $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
-                    }, 5000);
-                }, 5000);
-            }, 40000 * Math.random());
+    function setOffAnimation(tile, count) {
+        var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+        if (count % 2 != 0) {
+            $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
         }
 
-        function prettyDate(date_str) {
-            var time_formats = [
-          [120, 'a minute ago', 'a minute from now'],
-          [3600, 'minutes', 60],
-          [7200, 'an hour ago', 'an hour from now'],
-          [86400, 'hours', 3600],
-          [172800, 'a day ago', 'a day from now'],
-          [604800, 'days', 86400],
-          [1209600, 'a week ago', 'a week from now'],
-          [2419200, 'weeks', 604800],
-          [4838400, 'a month ago', 'a month from now'],
-          [29030400, 'months', 2419200],
-          [58060800, 'a year ago', 'a year from now'],
-          [2903040000, 'years', 29030400]
+        setTimeout(function () {
+            setInterval(function () {
+                if (tile.hasClass('viewing')) return;
+                var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                setTimeout(function () {
+                    if (tile.hasClass('viewing')) return;
+                    var top = ($(tile).hasClass('rlp')) ? '66' : '0';
+                    $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                }, 5000);
+            }, 5000);
+        }, 40000 * Math.random());
+    }
+
+    function prettyDate(date_str) {
+        var time_formats = [
+      [120, 'a minute ago', 'a minute from now'],
+      [3600, 'minutes', 60],
+      [7200, 'an hour ago', 'an hour from now'],
+      [86400, 'hours', 3600],
+      [172800, 'a day ago', 'a day from now'],
+      [604800, 'days', 86400],
+      [1209600, 'a week ago', 'a week from now'],
+      [2419200, 'weeks', 604800],
+      [4838400, 'a month ago', 'a month from now'],
+      [29030400, 'months', 2419200],
+      [58060800, 'a year ago', 'a year from now'],
+      [2903040000, 'years', 29030400]
         ];
 
-            var seconds = (new Date - new Date(date_str)) / 1000;
-            var token = 'ago', list_choice = 1;
-            if (seconds < 0) {
-                seconds = Math.abs(seconds);
-                token = 'from now';
-                list_choice = 2;
-            }
-            var i = 0, format;
-            while (format = time_formats[i++]) {
-                if (seconds < format[0]) {
-                    if (typeof format[2] == 'string') {
-                        return format[list_choice];
-                    }
-                    else {
-                        return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
-                    }
+        var seconds = (new Date - new Date(date_str)) / 1000;
+        var token = 'ago', list_choice = 1;
+        if (seconds < 0) {
+            seconds = Math.abs(seconds);
+            token = 'from now';
+            list_choice = 2;
+        }
+        var i = 0, format;
+        while (format = time_formats[i++]) {
+            if (seconds < format[0]) {
+                if (typeof format[2] == 'string') {
+                    return format[list_choice];
+                }
+                else {
+                    return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
                 }
             }
         }
-        
+    }
+        function SetMeetingsHtml(data) {
+            $("#meetingslistDiv").html(data);
+            var instructionLabel = $(data).find('li').length;
+            if (instructionLabel !== 0) {
+                $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
+            }
+            else {
+                $("#searchResultMeeting").html("Ingen m&#248;ter funnet");
+            }
+            $('#viewMoreMeetings').css('display', 'none');
+        }
+
+        function TrackClickedMonth(url,trimresults) {
+            var selectedMonth = $("#ulMonths option:selected").val();
+            var selectedYear = $("#ulYear option:selected").val();
+            TrackMeetingsMonthFilterClick('PositionFromCurrentMonth.' + ((new Date().getMonth() + 1) - selectedMonth) * -1);
+            $.ajax({
+                url: url,
+                data: { month: selectedMonth.toString(), year: selectedYear.toString(), trimResult: trimresults},
+                cache: false,
+                type: "GET",
+                dataType: "html",
+                beforeSend: function (xhr, opts) {
+                    $("#meetingscontentLoad").addClass("contentMask");
+                },
+                complete: function () {
+                    $("#meetingscontentLoad").removeClass("contentMask");
+                },
+                success: function (data, textStatus, XMLHttpRequest) {
+                    SetMeetingsHtml(data);
+                    var instructionLabel = $(data).find('li').length;
+                    if (instructionLabel !== 0) {
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter funnet for " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $(".meetingsHeader img").css('display', 'block');
+                        $(".homePageSelectedDateString").css('display', 'block');
+                    }
+                    else {
+                        $("#instructionLabel").html("");
+                        $(".meetingsHeader img").css('display', 'none');
+                        $("#mainPageFindMeetings img").css('display', 'block');
+                        $("#mainPageLatestMeetings img").css('display', 'block');
+                        $("#mainPageBoards img").css('display', 'block');
+                    }
+                }
+            });
+        }
     </script>
 </head>
 <body>
-    <div class="container">
-        <div id="skip">
-            <a href="#content">G&#229; til hovedinnhold</a>
-        </div>
-        <div class="header">
-            <div class="siteLogo">
-
-                    <a href="/Meetings/tfk">
-                        <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Site Logo." /></a>            
-            </div>
-            <div class="siteTitle">Politiske m&#248;ter</div>
-            <div class="search">
-                <form name="searchForm" action="/Meetings/tfk/AgendaItems/Search" method="get">
-                <label title="Search" class="uihide" for="q">
-                    Search</label>
-                <input id="q" name="q" type="text" tabindex="1" value="S&#248;k" onfocus="value=''" size="20"  />
-                
-                <input title="Submit" type="submit" value="SearchButton" id="SearchButton" class="button"
-                    style="display: none;" />
-                <a title="Submit" href="javascript:this.document.forms[0].submit()">
-                    <img src="/Content/Images/search-icon.png" alt="Search" class="searchImage" /></a>
-                </form>
-            </div>
-            <div class="tabs">
-<a href="/Meetings/tfk">Hjem</a>
-<a href="/Meetings/tfk/Boards">Utvalg</a>
-                <div class="fontSize">
-                </div>
-            </div>
-        </div>
-        <h1>
-   
-        alle Utvalg
-</h1>
-            <div class="twoColumns">
-                <div id="content" class="content">
+    <div id="loader"></div>
+    <div class="">
                     
-<script type="text/javascript">
-    $(function () {
-        $(".tabs a:first-child").next().addClass("highlightTabs");
-    });
-</script>
-<ul>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217642">Administrasjonsutvalet</a>
-            </h2>
-            <p>
-                (01.10.2015 - 11.11.2015)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200151">Administrasjonsutvalet 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/209335">Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/236944">Fellesnemnda</a>
-            </h2>
-            <p>
-                (01.01.2018 - 31.12.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200173">Forhandlingsutvalet</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/220291">Forhandlingsutvalet </a>
-            </h2>
-            <p>
-                (15.10.2015 - 15.10.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217345">Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne</a>
-            </h2>
-            <p>
-                (01.01.2016 - 31.12.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200178">Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 31.12.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/216162">Fylkestinget</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200145">Fylkestinget 2011 - 2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/216167">Fylkesutvalet</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200147">Fylkesutvalet 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/228300">Fylkesvalstyret</a>
-            </h2>
-            <p>
-                (30.09.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/209066">Fylkesvalstyret 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/225118">Fylkets Trafikksikkerhetsutval</a>
-            </h2>
-            <p>
-                (01.01.2016 - 31.12.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/218688">Hovudutval for administrasjonssaker</a>
-            </h2>
-            <p>
-                (27.10.2015 - 15.10.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217336">Hovudutval for kompetanse </a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200146">Hovudutval for kompetanse 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200148">Hovudutval for kultur 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217339">Hovudutval for kultur, idrett og folkehelse </a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217335">Hovudutval for n&#230;ringsutvikling</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200144">Hovudutval for n&#230;ringsutvikling 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217337">Hovudutval for samferdsel</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200149">Hovudutval for samferdsel 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200150">Klagenemnda for skolesaker 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/236946">Partssammensatt utvalg</a>
-            </h2>
-            <p>
-                (01.01.2018 - 31.12.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217344">Telemark fylkeskommunale eldrer&#229;d</a>
-            </h2>
-            <p>
-                (01.01.2016 - 31.12.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200177">Telemark fylkeskommunale eldrer&#229;d 2011-2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 31.12.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217338">Telemark fylkeskommunale klagenemnd</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200175">Telemark fylkeskommunale klagenemnd 2011 - 2015</a>
-            </h2>
-            <p>
-                (01.10.2011 - 30.09.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217341">Telemark fylkeskommunale klagenemnda for skolesaker</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/208883">Telemark interkommunale n&#230;ringsfond</a>
-            </h2>
-            <p>
-                (01.01.2014 - 01.10.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/222101">Telemark interkommunale n&#230;ringsfond</a>
-            </h2>
-            <p>
-                (30.12.2015 - 01.10.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217261">Telemark kontrollutval</a>
-            </h2>
-            <p>
-                (01.10.2015 - 30.09.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/231335">Telemark ungdomsr&#229;d - styre</a>
-            </h2>
-            <p>
-                (04.03.2017 - 08.03.2019)</p>
-            <p>
-                
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/217342">Yrkesoppl&#230;ringsnemnda </a>
-            </h2>
-            <p>
-                (01.01.2016 - 31.12.2019)</p>
-            <p>
-                 
-            </p>
-        </li>
-        <li>
-            <h2>
-                <a href="/Meetings/tfk/Boards/Details/200176">Yrkesoppl&#230;ringsnemnda 2012 - 2015</a>
-            </h2>
-            <p>
-                (01.01.2012 - 31.12.2015)</p>
-            <p>
-                
-            </p>
-        </li>
-</ul>
+        <div class="headerSection" style="background-color: #fff">
+            <div class="containerFluid">
+                <header class="header">
+                    <div class="siteLogo">
 
-                </div>
-                <div class="sidebar">
-                    
-    <div id="yearFilter" class="SideBarItem">
-        <h3>
-            etter &#229;r</h3>
-        <ul>
-                <li><a href="/Meetings/tfk/Boards?Year=2019" title="etter år 2019.">2019</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2018" title="etter år 2018.">2018</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2017" title="etter år 2017.">2017</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2016" title="etter år 2016.">2016</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2015" title="etter år 2015.">2015</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2014" title="etter år 2014.">2014</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2012" title="etter år 2012.">2012</a>
-                </li> 
-                <li><a href="/Meetings/tfk/Boards?Year=2011" title="etter år 2011.">2011</a>
-                </li> 
-        </ul>
+                            <a href="/Meetings/tfk">
+                                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Hjem" />
+                            </a>
+                    </div>
+                    <div class="siteTitle">
+                        <h1>Politiske m&#248;ter</h1>
+                    </div>
+                    <div class="siteSearch">
+                        <div class="searchForm">
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-label="S&#248;k">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            </div>
+        <div class="containerFluid">
+            <div class="mainContainer">
+                    <div class="breadcrumb">
+                        <ul>
+                                <li> <a href="/Meetings/tfk">Hjem</a></li>
+                                <li> ></li>
+                                <li> Alle utvalg</li>
+                            <li>
+                        </ul>
+                    </div>
+
+
+<div class="goBackSection viewMorePage">
+    <div class="goBackButton">
+        <button onclick="window.location.href = '/Meetings/tfk'">
+            <div class="buttonImage">
+                <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
+            </div>
+            <div class="buttonLink">	<span aria-hidden="true"> G&#229; til startsiden </span> </div>
+        </button>
     </div>
-
-                </div>
+    <div class="meetingTitle">
+        <div class="meetingsHeaderSec">
+            <div class="meetingTitleIcon">
+                <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
             </div>
-        <div class="footer">
-            <div class="footerLogo">
-                    <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Footer%20Icon.jpg" alt="Site Footer Logo." width="28" height="28" />
-                <p>
+            <div class="meetingTitleHeader">
+                <h2>Alle utvalg</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<aside class="searchPageDropDownContainerSection">
+    <div class="searchPageDropDownContainer" id="filter">
+        <div class="meetingsHeaderSection">
+            <div class="meetingsHeader">
+                <h2>Filtrer s&#248;keresultater</h2>
+            </div>
+        </div>
+        <div class="dropdownSection">
+            <div class="selectBoard">
+                <label class="instructionLabel" for="boardsFilter">Velg &#229;r</label>
+                <select class="dropdown" onchange="FilterBoardsByYear('/Meetings/tfk/Boards')" id="boardsFilter" tabindex="0">
+                    <option value="all">Alle</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</aside>
+
+
+<section class="meetingsSection meetingsSearch">
+    <div class="findMeetings findMeetingsSearchPage viewMoreBoards">
+        <div class="meetingsHeader">
+            <img class="images" src="/Areas/Meetings/Content/Images/Search-button.png" alt="">
+            <h2>Fant 37 Utvalg </h2>
+        </div>
+        <div class="boardList">
+            <ul>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217642">
+                        <div class="boardName">
+                            <h3>Administrasjonsutvalet</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200151">
+                        <div class="boardName">
+                            <h3>Administrasjonsutvalet 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/209335">
+                        <div class="boardName">
+                            <h3>Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/236944">
+                        <div class="boardName">
+                            <h3>Fellesnemnda</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2018 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200173">
+                        <div class="boardName">
+                            <h3>Forhandlingsutvalet</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/220291">
+                        <div class="boardName">
+                            <h3>Forhandlingsutvalet </h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217345">
+                        <div class="boardName">
+                            <h3>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2016 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200178">
+                        <div class="boardName">
+                            <h3>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/216162">
+                        <div class="boardName">
+                            <h3>Fylkestinget</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200145">
+                        <div class="boardName">
+                            <h3>Fylkestinget 2011 - 2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/216167">
+                        <div class="boardName">
+                            <h3>Fylkesutvalet</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200147">
+                        <div class="boardName">
+                            <h3>Fylkesutvalet 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/228300">
+                        <div class="boardName">
+                            <h3>Fylkesvalstyret</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/209066">
+                        <div class="boardName">
+                            <h3>Fylkesvalstyret 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/225118">
+                        <div class="boardName">
+                            <h3>Fylkets Trafikksikkerhetsutval</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2016 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/218688">
+                        <div class="boardName">
+                            <h3>Hovudutval for administrasjonssaker</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217336">
+                        <div class="boardName">
+                            <h3>Hovudutval for kompetanse </h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200146">
+                        <div class="boardName">
+                            <h3>Hovudutval for kompetanse 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200148">
+                        <div class="boardName">
+                            <h3>Hovudutval for kultur 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217339">
+                        <div class="boardName">
+                            <h3>Hovudutval for kultur, idrett og folkehelse </h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217335">
+                        <div class="boardName">
+                            <h3>Hovudutval for n&#230;ringsutvikling</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200144">
+                        <div class="boardName">
+                            <h3>Hovudutval for n&#230;ringsutvikling 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217337">
+                        <div class="boardName">
+                            <h3>Hovudutval for samferdsel</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200149">
+                        <div class="boardName">
+                            <h3>Hovudutval for samferdsel 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200150">
+                        <div class="boardName">
+                            <h3>Klagenemnda for skolesaker 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/236946">
+                        <div class="boardName">
+                            <h3>Partssammensatt utvalg</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2018 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217344">
+                        <div class="boardName">
+                            <h3>Telemark fylkeskommunale eldrer&#229;d</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2016 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200177">
+                        <div class="boardName">
+                            <h3>Telemark fylkeskommunale eldrer&#229;d 2011-2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217338">
+                        <div class="boardName">
+                            <h3>Telemark fylkeskommunale klagenemnd</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200175">
+                        <div class="boardName">
+                            <h3>Telemark fylkeskommunale klagenemnd 2011 - 2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2011 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217341">
+                        <div class="boardName">
+                            <h3>Telemark fylkeskommunale klagenemnda for skolesaker</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/208883">
+                        <div class="boardName">
+                            <h3>Telemark interkommunale n&#230;ringsfond</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2014 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/222101">
+                        <div class="boardName">
+                            <h3>Telemark interkommunale n&#230;ringsfond</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217261">
+                        <div class="boardName">
+                            <h3>Telemark kontrollutval</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2015 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/231335">
+                        <div class="boardName">
+                            <h3>Telemark ungdomsr&#229;d - styre</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2017 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/217342">
+                        <div class="boardName">
+                            <h3>Yrkesoppl&#230;ringsnemnda </h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2016 - 2019</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="boardLink">
+                    <a href="/Meetings/tfk/Boards/Details/200176">
+                        <div class="boardName">
+                            <h3>Yrkesoppl&#230;ringsnemnda 2012 - 2015</h3>
+                        </div>
+                        <div class="boardPeriod">
+                            <span>2012 - 2015</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+                <div class="bannerImage">
+                        <img src="/Areas/Meetings/Content/Images/meetings-bg.jpg" alt="Omr&#229;debanner" />
+                </div>
+
+                <footer class="footer">
+                    <p>
 &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
-                </p>
+                    </p>
+                </footer>
             </div>
         </div>
-    </div>
+     </div>
 </body>
 </html>

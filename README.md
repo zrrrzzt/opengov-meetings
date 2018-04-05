@@ -6,9 +6,11 @@
 
 A Node.js module for connecting to the [360 OpenGov Meetings](https://campaigns.tieto.com/nb/360#public) solution from [Tieto](https://www.tieto.no).
 
-This API is based on screenscraping and far from rock solid.
+This API is based on screenscraping and far from rock solid. 
 
 It is however the best solution I've found so far to integrate 360 OpenGov Meetings with other systems.
+
+This module supports the newest version of OpenGov. For previous versions stick to `v4.1.1`.
 
 ## Installation
 
@@ -31,13 +33,13 @@ Every call returns error or a data object
 List all boards.
 
 ```JavaScript
-const ogm = require('opengov-meetings')
+const { getBoards } = require('opengov-meetings')
 const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk'
 }
 
-ogm.getBoards(options)
+getBoards(options)
 .then(console.log)
 .catch(console.error)
 ```
@@ -49,7 +51,7 @@ List all meetings for a given board
 **boardId** id for the board
 
 ```JavaScript
-const ogm = require('opengov-meetings')
+const { getMeetings } = require('opengov-meetings')
 const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
@@ -57,7 +59,7 @@ const options = {
   year: 2015
 }
 
-ogm.getMeetings(options)
+getMeetings(options)
 .then(console.log)
 .catch(console.error)
 ```
@@ -69,14 +71,14 @@ List agenda for a given meeting.
 **meetingId** id for the meeting
 
 ```JavaScript
-const ogm = require('opengov-meetings')
+const { getAgenda } = require('opengov-meetings')
 const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
   meetingId: '203235'
 }
 
-ogm.getAgenda(options)
+getAgenda(options)
 .then(console.log)
 .catch(console.error)
 ```
@@ -88,14 +90,14 @@ Get details and documents for a given agendaItem
 **agendaId** id for the item
 
 ```JavaScript
-const ogm = require('opengov-meetings')
+const { getDetails } = require('opengov-meetings')
 const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
   agendaId: '200262'
 }
 
-ogm.getDetails(options)
+getDetails(options)
 .then(console.log)
 .catch(console.error)
 ```

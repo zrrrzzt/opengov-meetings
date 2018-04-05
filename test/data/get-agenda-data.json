@@ -1,55 +1,65 @@
 {
   "details": {
-    "board": "Administrasjonsutvalet 2011-2015",
+    "board": "Fylkestinget",
     "place": "",
-    "date": "10.11.2014",
+    "date": "05.03.2018",
     "status": "Offentlig"
   },
   "documents": [
     {
-      "fileUrl": "/Meetings/tfk/File/Details/208934.PDF?fileName=Protokoll%20Administrasjonsutvalet%2010.11.2014&fileSize=843579",
-      "title": "Protokoll Administrasjonsutvalet 10.11.2014"
+      "fileUrl": "/Meetings/tfk/File/Details/845680.PDF?fileName=M%C3%B8teinnkalling%20Fylkestinget%2005.03.2018&fileSize=881562",
+      "title": "Møteinnkalling Fylkestinget 05.03.2018"
     },
     {
-      "fileUrl": "/Meetings/tfk/File/Details/206329.PDF?fileName=M%C3%B8teinnkalling%20Administrasjonsutvalet%2010.11.2014&fileSize=1371817",
-      "title": "Møteinnkalling Administrasjonsutvalet 10.11.2014"
+      "fileUrl": "/Meetings/tfk/File/Details/849355.PDF?fileName=Protokoll%20Fylkestinget%2005.03.2018&fileSize=582829",
+      "title": "Protokoll Fylkestinget 05.03.2018"
     }
   ],
   "agenda": [
     {
-      "agendanumber": "8/14",
-      "title": "Mål- og budsjettdokument 2015-2018",
-      "id": "200267"
+      "agendanumber": "1/18",
+      "title": "Møteinnkalling Fylkestinget 05.03.2018",
+      "id": "211242"
     },
     {
-      "agendanumber": "9/14",
-      "title": "Disponering av unytta lønsmidlar knytt til streiken hausten 2014",
-      "id": "200264"
+      "agendanumber": "1/18",
+      "title": "Godkjenning - Møteprotokoll fylkestinget 6.-7. 12. 2017",
+      "id": "211191"
     },
     {
-      "agendanumber": "10/14",
-      "title": "Oppdragsverksemd ved dei vidaregåande skulane i Telemark",
-      "id": "200263"
+      "agendanumber": "1/18",
+      "title": "Ny Skien videregående skole utgreiing om Inventar",
+      "id": "211236"
     },
     {
-      "agendanumber": "11/14",
-      "title": "Fritt skuleval",
-      "id": "200265"
+      "agendanumber": "2/18",
+      "title": "Høring -  Regionreformen. Rapport fra ekspertutvalg",
+      "id": "211237"
     },
     {
-      "agendanumber": "12/14",
-      "title": "Skuletilbodet 2015-2016",
-      "id": "200266"
+      "agendanumber": "3/18",
+      "title": "Reglement for fellesnemnda mv.",
+      "id": "211238"
     },
     {
-      "agendanumber": "13/14",
-      "title": "Administrasjonsutvalet - møteplan 2015",
-      "id": "200268"
+      "agendanumber": "4/18",
+      "title": "Godtgjering for medlemmene i fellesnemnda mv.",
+      "id": "211239"
     },
     {
-      "agendanumber": "14/14",
-      "title": "Eventuelt - Administrasjonsutvalet 10.11.2014",
-      "id": "200262"
+      "agendanumber": "5/18",
+      "title": "Søknad om permisjon - Knut Morten Johansen",
+      "id": "211240"
+    },
+    {
+      "agendanumber": "6/18",
+      "title": "Gea Norvegica Geopark IKS – revidert selskapsavtale",
+      "id": "211268"
+    },
+    {
+      "agendanumber": "7/18",
+      "title": "Oppnevning av medlem til representantskapet for nasjonal digital læringsarena (NDLA)",
+      "id": "211269"
     }
   ]
 }

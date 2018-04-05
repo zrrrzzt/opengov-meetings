@@ -1,332 +1,1329 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
     <title>
-        Politiske m&#248;ter
+             Politiske m&#248;ter
     </title>
-    <link href="/Meetings/Content/css?v=03z2eu_fy0WNC_ujLXKhgb7lpOViX7noGzQEhd5Pvas1" rel="stylesheet"/>
+    <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    <link href="/Content/carouselCSS?v=eLLEJaK5BL_OmYuDCDiKZWlTfgS30WEnDkYbZT9-TL41" rel="stylesheet"/>
-
-    <style type="text/css">
-        a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
-        {
-            color:#e51400;
-        }
-        .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
-        {
-            background-color:#e51400;
-        }
-        .calendar .currentMonth
-        {
-            background:#e51400 !important;
-        }
-        #boards.SideBarItem a:hover, .tabs a:hover
-        {
-            border-bottom-color: #e51400;
-        }
-        .highlightTabs
-        {
-            border-bottom-color: #e51400 !important;
-        }
-    </style>
+    
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+        <style type="text/css">
+            a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
+            {
+                color:#58595b;
+            }
+            .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
+            {
+                background-color:#58595b;
+            }
+            .calendar .currentMonth
+            {
+                background:#58595b !important;
+            }
+            #boards.SideBarItem a:hover, .tabs a:hover
+            {   
+                border-bottom-color: #58595b;
+            }
+            .highlightTabs
+            {
+                border-bottom-color: #58595b !important;
+            }
+        </style>
     <script src="/Scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
 
     <script src="/Scripts/jqueryals?v=-qnb2jmETXGPoNwb4NLwYURDCRw_MqIEAg1D5z0FDSE1"></script>
 
     <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
 
+        <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37639147-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_set', 'title', 'Fylkestinget']); // override page title
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            function GaTrackEvent(category, value) {
+                _gaq.push(['_trackEvent', category, value]);
+            }
+
+            function GaTrackEventWithLabel(category, value, label) {
+                _gaq.push(['_trackEvent', category, value, label]);
+            }
+
+            function TFD(type) {
+                GaTrackEvent('FileDownload', type);
+            }
+
+            function TTC(value) {
+                GaTrackEventWithLabel('Tile', 'Click', value);
+            }
+
+    function THBLC(type) {
+        GaTrackEvent('Home.BoardsList', 'ItemClick');
+    }
+
+    function THMC(type) {
+        GaTrackEvent('Home.MeetingsList', 'ItemClick');
+    }
+
+    function TMVCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'ItemClick');
+    }
+
+    function THLMCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
+    }
+
+    function THLWCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
+    }
+
+    function THMMFC(value) {
+        GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
+    }
+
+      </script>
     <script type="text/javascript">
 
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-37639147-1']);
-        _gaq.push(['_gat._anonymizeIp']);
-        _gaq.push(['_set', 'title', 'Administrasjonsutvalet 2011-2015']); // override page title
-        _gaq.push(['_trackPageview']);
+    function TrackFileDownload(type) {
+        if (typeof (TFD) != "undefined")
+            TFD(type);
+    }
 
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+    function TrackTileClick(value) {
+        if (typeof (TTC) != "undefined")
+            TTC(value);
+    }
 
-        function GaTrackEvent(category, value) {
-            _gaq.push(['_trackEvent', category, value]);
-        }
+    function TrackHomeMeetingsLinkClick(type) {
+        if (typeof (THMC) != "undefined")
+            THMC(type);
+    }
 
-        function GaTrackEventWithLabel(category, value, label) {
-            _gaq.push(['_trackEvent', category, value, label]);
-        }
+    function TrackMostViewedCasesClick(type) {
+        if (typeof (TMVCC) != "undefined")
+            TMVCC(type);
+    }
 
-        function TFD(type) {
-            GaTrackEvent('FileDownload', type);
-        }
-
-        function TTC(value) {
-            GaTrackEventWithLabel('Tile', 'Click', value);
-        }
-
-        function THBLC(type) {
-            GaTrackEvent('Home.BoardsList', 'ItemClick');
-        }
-
-        function THMC(type) {
-            GaTrackEvent('Home.MeetingsList', 'ItemClick');
-        }
-
-        function TMVCC(type) {
-            GaTrackEvent('Home.MostViewedCases', 'ItemClick');
-        }
-
-        function THLMCC(type) {
-            GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
-        }
-
-        function THLWCC(type) {
-            GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
-        }
-
-        function THMMFC(value) {
-            GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
-        }
-
-    </script>
-    <script type="text/javascript">
-
-        function TrackFileDownload(type) {
-            if (typeof (TFD) != "undefined")
-                TFD(type);
-        }
-
-        function TrackTileClick(value) {
-            if (typeof (TTC) != "undefined")
-                TTC(value);
-        }
-
-        function TrackHomeMeetingsLinkClick(type) {
-            if (typeof (THMC) != "undefined")
-                THMC(type);
-        }
-
-        function TrackMostViewedCasesClick(type) {
-            if (typeof (TMVCC) != "undefined")
-                TMVCC(type);
-        }
-
-        function TrackHomeBoardLinkClick(type) {
-            if (typeof (THBLC) != "undefined")
-                THBLC(type);
-        }
-
-        //
-        function TrackRecentAgendasLastMonthClick(type) {
-            if (typeof (THLMCC) != "undefined")
-                THLMCC(type);
-        }
+    function TrackHomeBoardLinkClick(type) {
+        if (typeof (THBLC) != "undefined")
+            THBLC(type);
+    }
 
 
-        function TrackRecentAgendasLastWeekClick(type) {
-            if (typeof (THLWCC) != "undefined")
-                THLWCC(type);
-        }
+    function TrackRecentAgendasLastMonthClick(type) {
+        if (typeof (THLMCC) != "undefined")
+            THLMCC(type);
+    }
 
-        function TrackMeetingsMonthFilterClick(value) {
-            if (typeof (THMMFC) != "undefined")
-                THMMFC(value);
-        }
+
+    function TrackRecentAgendasLastWeekClick(type) {
+        if (typeof (THLWCC) != "undefined")
+            THLWCC(type);
+    }
+
+    function TrackMeetingsMonthFilterClick(value) {
+        if (typeof (THMMFC) != "undefined")
+            THMMFC(value);
+    }
 
 
 
-        $('document').ready(function () {
-            $('.tile').on({
-                'mouseenter': function () {
-                    var top = ($(this).hasClass('rlp')) ? '275' : '180';
-                    $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-                },
-                'mouseleave': function () {
-                    var top = ($(this).hasClass('rlp')) ? '66' : '0';
-                    $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
-                }
-            });
-
-            $('.pretty_date').each(function (index, element) {
-                $(element).html(prettyDate($(element).html()));
-            });
-
-            attachAnimations('.tilepost');
+    $('document').ready(function () {
+        $('.tile').on({
+            'mouseenter': function () {
+                var top = ($(this).hasClass('rlp')) ? '275' : '180';
+                $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            },
+            'mouseleave': function () {
+                var top = ($(this).hasClass('rlp')) ? '66' : '0';
+                $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            }
         });
 
-        function attachAnimations(selector) {
-            $(selector).each(function (i) {
-                setOffAnimation($(this), i);
-            });
+        $('.pretty_date').each(function (index, element) {
+            $(element).html(prettyDate($(element).html()));
+        });
+
+        attachAnimations('.tilepost');
+
+
+        $("#searchButton").on('click', function () {
+            var searchQuery = document.getElementById('q').value;
+            searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+            window.location.href = searchQuery;
+        });
+        $("#q").on("keydown", function (e) {
+            if (e.keyCode === 13) {
+                var searchQuery = document.getElementById('q').value;
+                searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+                window.location.href = searchQuery;
+            }
+        });
+    });
+    function attachAnimations(selector) {
+        $(selector).each(function (i) {
+            setOffAnimation($(this), i);
+        });
+    }
+
+    function setOffAnimation(tile, count) {
+        var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+        if (count % 2 != 0) {
+            $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
         }
 
-        function setOffAnimation(tile, count) {
-            var top = ($(tile).hasClass('rlp')) ? '275' : '180';
-            if (count % 2 != 0) {
-                $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
-            }
-
-            setTimeout(function () {
-                setInterval(function () {
+        setTimeout(function () {
+            setInterval(function () {
+                if (tile.hasClass('viewing')) return;
+                var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                setTimeout(function () {
                     if (tile.hasClass('viewing')) return;
-                    var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                    var top = ($(tile).hasClass('rlp')) ? '66' : '0';
                     $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
-                    setTimeout(function () {
-                        if (tile.hasClass('viewing')) return;
-                        var top = ($(tile).hasClass('rlp')) ? '66' : '0';
-                        $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
-                    }, 5000);
                 }, 5000);
-            }, 40000 * Math.random());
+            }, 5000);
+        }, 40000 * Math.random());
+    }
+
+    function prettyDate(date_str) {
+        var time_formats = [
+      [120, 'a minute ago', 'a minute from now'],
+      [3600, 'minutes', 60],
+      [7200, 'an hour ago', 'an hour from now'],
+      [86400, 'hours', 3600],
+      [172800, 'a day ago', 'a day from now'],
+      [604800, 'days', 86400],
+      [1209600, 'a week ago', 'a week from now'],
+      [2419200, 'weeks', 604800],
+      [4838400, 'a month ago', 'a month from now'],
+      [29030400, 'months', 2419200],
+      [58060800, 'a year ago', 'a year from now'],
+      [2903040000, 'years', 29030400]
+        ];
+
+        var seconds = (new Date - new Date(date_str)) / 1000;
+        var token = 'ago', list_choice = 1;
+        if (seconds < 0) {
+            seconds = Math.abs(seconds);
+            token = 'from now';
+            list_choice = 2;
         }
-
-        function prettyDate(date_str) {
-            var time_formats = [
-                [120, 'a minute ago', 'a minute from now'],
-                [3600, 'minutes', 60],
-                [7200, 'an hour ago', 'an hour from now'],
-                [86400, 'hours', 3600],
-                [172800, 'a day ago', 'a day from now'],
-                [604800, 'days', 86400],
-                [1209600, 'a week ago', 'a week from now'],
-                [2419200, 'weeks', 604800],
-                [4838400, 'a month ago', 'a month from now'],
-                [29030400, 'months', 2419200],
-                [58060800, 'a year ago', 'a year from now'],
-                [2903040000, 'years', 29030400]
-            ];
-
-            var seconds = (new Date - new Date(date_str)) / 1000;
-            var token = 'ago', list_choice = 1;
-            if (seconds < 0) {
-                seconds = Math.abs(seconds);
-                token = 'from now';
-                list_choice = 2;
-            }
-            var i = 0, format;
-            while (format = time_formats[i++]) {
-                if (seconds < format[0]) {
-                    if (typeof format[2] == 'string') {
-                        return format[list_choice];
-                    }
-                    else {
-                        return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
-                    }
+        var i = 0, format;
+        while (format = time_formats[i++]) {
+            if (seconds < format[0]) {
+                if (typeof format[2] == 'string') {
+                    return format[list_choice];
+                }
+                else {
+                    return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
                 }
             }
         }
+    }
+        function SetMeetingsHtml(data) {
+            $("#meetingslistDiv").html(data);
+            var instructionLabel = $(data).find('li').length;
+            if (instructionLabel !== 0) {
+                $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
+            }
+            else {
+                $("#searchResultMeeting").html("Ingen m&#248;ter funnet");
+            }
+            $('#viewMoreMeetings').css('display', 'none');
+        }
 
+        function TrackClickedMonth(url,trimresults) {
+            var selectedMonth = $("#ulMonths option:selected").val();
+            var selectedYear = $("#ulYear option:selected").val();
+            TrackMeetingsMonthFilterClick('PositionFromCurrentMonth.' + ((new Date().getMonth() + 1) - selectedMonth) * -1);
+            $.ajax({
+                url: url,
+                data: { month: selectedMonth.toString(), year: selectedYear.toString(), trimResult: trimresults},
+                cache: false,
+                type: "GET",
+                dataType: "html",
+                beforeSend: function (xhr, opts) {
+                    $("#meetingscontentLoad").addClass("contentMask");
+                },
+                complete: function () {
+                    $("#meetingscontentLoad").removeClass("contentMask");
+                },
+                success: function (data, textStatus, XMLHttpRequest) {
+                    SetMeetingsHtml(data);
+                    var instructionLabel = $(data).find('li').length;
+                    if (instructionLabel !== 0) {
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter funnet for " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $(".meetingsHeader img").css('display', 'block');
+                        $(".homePageSelectedDateString").css('display', 'block');
+                    }
+                    else {
+                        $("#instructionLabel").html("");
+                        $(".meetingsHeader img").css('display', 'none');
+                        $("#mainPageFindMeetings img").css('display', 'block');
+                        $("#mainPageLatestMeetings img").css('display', 'block');
+                        $("#mainPageBoards img").css('display', 'block');
+                    }
+                }
+            });
+        }
     </script>
 </head>
 <body>
-<div class="container">
-    <div id="skip">
-        <a href="#content">G&#229; til hovedinnhold</a>
-    </div>
-    <div class="header">
-        <div class="siteLogo">
+    <div id="loader"></div>
+    <div class="">
+                    
+        <div class="headerSection" style="background-color: #fff">
+            <div class="containerFluid">
+                <header class="header">
+                    <div class="siteLogo">
 
-            <a href="/Meetings/tfk">
-                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Site Logo." /></a>
-        </div>
-        <div class="siteTitle">Politiske m&#248;ter</div>
-        <div class="search">
-            <form name="searchForm" action="/Meetings/tfk/AgendaItems/Search" method="get">
-                <label title="Search" class="uihide" for="q">
-                    Search</label>
-                <input id="q" name="q" type="text" tabindex="1" value="S&#248;k" onfocus="value=''" size="20"  />
-
-                <input title="Submit" type="submit" value="SearchButton" id="SearchButton" class="button"
-                       style="display: none;" />
-                <a title="Submit" href="javascript:this.document.forms[0].submit()">
-                    <img src="/Content/Images/search-icon.png" alt="Search" class="searchImage" /></a>
-            </form>
-        </div>
-        <div class="tabs">
-            <a href="/Meetings/tfk">Hjem</a>
-            <a href="/Meetings/tfk/Boards">Utvalg</a>
-            <div class="fontSize">
-            </div>
-        </div>
-    </div>
-    <h1>
-        Administrasjonsutvalet 2011-2015
-    </h1>
-    <div class="twoColumns">
-        <div id="content" class="content">
-
-
-
-
-            <div class="calendarContainer">
-                <div class="yearDisplay">
-                    <div class="previousYear">
-                        <a href="/Meetings/tfk/Boards/Details/200151?Year=2014">Previous</a>            </div>
-                    <h2>M&#248;ter, 2015</h2>
-                    <div class="nextYear">
+                            <a href="/Meetings/tfk">
+                                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Hjem" />
+                            </a>
                     </div>
-                </div>
-                <table class="calendar">
-                    <caption style="display:none">M&#248;ter, 2015</caption>
-                    <thead>
-                    <tr>
-                        <th title="januar">jan</th>
-                        <th title="februar">feb</th>
-                        <th title="mars">mar</th>
-                        <th title="april">apr</th>
-                        <th title="mai">mai</th>
-                        <th title="juni">jun</th>
-                        <th title="juli">jul</th>
-                        <th title="august">aug</th>
-                        <th title="september">sep</th>
-                        <th title="oktober">okt</th>
-                        <th title="november">nov</th>
-                        <th title="desember">des</th>
-
-                    </tr>
-                    </thead>
-
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td><a href="/Meetings/tfk/Meetings/Details/212860" title="Offentlig">19</a></td>
-                        <td></td>
-                        <td></td>
-                        <td><a href="/Meetings/tfk/Meetings/Details/212864" title="Offentlig">8</a></td>
-                        <td></td>
-                        <td></td>
-                        <td title="Avlyst">21</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
+                    <div class="siteTitle">
+                        <h1>Politiske m&#248;ter</h1>
+                    </div>
+                    <div class="siteSearch">
+                        <div class="searchForm">
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-label="S&#248;k">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            </button>
+                        </div>
+                    </div>
+                </header>
             </div>
-
-
-        </div>
-        <div class="sidebar">
-
-            <div id="members" class="SideBarItem">
-                <h3>Medlemmer / varamedlemmer</h3>
-                <ul>
-                    <li>Elisabeth A. Nilsen<pre class="roleDescList">Arbeiderpartiet - Leder i utvalg</pre></li><li>Helle Hogner<pre class="roleDescList">Sosialistisk Venstreparti - Utvalgsmedlem</pre></li><li>Tor Erik Baksås<pre class="roleDescList">Senterpartiet - Utvalgsmedlem</pre></li><li>Gunn Marit Helgesen<pre class="roleDescList">Høyre - Utvalgsmedlem</pre></li><li>Thorleif Fluer Vikre<pre class="roleDescList">Fremskrittspartiet - Utvalgsmedlem</pre></li><li>Jorunn Tisjø<pre class="roleDescList">Utvalgsmedlem</pre></li><li>Morten Kleiv<pre class="roleDescList">Utvalgsmedlem</pre></li><li>Tom Egil Flata<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Lise Wiik<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Jørund A. Ruud<pre class="roleDescList">Arbeiderpartiet - Varamedlem i utvalg</pre></li><li>Beate Marie Dahl Eide<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Olav Seltveit Urbø<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Gunhild Lurås<pre class="roleDescList">Senterpartiet - Varamedlem i utvalg</pre></li><li>Steinar A. Miland<pre class="roleDescList">Sosialistisk Venstreparti - Varamedlem i utvalg</pre></li><li>Mari Anne Sannes<pre class="roleDescList">Sosialistisk Venstreparti - Varamedlem i utvalg</pre></li><li>Kristian Espeland<pre class="roleDescList">Kristelig Folkeparti - Varamedlem i utvalg</pre></li><li>Nina Vibeke Five<pre class="roleDescList">Høyre - Varamedlem i utvalg</pre></li><li>Jarl-Håvard Borgen<pre class="roleDescList">Høyre - Varamedlem i utvalg</pre></li><li>Gry Anette Rekanes Amundsen<pre class="roleDescList">Fremskrittspartiet - Varamedlem i utvalg</pre></li><li>Karianne Hansen<pre class="roleDescList">Fremskrittspartiet - Varamedlem i utvalg</pre></li><li>Geir Olav Tveit<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Mona Galåen<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Morten Røgeberg Cowles<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Jon Helge Bergane<pre class="roleDescList">Varamedlem i utvalg</pre></li><li>Helén Andersen<pre class="roleDescList">Møtesekretær</pre></li>        </ul>
             </div>
+        <div class="containerFluid">
+            <div class="mainContainer">
+                    <div class="breadcrumb">
+                        <ul>
+                                <li> <a href="/Meetings/tfk">Hjem</a></li>
+                                <li> ></li>
+                                <li> Fylkestinget</li>
+                            <li>
+                        </ul>
+                    </div>
 
-        </div>
+
+
+<div class="goBackSection boardsPage">
+    <div class="goBackButton">
+        <button onclick="window.location.href='/Meetings/tfk'">
+            <div class="buttonImage">
+                <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
+            </div>
+            <div class="buttonLink"><span aria-hidden="true">G&#229; til startsiden </span> </div>
+        </button>
     </div>
-    <div class="footer">
-        <div class="footerLogo">
-            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Footer%20Icon.jpg" alt="Site Footer Logo." />
-            <p>
-                &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
-            </p>
+
+    <div class="meetingTitle">
+        <div class="meetingsHeaderSec">
+            <div class="meetingTitleIcon">
+                <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
+            </div>
+            <div class="meetingTitleHeader">
+                <h2>Fylkestinget</h2>
+            </div>
         </div>
     </div>
 </div>
+
+
+<section class="meetingsSection">
+    <div class="findMeetings findMeetingsBoardsPage">
+        <div class="meetingsHeader">
+            <img class="images" src="/Areas/Meetings/Content/Images/meeting.png" alt="">
+            <h2>Finn m&#248;ter - Fylkestinget</h2>
+        </div>
+        <div class="meetingsContainer">
+            <div class="selectYear">
+                <label class="instructionLabel" for="boardsYearSelection">&#197;r</label>
+                <select class="dropdown" id="boardsYearSelection" onchange="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/216162')" tabindex="0">
+                            <option selected>2018</option>
+                            <option>2017</option>
+                            <option>2016</option>
+                            <option>2015</option>
+                </select>
+            </div>
+            <div class="selectMonth">
+                <label class="instructionLabel" for="boardsSelectionMonth">M&#229;ned</label>
+                <select class="dropdown" id="boardsSelectionMonth" onchange="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/216162')" tabindex="0">
+
+                        <option value="-1" selected>Alle</option>
+                                                        <option value="1">januar</option>
+                                    <option value="2">februar</option>
+                                    <option value="3">mars</option>
+                                    <option value="4">april</option>
+                                    <option value="5">mai</option>
+                                    <option value="6">juni</option>
+                                    <option value="7">juli</option>
+                                    <option value="8">august</option>
+                                    <option value="9">september</option>
+                                    <option value="10">oktober</option>
+                                    <option value="11">november</option>
+                                    <option value="12">desember</option>
+
+                </select>
+            </div>
+            <div class="selectedDate">
+                <p class="instructionLabel" id="instructionLabel">5 m&#248;ter funnet for  2018</p>
+            </div>
+        </div>
+            <div class="meetingList">
+                <ul>
+                                <li class="boardLink">
+                                    <a href="/Meetings/tfk/Meetings/Details/644324">
+                                        <div class="meetingName">
+                                            <h3>Fylkestinget (05.03.2018)</h3>
+                                        </div>
+                                        <div class="meetingDate">
+                                            <span>05.03.2018</span>
+                                            <span>00:00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
+                                    <div class="meetingName">
+                                        <h3>Fylkestinget (24.04.2018)</h3>
+                                    </div>
+                                    <div class="meetingDate">
+                                        <span>24.04.2018</span>
+                                        <span>Ikke publisert</span>
+                                    </div>
+                                </li>
+                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
+                                    <div class="meetingName">
+                                        <h3>Fylkestinget (05.06.2018)</h3>
+                                    </div>
+                                    <div class="meetingDate">
+                                        <span>05.06.2018</span>
+                                        <span>Ikke publisert</span>
+                                    </div>
+                                </li>
+                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
+                                    <div class="meetingName">
+                                        <h3>Fylkestinget (24.10.2018)</h3>
+                                    </div>
+                                    <div class="meetingDate">
+                                        <span>24.10.2018</span>
+                                        <span>Ikke publisert</span>
+                                    </div>
+                                </li>
+                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
+                                    <div class="meetingName">
+                                        <h3>Fylkestinget (05.12.2018)</h3>
+                                    </div>
+                                    <div class="meetingDate">
+                                        <span>05.12.2018</span>
+                                        <span>Ikke publisert</span>
+                                    </div>
+                                </li>
+                </ul>
+            </div>
+    </div>
+</section>
+
+
+    <aside class="membersSection" id="members">
+        <div class="members">
+            <div class="membersHeaderSection">
+                <div class="membersHeader">
+                    <img class="images" src="/Areas/Meetings/Content/Images/BoardRepresentatives.png" alt="">
+                    <h2>Medlemmer / varamedlemmer</h2>
+                </div>
+            </div>
+            <div class="membersList">
+                    <ul>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Sven Tore L&#248;kslid</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Fylkesordf&#248;rer</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hans Edvard Askjer</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Fylkesvaraordf&#248;rer</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>&#197;dne Tobias Salomonsen Naper</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Sosialistisk Venstreparti - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Tone Berge Hansen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>J&#248;rund A. Ruud</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Maja Foss Five</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Vidar Stang</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Elisabeth Holien</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hallgeir Ofte</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Elisabeth Ljos&#229;k</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Birger Hovden</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mette Katrine Kjelstrup Ofstad</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Bj&#248;rn Harald Rudborg</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Torhild Jensen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Sigvald Oppeb&#248;en Hansen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Lise Wiik</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ole-Henrik Olsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Eva Markset Lia</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Knut Duesund</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Bj&#248;rg Inger Flatland</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Gunn Marit Helgesen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Edvard M&#230;land</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kathrine S&#230;tre Evensen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Per Lykke</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Frode Lieungh</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Veslem&#248;y W&#229;le</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Nina Vibeke Laukvik</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>B&#229;rd Hoksrud</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Gry Anette Rekanes Amundsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Harald Kinck</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Stine Margrethe Knutsdatter Olsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Erling Dahl</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Terje Riis-Johansen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Beate Marie Dahl Eide</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Olav Seltveit Urb&#248;</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Heidi Therese Herum</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Knut Jarle S&#248;rdalen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Charlotte Therkelsen S&#230;tersdal</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>R&#248;dt - Telemark - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Olav Kasland</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Venstre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ron Bruinvis</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Lena Solli Sal</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hans Sundsvalen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Linda Holien</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jone Blikra</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Karianne Sydtveit Reiten</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Aleksander Martin Gj&#248;s&#230;ter</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Solveig Nekstad Grave</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Roald Stykket</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hilde Alice V&#229;gslid</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jon F. Leiulfsrud</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kathrine Haatvedt</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Olav &#197;ge Dale</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Tone Skau Jonassen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>B&#248;rre R&#248;nningen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Astri Klonteig</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kristian Hanto</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Karin Hagen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jon Andr&#232; Nesland</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Gunn Nicolaysen Gundersen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Terje Norschau</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ellen Oddrun Smenes</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Tord Samdal</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kjellaug Westbye Abrahamsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jostein Gj&#230;rum</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Synn&#248;ve Lund</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ingunn Skalstad</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mahmoud Farahmand</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kari Rasmussen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kari K. Fosso</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Karin E. Solberg Mathisen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Inger Lise Wiersdalen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Solveig Sundb&#248; Abrahamsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ole Einar Amlie</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jacob Andreas S&#248;reide</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Tina Wilcox</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mats Eirik Pettersen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Andrei B. Sk&#229;rdal</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Nils Bj&#248;rnflaten</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mogens Iversen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Vibeke-Emilie Abrahamsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Svein Martin Bergene</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jon Pieter Fl&#248;lo</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Anne-Nora Oma Dahle</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jan Thorsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kjell Abraham S&#248;lver&#248;d</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Anne Kristine Gr&#248;tting</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Svein H. Bakka</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Arne Ettestad</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Anne Grete Evju</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ole Roger Dyrkorn</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>R&#248;dt - Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kari Anne Torsteinson</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>R&#248;dt - Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Tobias Drevland Lund</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>R&#248;dt - Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Ana Taylor Lopez</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>R&#248;dt - Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Lars Solbakken</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Venstre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Sandra Yeomans</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Venstre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Torgeir Fossli</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Venstre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Eli Taugb&#248;l</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Venstre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Una Pasovic</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Sosialistisk Venstreparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jan-Petter Gurholt</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Sosialistisk Venstreparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Sara Hjelmseth Iversen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Sosialistisk Venstreparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Steinar A. Miland</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Sosialistisk Venstreparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jon Ingebretsen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Marlies Besler</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Marie Skyer</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Lars Berge Haugann</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Erik H&#248;ines</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Milj&#248;partiet De Gr&#248;nne Telemark - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Evy-Anni Evensen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fra administrasjon</p>
+                                </div>
+                            </li>
+
+                    </ul>
+            </div>
+
+        </div>
+    </aside>
+                <div class="bannerImage">
+                        <img src="/Areas/Meetings/Content/Images/meetings-bg.jpg" alt="Omr&#229;debanner" />
+                </div>
+
+                <footer class="footer">
+                    <p>
+&nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+     </div>
 </body>
 </html>

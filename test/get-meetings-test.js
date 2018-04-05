@@ -1,5 +1,6 @@
 const tap = require('tap')
 const getMeetings = require('../lib/get-meetings')
+const host = 'http://opengov.cloudapp.net'
 
 tap.test('It requires an options object', test => {
   const options = false
@@ -40,7 +41,7 @@ tap.test('It requires options.host to be a valid url', test => {
 
 tap.test('It requires options.path', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: false
   }
   const expectedErrorMessage = 'Missing required input: options.path'
@@ -54,7 +55,7 @@ tap.test('It requires options.path', test => {
 
 tap.test('It requires options.boardId', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk',
     boardId: false
   }
@@ -69,9 +70,9 @@ tap.test('It requires options.boardId', test => {
 
 tap.test('It requires options.year', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk',
-    boardId: '200151',
+    boardId: '216162',
     year: false
   }
   const expectedErrorMessage = 'Missing required input: options.year'
@@ -85,15 +86,15 @@ tap.test('It requires options.year', test => {
 
 tap.test('It returns expected results', test => {
   const options = {
-    host: 'http://opengov.cloudapp.net',
+    host: host,
     path: '/Meetings/tfk',
-    boardId: '200151',
-    year: '2015'
+    boardId: '216162',
+    year: '2018'
   }
   const expectedResult = require('./data/get-meetings-data-full.json')
   return getMeetings(options)
     .then(data => {
-      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
+      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned meetings OK')
       test.done()
     })
     .catch(error => {
@@ -105,8 +106,8 @@ tap.test('It returns error on error', test => {
   const options = {
     host: 'http://detteerenurlsomsannsynligviseikkefinnes.no',
     path: '/Meetings/tfk',
-    boardId: '200151',
-    year: '2015'
+    boardId: '216162',
+    year: '2018'
   }
   return getMeetings(options)
     .then(console.log)

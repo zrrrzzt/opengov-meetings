@@ -1,25 +1,49 @@
 {
-  "board": "Administrasjonsutvalet 2011-2015",
+  "board": "Fylkestinget",
   "meetings": [
     {
-      "date": "19. mars",
-      "day": "19",
+      "date": "05.03.2018",
+      "day": "05",
       "month": "03",
-      "status": "Offentlig",
-      "id": "212860"
+      "year": "2018",
+      "yearMonthDay": "20180305",
+      "status": "Publisert",
+      "id": "644324"
     },
     {
-      "date": "8. juni",
-      "day": "08",
+      "date": "24.04.2018",
+      "day": "24",
+      "month": "04",
+      "year": "2018",
+      "yearMonthDay": "20180424",
+      "status": "Ikke publisert",
+      "id": ""
+    },
+    {
+      "date": "05.06.2018",
+      "day": "05",
       "month": "06",
-      "status": "Offentlig",
-      "id": "212864"
+      "year": "2018",
+      "yearMonthDay": "20180605",
+      "status": "Ikke publisert",
+      "id": ""
     },
     {
-      "date": "21. september",
-      "day": "21",
-      "month": "09",
-      "status": "Avlyst",
+      "date": "24.10.2018",
+      "day": "24",
+      "month": "10",
+      "year": "2018",
+      "yearMonthDay": "20181024",
+      "status": "Ikke publisert",
+      "id": ""
+    },
+    {
+      "date": "05.12.2018",
+      "day": "05",
+      "month": "12",
+      "year": "2018",
+      "yearMonthDay": "20181205",
+      "status": "Ikke publisert",
       "id": ""
     }
   ]
