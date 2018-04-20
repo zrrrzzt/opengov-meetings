@@ -19,47 +19,56 @@
     {
       "agendanumber": "1/18",
       "title": "Møteinnkalling Fylkestinget 05.03.2018",
-      "id": "211242"
+      "id": "211242",
+      "public": true
     },
     {
       "agendanumber": "1/18",
       "title": "Godkjenning - Møteprotokoll fylkestinget 6.-7. 12. 2017",
-      "id": "211191"
+      "id": "211191",
+      "public": true
     },
     {
       "agendanumber": "1/18",
       "title": "Ny Skien videregående skole utgreiing om Inventar",
-      "id": "211236"
+      "id": "211236",
+      "public": true
     },
     {
       "agendanumber": "2/18",
       "title": "Høring -  Regionreformen. Rapport fra ekspertutvalg",
-      "id": "211237"
+      "id": "211237",
+      "public": true
     },
     {
       "agendanumber": "3/18",
       "title": "Reglement for fellesnemnda mv.",
-      "id": "211238"
+      "id": "211238",
+      "public": true
     },
     {
       "agendanumber": "4/18",
       "title": "Godtgjering for medlemmene i fellesnemnda mv.",
-      "id": "211239"
+      "id": "211239",
+      "public": true
     },
     {
       "agendanumber": "5/18",
       "title": "Søknad om permisjon - Knut Morten Johansen",
-      "id": "211240"
+      "id": "211240",
+      "public": true
     },
     {
       "agendanumber": "6/18",
       "title": "Gea Norvegica Geopark IKS – revidert selskapsavtale",
-      "id": "211268"
+      "id": "211268",
+      "public": true
     },
     {
       "agendanumber": "7/18",
       "title": "Oppnevning av medlem til representantskapet for nasjonal digital læringsarena (NDLA)",
-      "id": "211269"
+      "id": "211269",
+      "public": true
     }
   ]
 }

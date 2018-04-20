@@ -1,12 +1,11 @@
-const { getMeetings } = require('./index')
+const { getAgenda } = require('./index')
 const options = {
   host: 'http://opengov.cloudapp.net',
   path: '/Meetings/tfk',
-  boardId: '216162',
-  year: '2018'
+  meetingId: '627172'
 }
 
-getMeetings(options)
+getAgenda(options)
   .then(data => {
     console.log(JSON.stringify(data, null, 2))
   })
