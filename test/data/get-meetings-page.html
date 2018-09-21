@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
@@ -242,7 +243,7 @@
                 $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
             }
             else {
-                $("#searchResultMeeting").html("Ingen m&#248;ter funnet");
+                $("#searchResultMeeting").html("Ingen m&#248;ter er gjort tilgjengelig for denne perioden.");
             }
             $('#viewMoreMeetings').css('display', 'none');
         }
@@ -267,7 +268,7 @@
                     SetMeetingsHtml(data);
                     var instructionLabel = $(data).find('li').length;
                     if (instructionLabel !== 0) {
-                        $("#instructionLabel").html(instructionLabel + " m&#248;ter funnet for " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter er gjort tilgjengelig for  " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
                         $(".meetingsHeader img").css('display', 'block');
                         $(".homePageSelectedDateString").css('display', 'block');
                     }
@@ -286,7 +287,9 @@
 <body>
     <div id="loader"></div>
     <div class="">
-                    
+        <div id="skip">
+            <a href="#content">G&#229; til hovedinnhold</a>
+        </div>            
         <div class="headerSection" style="background-color: #fff">
             <div class="containerFluid">
                 <header class="header">
@@ -301,8 +304,9 @@
                     </div>
                     <div class="siteSearch">
                         <div class="searchForm">
+                            <span id="searchInputLabel">S&#248;k</span>
                             <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
-                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-label="S&#248;k">
+                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-labelledby="searchInputLabel">
                                 <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
                             </button>
                         </div>
@@ -321,6 +325,8 @@
                         </ul>
                     </div>
 
+                <h1></h1>
+
 
 
 <div class="goBackSection boardsPage">
@@ -333,7 +339,7 @@
         </button>
     </div>
 
-    <div class="meetingTitle">
+    <div class="meetingTitle" id="content">
         <div class="meetingsHeaderSec">
             <div class="meetingTitleIcon">
                 <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
@@ -355,7 +361,7 @@
         <div class="meetingsContainer">
             <div class="selectYear">
                 <label class="instructionLabel" for="boardsYearSelection">&#197;r</label>
-                <select class="dropdown" id="boardsYearSelection" onchange="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/216162')" tabindex="0">
+                <select class="dropdown" id="boardsYearSelection" tabindex="0">
                             <option selected>2018</option>
                             <option>2017</option>
                             <option>2016</option>
@@ -364,7 +370,7 @@
             </div>
             <div class="selectMonth">
                 <label class="instructionLabel" for="boardsSelectionMonth">M&#229;ned</label>
-                <select class="dropdown" id="boardsSelectionMonth" onchange="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/216162')" tabindex="0">
+                <select class="dropdown" id="boardsSelectionMonth" tabindex="0">
 
                         <option value="-1" selected>Alle</option>
                                                         <option value="1">januar</option>
@@ -383,61 +389,70 @@
                 </select>
             </div>
             <div class="selectedDate">
-                <p class="instructionLabel" id="instructionLabel">5 m&#248;ter funnet for  2018</p>
-            </div>
+                <button id="filterBtn" class="filterButton" tabindex="0" onclick="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/216162')">
+                    <span>Bruk filter</span>
+                </button>          
+            </div>      
         </div>
-            <div class="meetingList">
-                <ul>
-                                <li class="boardLink">
-                                    <a href="/Meetings/tfk/Meetings/Details/644324">
+        <div class="displaySearchResult boardDetailPage">
+            <p class="instructionLabel" id="instructionLabel">5 m&#248;ter funnet for  2018</p>
+        </div>
+                <div class="meetingList">
+                    <ul>
+                                    <li class="boardLink">
+                                        <a href="/Meetings/tfk/Meetings/Details/644324">
+                                            <div class="meetingName">
+                                                <span>Fylkestinget (05.03.2018)</span>
+                                            </div>
+                                            <div class="meetingDate">
+                                                <span>05.03.2018</span>
+                                                <span>00:00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="boardLink">
+                                        <a href="/Meetings/tfk/Meetings/Details/627172">
+                                            <div class="meetingName">
+                                                <span>Fylkestinget (24.04.2018)</span>
+                                            </div>
+                                            <div class="meetingDate">
+                                                <span>24.04.2018</span>
+                                                <span>13:00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="boardLink">
+                                        <a href="/Meetings/tfk/Meetings/Details/627173">
+                                            <div class="meetingName">
+                                                <span>Fylkestinget (05.06.2018)</span>
+                                            </div>
+                                            <div class="meetingDate">
+                                                <span>05.06.2018</span>
+                                                <span>13:00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li title="Under forberedelse" class="boardLink unpublishedMeeting">
                                         <div class="meetingName">
-                                            <h3>Fylkestinget (05.03.2018)</h3>
+                                            <span>Fylkestinget (24.10.2018)</span>
                                         </div>
                                         <div class="meetingDate">
-                                            <span>05.03.2018</span>
-                                            <span>00:00</span>
+                                            <span>24.10.2018</span>
+                                            <span>Ikke publisert</span>
                                         </div>
-                                    </a>
-                                </li>
-                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
-                                    <div class="meetingName">
-                                        <h3>Fylkestinget (24.04.2018)</h3>
-                                    </div>
-                                    <div class="meetingDate">
-                                        <span>24.04.2018</span>
-                                        <span>Ikke publisert</span>
-                                    </div>
-                                </li>
-                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
-                                    <div class="meetingName">
-                                        <h3>Fylkestinget (05.06.2018)</h3>
-                                    </div>
-                                    <div class="meetingDate">
-                                        <span>05.06.2018</span>
-                                        <span>Ikke publisert</span>
-                                    </div>
-                                </li>
-                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
-                                    <div class="meetingName">
-                                        <h3>Fylkestinget (24.10.2018)</h3>
-                                    </div>
-                                    <div class="meetingDate">
-                                        <span>24.10.2018</span>
-                                        <span>Ikke publisert</span>
-                                    </div>
-                                </li>
-                                <li title="Under forberedelse" class="boardLink unpublishedMeeting">
-                                    <div class="meetingName">
-                                        <h3>Fylkestinget (05.12.2018)</h3>
-                                    </div>
-                                    <div class="meetingDate">
-                                        <span>05.12.2018</span>
-                                        <span>Ikke publisert</span>
-                                    </div>
-                                </li>
-                </ul>
-            </div>
-    </div>
+                                    </li>
+                                    <li title="Under forberedelse" class="boardLink unpublishedMeeting">
+                                        <div class="meetingName">
+                                            <span>Fylkestinget (05.12.2018)</span>
+                                        </div>
+                                        <div class="meetingDate">
+                                            <span>05.12.2018</span>
+                                            <span>Ikke publisert</span>
+                                        </div>
+                                    </li>
+                    </ul>
+                </div>
+        </div>
 </section>
 
 
@@ -704,7 +719,7 @@
                                     <h3>Erling Dahl</h3>
                                 </div>
                                 <div class="memberDesignation">
-                                            <p>Fremskrittspartiet - Varamedlem i utvalg</p>
+                                            <p>Uavhengig - Varamedlem i utvalg</p>
                                 </div>
                             </li>
                             <li class="memberListItem">
@@ -1313,10 +1328,9 @@
 
         </div>
     </aside>
-                <div class="bannerImage">
-                        <img src="/Areas/Meetings/Content/Images/meetings-bg.jpg" alt="Omr&#229;debanner" />
+                            <div class="bannerImage">
+                        <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
                 </div>
-
                 <footer class="footer">
                     <p>
 &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>

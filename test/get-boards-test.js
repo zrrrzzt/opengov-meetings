@@ -61,7 +61,7 @@ tap.test('It returns expected results', test => {
   const expectedResult = require('./data/get-boards-data.json')
   return getBoards(options)
     .then(data => {
-      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned agenda OK')
+      tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned boards OK')
       test.done()
     })
     .catch(error => {
