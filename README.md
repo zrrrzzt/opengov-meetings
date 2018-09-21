@@ -104,5 +104,3 @@ getDetails(options)
 
 ## License
 [MIT](LICENSE)
-
-![Robohash image of opengov-meetings](https://robots.kebabstudios.party/opengov-meetings.png "Robohash image of opengov-meetings")
