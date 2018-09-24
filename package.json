@@ -13,7 +13,7 @@
     "node": ">=8.12.0"
   },
   "scripts": {
-    "test": "standard && nsp check && tap --reporter=spec test/*.js",
+    "test": "standard && tap --reporter=spec test/*.js",
     "coverage": "tap test/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/*.js && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
@@ -34,7 +34,6 @@
   "url": "https://github.com/zrrrzzt/opengov-meetings#readme",
   "devDependencies": {
     "coveralls": "3.0.2",
-    "nsp": "3.2.1",
     "standard": "12.0.1",
     "tap": "12.0.1"
   },
