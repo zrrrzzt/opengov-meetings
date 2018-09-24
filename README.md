@@ -102,5 +102,24 @@ getDetails(options)
 .catch(console.error)
 ```
 
+### getMembers
+
+Get members for a given board
+
+**boardId** id for the board
+
+```JavaScript
+const { getMembers } = require('opengov-meetings')
+const options = {
+  host: 'http://opengov.cloudapp.net',
+  path: '/Meetings/tfk',
+  agendaId: '217642'
+}
+
+getMembers(options)
+.then(console.log)
+.catch(console.error)
+```
+
 ## License
 [MIT](LICENSE)

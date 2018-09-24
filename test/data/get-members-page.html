@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+<html lang="nb-NO">
+<head>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta charset="utf-8" />
+    <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no">
+    <title>
+             Politiske m&#248;ter
+    </title>
+    <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
+
+    
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+        <style type="text/css">
+            a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
+            {
+                color:#58595b;
+            }
+            .home .tile .wrap .text, .home .tileDate, .SideBarItem a.last:hover span, .nextYear a:hover, .previousYear a:hover, #boards.SideBarItem a:hover, #lista1 .als-prev:hover, #lista1 .als-next:hover, h2.slideTitle, .sbHolder:hover .sbToggle, .sbToggleOpen:hover, .sbToggle:hover
+            {
+                background-color:#58595b;
+            }
+            .calendar .currentMonth
+            {
+                background:#58595b !important;
+            }
+            #boards.SideBarItem a:hover, .tabs a:hover
+            {   
+                border-bottom-color: #58595b;
+            }
+            .highlightTabs
+            {
+                border-bottom-color: #58595b !important;
+            }
+        </style>
+    <script src="/Scripts/jquery?v=CkVTG71m7lHB5jSCpyOSxbeCVJLIPag7u7NL4ykFenk1"></script>
+
+    <script src="/Scripts/jqueryals?v=-qnb2jmETXGPoNwb4NLwYURDCRw_MqIEAg1D5z0FDSE1"></script>
+
+    <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
+
+        <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37639147-1']);
+    _gaq.push(['_gat._anonymizeIp']);
+    _gaq.push(['_set', 'title', 'Administrasjonsutvalet']); // override page title
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+            function GaTrackEvent(category, value) {
+                _gaq.push(['_trackEvent', category, value]);
+            }
+
+            function GaTrackEventWithLabel(category, value, label) {
+                _gaq.push(['_trackEvent', category, value, label]);
+            }
+
+            function TFD(type) {
+                GaTrackEvent('FileDownload', type);
+            }
+
+            function TTC(value) {
+                GaTrackEventWithLabel('Tile', 'Click', value);
+            }
+
+    function THBLC(type) {
+        GaTrackEvent('Home.BoardsList', 'ItemClick');
+    }
+
+    function THMC(type) {
+        GaTrackEvent('Home.MeetingsList', 'ItemClick');
+    }
+
+    function TMVCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'ItemClick');
+    }
+
+    function THLMCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastMonthFilter');
+    }
+
+    function THLWCC(type) {
+        GaTrackEvent('Home.MostViewedCases', 'LastWeekFilter');
+    }
+
+    function THMMFC(value) {
+        GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
+    }
+
+      </script>
+    <script type="text/javascript">
+
+    function TrackFileDownload(type) {
+        if (typeof (TFD) != "undefined")
+            TFD(type);
+    }
+
+    function TrackTileClick(value) {
+        if (typeof (TTC) != "undefined")
+            TTC(value);
+    }
+
+    function TrackHomeMeetingsLinkClick(type) {
+        if (typeof (THMC) != "undefined")
+            THMC(type);
+    }
+
+    function TrackMostViewedCasesClick(type) {
+        if (typeof (TMVCC) != "undefined")
+            TMVCC(type);
+    }
+
+    function TrackHomeBoardLinkClick(type) {
+        if (typeof (THBLC) != "undefined")
+            THBLC(type);
+    }
+
+
+    function TrackRecentAgendasLastMonthClick(type) {
+        if (typeof (THLMCC) != "undefined")
+            THLMCC(type);
+    }
+
+
+    function TrackRecentAgendasLastWeekClick(type) {
+        if (typeof (THLWCC) != "undefined")
+            THLWCC(type);
+    }
+
+    function TrackMeetingsMonthFilterClick(value) {
+        if (typeof (THMMFC) != "undefined")
+            THMMFC(value);
+    }
+
+
+
+    $('document').ready(function () {
+        $('.tile').on({
+            'mouseenter': function () {
+                var top = ($(this).hasClass('rlp')) ? '275' : '180';
+                $(this).addClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            },
+            'mouseleave': function () {
+                var top = ($(this).hasClass('rlp')) ? '66' : '0';
+                $(this).removeClass('viewing').children('.wrap').stop().animate({ 'top': top }, 300);
+            }
+        });
+
+        $('.pretty_date').each(function (index, element) {
+            $(element).html(prettyDate($(element).html()));
+        });
+
+        attachAnimations('.tilepost');
+
+
+        $("#searchButton").on('click', function () {
+            var searchQuery = document.getElementById('q').value;
+            searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+            window.location.href = searchQuery;
+        });
+        $("#q").on("keydown", function (e) {
+            if (e.keyCode === 13) {
+                var searchQuery = document.getElementById('q').value;
+                searchQuery = '/Meetings/tfk/AgendaItems/Search' + '?q=' + encodeURIComponent(searchQuery);
+                window.location.href = searchQuery;
+            }
+        });
+    });
+    function attachAnimations(selector) {
+        $(selector).each(function (i) {
+            setOffAnimation($(this), i);
+        });
+    }
+
+    function setOffAnimation(tile, count) {
+        var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+        if (count % 2 != 0) {
+            $(tile).children('.wrap').stop().animate({ 'top': top }, 0);
+        }
+
+        setTimeout(function () {
+            setInterval(function () {
+                if (tile.hasClass('viewing')) return;
+                var top = ($(tile).hasClass('rlp')) ? '275' : '180';
+                $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                setTimeout(function () {
+                    if (tile.hasClass('viewing')) return;
+                    var top = ($(tile).hasClass('rlp')) ? '66' : '0';
+                    $(tile).children('.wrap').stop().animate({ 'top': top }, 1000);
+                }, 5000);
+            }, 5000);
+        }, 40000 * Math.random());
+    }
+
+    function prettyDate(date_str) {
+        var time_formats = [
+      [120, 'a minute ago', 'a minute from now'],
+      [3600, 'minutes', 60],
+      [7200, 'an hour ago', 'an hour from now'],
+      [86400, 'hours', 3600],
+      [172800, 'a day ago', 'a day from now'],
+      [604800, 'days', 86400],
+      [1209600, 'a week ago', 'a week from now'],
+      [2419200, 'weeks', 604800],
+      [4838400, 'a month ago', 'a month from now'],
+      [29030400, 'months', 2419200],
+      [58060800, 'a year ago', 'a year from now'],
+      [2903040000, 'years', 29030400]
+        ];
+
+        var seconds = (new Date - new Date(date_str)) / 1000;
+        var token = 'ago', list_choice = 1;
+        if (seconds < 0) {
+            seconds = Math.abs(seconds);
+            token = 'from now';
+            list_choice = 2;
+        }
+        var i = 0, format;
+        while (format = time_formats[i++]) {
+            if (seconds < format[0]) {
+                if (typeof format[2] == 'string') {
+                    return format[list_choice];
+                }
+                else {
+                    return Math.floor(seconds / format[2]) + ' ' + format[1] + ' ' + token;
+                }
+            }
+        }
+    }
+        function SetMeetingsHtml(data) {
+            $("#meetingslistDiv").html(data);
+            var instructionLabel = $(data).find('li').length;
+            if (instructionLabel !== 0) {
+                $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
+            }
+            else {
+                $("#searchResultMeeting").html("Ingen m&#248;ter er gjort tilgjengelig for denne perioden.");
+            }
+            $('#viewMoreMeetings').css('display', 'none');
+        }
+
+        function TrackClickedMonth(url,trimresults) {
+            var selectedMonth = $("#ulMonths option:selected").val();
+            var selectedYear = $("#ulYear option:selected").val();
+            TrackMeetingsMonthFilterClick('PositionFromCurrentMonth.' + ((new Date().getMonth() + 1) - selectedMonth) * -1);
+            $.ajax({
+                url: url,
+                data: { month: selectedMonth.toString(), year: selectedYear.toString(), trimResult: trimresults},
+                cache: false,
+                type: "GET",
+                dataType: "html",
+                beforeSend: function (xhr, opts) {
+                    $("#meetingscontentLoad").addClass("contentMask");
+                },
+                complete: function () {
+                    $("#meetingscontentLoad").removeClass("contentMask");
+                },
+                success: function (data, textStatus, XMLHttpRequest) {
+                    SetMeetingsHtml(data);
+                    var instructionLabel = $(data).find('li').length;
+                    if (instructionLabel !== 0) {
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter er gjort tilgjengelig for  " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $(".meetingsHeader img").css('display', 'block');
+                        $(".homePageSelectedDateString").css('display', 'block');
+                    }
+                    else {
+                        $("#instructionLabel").html("");
+                        $(".meetingsHeader img").css('display', 'none');
+                        $("#mainPageFindMeetings img").css('display', 'block');
+                        $("#mainPageLatestMeetings img").css('display', 'block');
+                        $("#mainPageBoards img").css('display', 'block');
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <div id="loader"></div>
+    <div class="">
+        <div id="skip">
+            <a href="#content">G&#229; til hovedinnhold</a>
+        </div>            
+        <div class="headerSection" style="background-color: #fff">
+            <div class="containerFluid">
+                <header class="header">
+                    <div class="siteLogo">
+
+                            <a href="/Meetings/tfk">
+                                <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/Site%20Logo%20Icon.jpg" alt="Hjem" />
+                            </a>
+                    </div>
+                    <div class="siteTitle">
+                        <h1>Politiske m&#248;ter</h1>
+                    </div>
+                    <div class="siteSearch">
+                        <div class="searchForm">
+                            <span id="searchInputLabel">S&#248;k</span>
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-labelledby="searchInputLabel">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            </button>
+                        </div>
+                    </div>
+                </header>
+            </div>
+            </div>
+        <div class="containerFluid">
+            <div class="mainContainer">
+                    <div class="breadcrumb">
+                        <ul>
+                                <li> <a href="/Meetings/tfk">Hjem</a></li>
+                                <li> ></li>
+                                <li> Administrasjonsutvalet</li>
+                            <li>
+                        </ul>
+                    </div>
+
+                <h1></h1>
+
+
+
+<div class="goBackSection boardsPage">
+    <div class="goBackButton">
+        <button onclick="window.location.href='/Meetings/tfk'">
+            <div class="buttonImage">
+                <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
+            </div>
+            <div class="buttonLink"><span aria-hidden="true">G&#229; til startsiden </span> </div>
+        </button>
+    </div>
+
+    <div class="meetingTitle" id="content">
+        <div class="meetingsHeaderSec">
+            <div class="meetingTitleIcon">
+                <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
+            </div>
+            <div class="meetingTitleHeader">
+                <h2>Administrasjonsutvalet</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="meetingsSection">
+    <div class="findMeetings findMeetingsBoardsPage">
+        <div class="meetingsHeader">
+            <img class="images" src="/Areas/Meetings/Content/Images/meeting.png" alt="">
+            <h2>Finn m&#248;ter - Administrasjonsutvalet</h2>
+        </div>
+        <div class="meetingsContainer">
+            <div class="selectYear">
+                <label class="instructionLabel" for="boardsYearSelection">&#197;r</label>
+                <select class="dropdown" id="boardsYearSelection" tabindex="0">
+                            <option selected>2015</option>
+                </select>
+            </div>
+            <div class="selectMonth">
+                <label class="instructionLabel" for="boardsSelectionMonth">M&#229;ned</label>
+                <select class="dropdown" id="boardsSelectionMonth" tabindex="0">
+
+                        <option value="-1" selected>Alle</option>
+                                                        <option value="1">januar</option>
+                                    <option value="2">februar</option>
+                                    <option value="3">mars</option>
+                                    <option value="4">april</option>
+                                    <option value="5">mai</option>
+                                    <option value="6">juni</option>
+                                    <option value="7">juli</option>
+                                    <option value="8">august</option>
+                                    <option value="9">september</option>
+                                    <option value="10">oktober</option>
+                                    <option value="11">november</option>
+                                    <option value="12">desember</option>
+
+                </select>
+            </div>
+            <div class="selectedDate">
+                <button id="filterBtn" class="filterButton" tabindex="0" onclick="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/217642')">
+                    <span>Bruk filter</span>
+                </button>          
+            </div>      
+        </div>
+        <div class="displaySearchResult boardDetailPage">
+            <p class="instructionLabel" id="instructionLabel">1 m&#248;ter funnet for  2015</p>
+        </div>
+                <div class="meetingList">
+                    <ul>
+                                    <li class="boardLink">
+                                        <a href="/Meetings/tfk/Meetings/Details/326234">
+                                            <div class="meetingName">
+                                                <span>Administrasjonsutvalet (10.11.2015)</span>
+                                            </div>
+                                            <div class="meetingDate">
+                                                <span>10.11.2015</span>
+                                                <span>00:00</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                    </ul>
+                </div>
+        </div>
+</section>
+
+
+    <aside class="membersSection" id="members">
+        <div class="members">
+            <div class="membersHeaderSection">
+                <div class="membersHeader">
+                    <img class="images" src="/Areas/Meetings/Content/Images/BoardRepresentatives.png" alt="">
+                    <h2>Medlemmer / varamedlemmer</h2>
+                </div>
+            </div>
+            <div class="membersList">
+                    <ul>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Vidar Stang</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Leder i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Lise Wiik</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Arbeiderpartiet - Nestleder i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hans Edvard Askjer</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Gunn Marit Helgesen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mats Eirik Pettersen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Fremskrittspartiet - Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jorunn Tisj&#248;</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Beate Marie Dahl Eide</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Olav Seltveit Urb&#248;</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Nina Vibeke Laukvik</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Geir Olav Tveit</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mona Gal&#229;en</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Morten R&#248;geberg Cowles</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Jon Helge Bergane</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Knut Duesund</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Bj&#248;rg Inger Flatland</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Mahmoud Farahmand</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Kathrine S&#230;tre Evensen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>H&#248;yre - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Heidi Therese Herum</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Senterpartiet - Varamedlem i utvalg</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h3>Hel&#233;n Andersen</h3>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>M&#248;tesekret&#230;r</p>
+                                </div>
+                            </li>
+
+                    </ul>
+            </div>
+
+        </div>
+    </aside>
+                            <div class="bannerImage">
+                        <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
+                </div>
+                <footer class="footer">
+                    <p>
+&nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
+                    </p>
+                </footer>
+            </div>
+        </div>
+     </div>
+</body>
+</html>

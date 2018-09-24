@@ -1,0 +1,119 @@
+{
+  "name": "Administrasjonsutvalet",
+  "members": [
+    {
+      "firstName": "Vidar",
+      "lastName": "Stang",
+      "party": "Arbeiderpartiet",
+      "role": "Leder i utvalg"
+    },
+    {
+      "firstName": "Lise",
+      "lastName": "Wiik",
+      "party": "Arbeiderpartiet",
+      "role": "Nestleder i utvalg"
+    },
+    {
+      "firstName": "Hans Edvard",
+      "lastName": "Askjer",
+      "party": "Kristelig Folkeparti",
+      "role": "Utvalgsmedlem"
+    },
+    {
+      "firstName": "Gunn Marit",
+      "lastName": "Helgesen",
+      "party": "Høyre",
+      "role": "Utvalgsmedlem"
+    },
+    {
+      "firstName": "Mats Eirik",
+      "lastName": "Pettersen",
+      "party": "Fremskrittspartiet",
+      "role": "Utvalgsmedlem"
+    },
+    {
+      "firstName": "Jorunn",
+      "lastName": "Tisjø",
+      "party": "",
+      "role": "Utvalgsmedlem"
+    },
+    {
+      "firstName": "Beate Marie Dahl",
+      "lastName": "Eide",
+      "party": "Senterpartiet",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Olav Seltveit",
+      "lastName": "Urbø",
+      "party": "Senterpartiet",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Nina Vibeke",
+      "lastName": "Laukvik",
+      "party": "Høyre",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Geir Olav",
+      "lastName": "Tveit",
+      "party": "",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Mona",
+      "lastName": "Galåen",
+      "party": "",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Morten Røgeberg",
+      "lastName": "Cowles",
+      "party": "",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Jon Helge",
+      "lastName": "Bergane",
+      "party": "",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Knut",
+      "lastName": "Duesund",
+      "party": "Kristelig Folkeparti",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Bjørg Inger",
+      "lastName": "Flatland",
+      "party": "Kristelig Folkeparti",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Mahmoud",
+      "lastName": "Farahmand",
+      "party": "Høyre",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Kathrine Sætre",
+      "lastName": "Evensen",
+      "party": "Høyre",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Heidi Therese",
+      "lastName": "Herum",
+      "party": "Senterpartiet",
+      "role": "Varamedlem i utvalg"
+    },
+    {
+      "firstName": "Helén",
+      "lastName": "Andersen",
+      "party": "",
+      "role": "Møtesekretær"
+    }
+  ]
+}
