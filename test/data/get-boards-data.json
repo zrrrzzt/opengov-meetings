@@ -16,12 +16,12 @@
     "id": "236944"
   },
   {
-    "name": "Forhandlingsutvalet",
-    "id": "200173"
+    "name": "Forhandlingsutvalet  2016-2019",
+    "id": "220291"
   },
   {
-    "name": "Forhandlingsutvalet",
-    "id": "220291"
+    "name": "Forhandlingsutvalet 2015",
+    "id": "200173"
   },
   {
     "name": "Fylkeskommunalt råd for personer med nedsatt funksjonsevne",
@@ -60,7 +60,7 @@
     "id": "225118"
   },
   {
-    "name": "Hovudutval for administrasjonssaker",
+    "name": "Hovudutval for administrasjonssaker 2015-2019",
     "id": "218688"
   },
   {
@@ -80,24 +80,36 @@
     "id": "217339"
   },
   {
-    "name": "Hovudutval for næringsutvikling",
-    "id": "217335"
-  },
-  {
     "name": "Hovudutval for næringsutvikling 2011-2015",
     "id": "200144"
   },
   {
-    "name": "Hovudutval for samferdsel",
-    "id": "217337"
+    "name": "Hovudutval for næringsutvikling 2015-2019",
+    "id": "217335"
   },
   {
     "name": "Hovudutval for samferdsel 2011-2015",
     "id": "200149"
   },
   {
+    "name": "Hovudutval for samferdsel 2015-2019",
+    "id": "217337"
+  },
+  {
+    "name": "Kinn kontrollutvalg",
+    "id": "248749"
+  },
+  {
     "name": "Klagenemnda for skolesaker 2011-2015",
     "id": "200150"
+  },
+  {
+    "name": "Midt-Telemark kontrollutvalg",
+    "id": "249181"
+  },
+  {
+    "name": "Nye Kristiansand kontrollutvalg",
+    "id": "249210"
   },
   {
     "name": "Partssammensatt utvalg",

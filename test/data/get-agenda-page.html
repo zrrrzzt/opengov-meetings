@@ -2,18 +2,19 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no">
     <title>
-             Politiske m&#248;ter
+             Politiske m&#248;ter - M&#248;ter - Fylkestinget (05.03.2018)
     </title>
     <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    
-    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script>
         <style type="text/css">
             a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
             {
@@ -28,7 +29,7 @@
                 background:#58595b !important;
             }
             #boards.SideBarItem a:hover, .tabs a:hover
-            {   
+            {
                 border-bottom-color: #58595b;
             }
             .highlightTabs
@@ -42,9 +43,12 @@
 
     <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
 
+    <script>
+        var _gaq = _gaq || [];
+    </script>
+
         <script type="text/javascript">
 
-    var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37639147-1']);
     _gaq.push(['_gat._anonymizeIp']);
     _gaq.push(['_set', 'title', 'Fylkestinget (05.03.2018)']); // override page title
@@ -96,7 +100,7 @@
         GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
     }
 
-      </script>
+        </script>
     <script type="text/javascript">
 
     function TrackFileDownload(type) {
@@ -243,7 +247,7 @@
                 $("#searchResultMeeting").html(instructionLabel + " m&#248;ter funnet");
             }
             else {
-                $("#searchResultMeeting").html("Ingen m&#248;ter funnet");
+                $("#searchResultMeeting").html("Ingen m&#248;ter er gjort tilgjengelig for denne perioden.");
             }
             $('#viewMoreMeetings').css('display', 'none');
         }
@@ -268,7 +272,7 @@
                     SetMeetingsHtml(data);
                     var instructionLabel = $(data).find('li').length;
                     if (instructionLabel !== 0) {
-                        $("#instructionLabel").html(instructionLabel + " m&#248;ter funnet for " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
+                        $("#instructionLabel").html(instructionLabel + " m&#248;ter er gjort tilgjengelig for  " + $("#ulMonths option:selected").text() + " " + $("#ulYear option:selected").text());
                         $(".meetingsHeader img").css('display', 'block');
                         $(".homePageSelectedDateString").css('display', 'block');
                     }
@@ -287,8 +291,10 @@
 <body>
     <div id="loader"></div>
     <div class="">
-                    
-        <div class="headerSection" style="background-color: #FFD520">
+        <div id="skip">
+            <a href="#content">G&#229; til hovedinnhold</a>
+        </div>
+        <div class="headerSection" style="background-color: #fff">
             <div class="containerFluid">
                 <header class="header">
                     <div class="siteLogo">
@@ -302,29 +308,28 @@
                     </div>
                     <div class="siteSearch">
                         <div class="searchForm">
-                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
-                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-label="S&#248;k">
-                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            <span id="searchInputLabel">S&#248;k</span>
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" aria-labelledby="searchInputLabel" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" aria-label="S&#248;k" style="background-color: #62b3e5; border-color: #62b3e5">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true" />
                             </button>
                         </div>
                     </div>
                 </header>
             </div>
-            </div>
+        </div>
         <div class="containerFluid">
             <div class="mainContainer">
-                    <div class="breadcrumb">
+                    <div class="breadcrumb" role="navigation">
                         <ul>
                                 <li> <a href="/Meetings/tfk">Hjem</a></li>
-                                <li> ></li>
                                 <li> <a href="/Meetings/tfk/Boards/Details/216162">Fylkestinget</a></li>
-                                <li> ></li>
                                 <li> Fylkestinget (05.03.2018)</li>
-                            <li>
                         </ul>
                     </div>
 
 
+                
 
 <div class="goBackSection detailsPage">
     <div class="goBackButton">
@@ -335,176 +340,191 @@
             <div class="buttonLink">	<span aria-hidden="true"> G&#229; til utvalget </span> </div>
         </button>
     </div>
-    <div class="meetingTitle">
+    <div class="meetingTitle" id="content">
         <div class="meetingsHeaderSec">
             <div class="meetingTitleIcon">
                 <img class="images" src="/Areas/Meetings/Content/Images/meeting.png" alt="">
             </div>
             <div class="meetingTitleHeader">
-                <h2>Fylkestinget (05.03.2018)</h2>
+                <h2 class="meetingTitleHeaderText">Fylkestinget (05.03.2018)</h2>
             </div>
         </div>
     </div>
 </div>
-<section class="meetingsAgendaSection">
-    <div class="meetingsAgenda">        
-            <div class="meetingsHeader">
-                <h2>Saksliste</h2>
-            </div>
-            <div class="meetingAgendaList">
-                <ul>
-                                <div class="agendaItemHeader ">
-                                    <h3>M&#248;teinnkalling</h3>
-                                </div>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211242" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242','211242')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242', '211242')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>1/18 - M&#248;teinnkalling Fylkestinget 05.03.2018</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211242" class="panel"></div>
-                                </li>
-                                <div class="agendaItemHeader agendaHeader">
-                                    <h3>M&#248;teprotokoll</h3>
-                                </div>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211191" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191','211191')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191', '211191')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>1/18 - Godkjenning - M&#248;teprotokoll fylkestinget 6.-7. 12. 2017</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211191" class="panel"></div>
-                                </li>
-                                <div class="agendaItemHeader agendaHeader">
-                                    <h3>Saker til behandling</h3>
-                                </div>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211236" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236','211236')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236', '211236')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>1/18 - Ny Skien videreg&#229;ende skole utgreiing om Inventar</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211236" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211237" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237','211237')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237', '211237')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>2/18 - H&#248;ring -  Regionreformen. Rapport fra ekspertutvalg</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211237" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211238" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238','211238')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238', '211238')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>3/18 - Reglement for fellesnemnda mv.</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211238" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211239" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239','211239')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239', '211239')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>4/18 - Godtgjering for medlemmene i fellesnemnda mv.</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211239" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211240" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240','211240')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240', '211240')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>5/18 - S&#248;knad om permisjon - Knut Morten Johansen</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211240" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211268" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268','211268')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268', '211268')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>6/18 - Gea Norvegica Geopark IKS – revidert selskapsavtale</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211268" class="panel"></div>
-                                </li>
-                                <li>
-                                    <a class="accordion" tabindex="0" id="agendaItem_211269" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269','211269')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269', '211269')">
-                                        <div class="accordionImage">
-                                        </div>
-                                        <div class="accordionTitle">
-                                            <h4>7/18 - Oppnevning av medlem til representantskapet for nasjonal digital l&#230;ringsarena (NDLA)</h4>
-                                        </div>
-                                    </a>
-                                    <div id="211269" class="panel"></div>
-                                </li>
-</ul>
-            </div>
-      </div>
+
+<section role="main" class="meetingsAgendaSection">
+    <div class="meetingsAgenda">
+                <div class="meetingsHeader">
+                    <h3>Saksliste</h3>
+                </div>
+                    <div class="agendaItemHeader agendaHeader">
+                        <h4>M&#248;teinnkalling</h4>
+                    </div>
+                        <div class="meetingAgendaList">
+                            <ul role="list">
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211242" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242','211242')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211242', '211242')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">1/18 - M&#248;teinnkalling Fylkestinget 05.03.2018</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211242" class="panel"></div>
+                                            </li>
+
+                            </ul>
+                        </div>
+                    <div class="agendaItemHeader agendaHeader">
+                        <h4>M&#248;teprotokoll</h4>
+                    </div>
+                        <div class="meetingAgendaList">
+                            <ul role="list">
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211191" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191','211191')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211191', '211191')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">1/18 - Godkjenning - M&#248;teprotokoll fylkestinget 6.-7. 12. 2017</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211191" class="panel"></div>
+                                            </li>
+
+                            </ul>
+                        </div>
+                    <div class="agendaItemHeader agendaHeader">
+                        <h4>Saker til behandling</h4>
+                    </div>
+                        <div class="meetingAgendaList">
+                            <ul role="list">
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211236" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236','211236')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211236', '211236')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">1/18 - Ny Skien videreg&#229;ende skole utgreiing om Inventar</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211236" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211237" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237','211237')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211237', '211237')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">2/18 - H&#248;ring -  Regionreformen. Rapport fra ekspertutvalg</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211237" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211238" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238','211238')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211238', '211238')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">3/18 - Reglement for fellesnemnda mv.</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211238" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211239" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239','211239')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211239', '211239')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">4/18 - Godtgjering for medlemmene i fellesnemnda mv.</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211239" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211240" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240','211240')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211240', '211240')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">5/18 - S&#248;knad om permisjon - Knut Morten Johansen</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211240" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211268" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268','211268')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211268', '211268')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">6/18 - Gea Norvegica Geopark IKS – revidert selskapsavtale</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211268" class="panel"></div>
+                                            </li>
+                                            <li role="listitem">
+                                                <a class="accordion" tabindex="0" id="agendaItem_211269" aria-expanded="false" onclick="loadAgendaItem('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269','211269')" onkeydown="accordionKeydown('/Meetings/tfk/Meetings/LoadAgendaItemDetail/211269', '211269')">
+                                                    <div class="accordionImage">
+                                                    </div>
+                                                    <div class="accordionTitle">
+                                                        <h5 class="accordionTitleText">7/18 - Oppnevning av medlem til representantskapet for nasjonal digital l&#230;ringsarena (NDLA)</h5>
+                                                    </div>
+                                                </a>
+                                                <div id="211269" class="panel"></div>
+                                            </li>
+
+                            </ul>
+                        </div>
+
+    </div>
 </section>
 
 
 
-    <aside id="about" class="meetingsDocumentSection">
+
+                
+    <aside role="complementary" id="about" class="meetingsDocumentSection">
 
             <div class="meetingsDocumentDiv">
                 <div class="meetingsHeader">
-                    <h2>Dokumenter</h2>
+                    <h3>Dokumenter</h3>
                 </div>
                 <div class="documentDetails">
                     <div class="filesList">
                         <ul>
 <li class="boardLink " title="M&#248;teinnkalling Fylkestinget 05.03.2018">
-                                                <a href="/Meetings/tfk/File/Details/845680.PDF?fileName=M%C3%B8teinnkalling%20Fylkestinget%2005.03.2018&amp;fileSize=881562" onclick="TrackFileDownload('Meeting')">
-                                                    <div class="table">
-                                                        <div class="xfileIcon table-cell">
-                                                            <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
-                                                        </div>
-                                                        <div class="xfileName table-cell">
-                                                            M&#248;teinnkalling Fylkestinget 05.03.2018
-                                                        </div>
-                                                        <div class="xfileType table-cell">
-                                                            <span class="size">861KB</span>
-                                                        </div>
+                                            <a href="/Meetings/tfk/File/Details/845680.PDF?fileName=M%C3%B8teinnkalling%20Fylkestinget%2005.03.2018&amp;fileSize=881562" onclick="TrackFileDownload('Meeting')">
+                                                <div class="table">
+                                                    <div class="xfileIcon table-cell">
+                                                        <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
                                                     </div>
-                                                </a>
-                                            </li>
+                                                    <div class="xfileName table-cell">
+                                                        M&#248;teinnkalling Fylkestinget 05.03.2018
+                                                    </div>
+                                                    <div class="xfileType table-cell">
+                                                        <span class="size">861KB</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
 <li class="boardLink " title="Protokoll Fylkestinget 05.03.2018">
-                                                <a href="/Meetings/tfk/File/Details/849355.PDF?fileName=Protokoll%20Fylkestinget%2005.03.2018&amp;fileSize=582829" onclick="TrackFileDownload('Meeting')">
-                                                    <div class="table">
-                                                        <div class="xfileIcon table-cell">
-                                                            <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
-                                                        </div>
-                                                        <div class="xfileName table-cell">
-                                                            Protokoll Fylkestinget 05.03.2018
-                                                        </div>
-                                                        <div class="xfileType table-cell">
-                                                            <span class="size">569KB</span>
-                                                        </div>
+                                            <a href="/Meetings/tfk/File/Details/849355.PDF?fileName=Protokoll%20Fylkestinget%2005.03.2018&amp;fileSize=582829" onclick="TrackFileDownload('Meeting')">
+                                                <div class="table">
+                                                    <div class="xfileIcon table-cell">
+                                                        <img class="images" src="/Content/Images/PDF.png" alt="PDF" />
                                                     </div>
-                                                </a>
-                                            </li>
+                                                    <div class="xfileName table-cell">
+                                                        Protokoll Fylkestinget 05.03.2018
+                                                    </div>
+                                                    <div class="xfileType table-cell">
+                                                        <span class="size">569KB</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
                         </ul>
                     </div>
                 </div>
             </div>
         <div class="meetingsDetailsDiv">
             <div class="meetingsHeader">
-                <h2>Detaljer</h2>
+                <h3>Detaljer</h3>
             </div>
             <div class="details">
                 <div class="detailsList">
@@ -537,23 +557,25 @@
                         <span>Status</span>
                     </div>
                     <div class="detailContent">
-                        <p>Offentlig</p>
+                        <p>Avholdt</p>
                     </div>
                 </div>
             </div>
         </div>
     </aside>
-                <div class="bannerImage">
-                        <img src="/Areas/Meetings/Content/Images/meetings-bg.jpg" alt="Omr&#229;debanner" />
-                </div>
 
-                <footer class="footer">
+
+
+                    <div class="bannerImage">
+                            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
+                    </div>
+                <footer role="contentinfo" class="footer">
                     <p>
 &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
                     </p>
                 </footer>
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>

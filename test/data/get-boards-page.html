@@ -2,18 +2,19 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no">
     <title>
-             Politiske m&#248;ter
+             Politiske m&#248;ter - Alle utvalg
     </title>
     <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    
-    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script>
         <style type="text/css">
             a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
             {
@@ -28,7 +29,7 @@
                 background:#58595b !important;
             }
             #boards.SideBarItem a:hover, .tabs a:hover
-            {   
+            {
                 border-bottom-color: #58595b;
             }
             .highlightTabs
@@ -42,9 +43,12 @@
 
     <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
 
+    <script>
+        var _gaq = _gaq || [];
+    </script>
+
         <script type="text/javascript">
 
-    var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37639147-1']);
     _gaq.push(['_gat._anonymizeIp']);
     _gaq.push(['_set', 'title', 'AllBoards']); // override page title
@@ -96,7 +100,7 @@
         GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
     }
 
-      </script>
+        </script>
     <script type="text/javascript">
 
     function TrackFileDownload(type) {
@@ -289,7 +293,7 @@
     <div class="">
         <div id="skip">
             <a href="#content">G&#229; til hovedinnhold</a>
-        </div>            
+        </div>
         <div class="headerSection" style="background-color: #fff">
             <div class="containerFluid">
                 <header class="header">
@@ -305,562 +309,594 @@
                     <div class="siteSearch">
                         <div class="searchForm">
                             <span id="searchInputLabel">S&#248;k</span>
-                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
-                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-labelledby="searchInputLabel">
-                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" aria-labelledby="searchInputLabel" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" aria-label="S&#248;k" style="background-color: #62b3e5; border-color: #62b3e5">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true" />
                             </button>
                         </div>
                     </div>
                 </header>
             </div>
-            </div>
+        </div>
         <div class="containerFluid">
             <div class="mainContainer">
-                    <div class="breadcrumb">
+                    <div class="breadcrumb" role="navigation">
                         <ul>
                                 <li> <a href="/Meetings/tfk">Hjem</a></li>
-                                <li> ></li>
                                 <li> Alle utvalg</li>
-                            <li>
                         </ul>
                     </div>
 
-                <h1></h1>
 
-
-<div class="goBackSection viewMorePage">
-    <div class="goBackButton">
-        <button onclick="window.location.href = '/Meetings/tfk'">
-            <div class="buttonImage">
-                <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
-            </div>
-            <div class="buttonLink">	<span aria-hidden="true"> G&#229; til startsiden </span> </div>
-        </button>
-    </div>
-    <div class="meetingTitle" id="content">
-        <div class="meetingsHeaderSec">
-            <div class="meetingTitleIcon">
-                <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
-            </div>
-            <div class="meetingTitleHeader">
-                <h2>Alle Aktive utvalg</h2>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<aside class="searchPageDropDownContainerSection">
-    <div class="searchPageDropDownContainer" id="filter">
-        <div class="meetingsHeaderSection">
-            <div class="meetingsHeader">
-                <h2>Filtrer s&#248;keresultater</h2>
-            </div>
-        </div>
-        <div class="dropdownSection">
-            <div class="selectBoard">
-                <label class="instructionLabel" for="boardsFilter">Velg &#229;r</label>
-                <select class="dropdown" id="boardsFilter" tabindex="0">
-                    <option value="all">Alle</option>
-                            <option value="2020">2020</option>
-                            <option value="2019">2019</option>
-                            <option value="2018">2018</option>
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
-                </select>
-            </div>
-            <div class="applyFilterSection">
-                <label class="instructionLabel filterBtnLabel"></label>
-                <button id="filterBtn" class="filterButton filterButtonSearchPage" tabindex="0" onclick="FilterBoardsByYear('/Meetings/tfk/Boards')">
-                    <span>Bruk filter</span>
-                </button>
-            </div>
-        </div>
-    </div>
-</aside>
-
-
-<section class="meetingsSection meetingsSearch">
-    <div class="findMeetings findMeetingsSearchPage viewMoreBoards">
-        <div class="meetingsHeader">
-            <img class="images" src="/Areas/Meetings/Content/Images/Search-button.png" alt="">
-            <h2>Fant 45 Utvalg </h2>
-        </div>
-        <div class="boardList">
-            <ul>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217642">
-                        <div class="boardName">
-                            <span>Administrasjonsutvalet</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200151">
-                        <div class="boardName">
-                            <span>Administrasjonsutvalet 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/209335">
-                        <div class="boardName">
-                            <span>Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/236944">
-                        <div class="boardName">
-                            <span>Fellesnemnda</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200173">
-                        <div class="boardName">
-                            <span>Forhandlingsutvalet</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/220291">
-                        <div class="boardName">
-                            <span>Forhandlingsutvalet </span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217345">
-                        <div class="boardName">
-                            <span>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2016 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200178">
-                        <div class="boardName">
-                            <span>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/216162">
-                        <div class="boardName">
-                            <span>Fylkestinget</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200145">
-                        <div class="boardName">
-                            <span>Fylkestinget 2011 - 2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/216167">
-                        <div class="boardName">
-                            <span>Fylkesutvalet</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200147">
-                        <div class="boardName">
-                            <span>Fylkesutvalet 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/228300">
-                        <div class="boardName">
-                            <span>Fylkesvalstyret</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/209066">
-                        <div class="boardName">
-                            <span>Fylkesvalstyret 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/225118">
-                        <div class="boardName">
-                            <span>Fylkets Trafikksikkerhetsutval</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2016 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/218688">
-                        <div class="boardName">
-                            <span>Hovudutval for administrasjonssaker</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217336">
-                        <div class="boardName">
-                            <span>Hovudutval for kompetanse </span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200146">
-                        <div class="boardName">
-                            <span>Hovudutval for kompetanse 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200148">
-                        <div class="boardName">
-                            <span>Hovudutval for kultur 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217339">
-                        <div class="boardName">
-                            <span>Hovudutval for kultur, idrett og folkehelse </span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217335">
-                        <div class="boardName">
-                            <span>Hovudutval for n&#230;ringsutvikling</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200144">
-                        <div class="boardName">
-                            <span>Hovudutval for n&#230;ringsutvikling 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217337">
-                        <div class="boardName">
-                            <span>Hovudutval for samferdsel</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200149">
-                        <div class="boardName">
-                            <span>Hovudutval for samferdsel 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200150">
-                        <div class="boardName">
-                            <span>Klagenemnda for skolesaker 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/236946">
-                        <div class="boardName">
-                            <span>Partssammensatt utvalg</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/239126">
-                        <div class="boardName">
-                            <span>R&#229;d for frivillige</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/239069">
-                        <div class="boardName">
-                            <span>Synfaringsutvalet</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2020</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217344">
-                        <div class="boardName">
-                            <span>Telemark fylkeskommunale eldrer&#229;d</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2016 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200177">
-                        <div class="boardName">
-                            <span>Telemark fylkeskommunale eldrer&#229;d 2011-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217338">
-                        <div class="boardName">
-                            <span>Telemark fylkeskommunale klagenemnd</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200175">
-                        <div class="boardName">
-                            <span>Telemark fylkeskommunale klagenemnd 2011 - 2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2011 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217341">
-                        <div class="boardName">
-                            <span>Telemark fylkeskommunale klagenemnd for skolesaker</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/222101">
-                        <div class="boardName">
-                            <span>Telemark interkommunale n&#230;ringsfond</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/208883">
-                        <div class="boardName">
-                            <span>Telemark interkommunale n&#230;ringsfond 2014-2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2014 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217261">
-                        <div class="boardName">
-                            <span>Telemark kontrollutval</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2015 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/231335">
-                        <div class="boardName">
-                            <span>Telemark ungdomsr&#229;d - styre</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2017 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238523">
-                        <div class="boardName">
-                            <span>Temakomit&#233;  for kultur, idrett og folkehelse</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238072">
-                        <div class="boardName">
-                            <span>Temakomit&#233; eierskap</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238071">
-                        <div class="boardName">
-                            <span>Temakomit&#232; kompetanse 1</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238070">
-                        <div class="boardName">
-                            <span>Temakomit&#233; organisering av kollektivtrafikk</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238073">
-                        <div class="boardName">
-                            <span>Temakomit&#233; politisk organisering</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/238065">
-                        <div class="boardName">
-                            <span>Temakomit&#233; samfunnsutviklerrollen</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2018 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/217342">
-                        <div class="boardName">
-                            <span>Yrkesoppl&#230;ringsnemnda </span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2016 - 2019</span>
-                        </div>
-                    </a>
-                </li>
-                <li class="boardLink">
-                    <a href="/Meetings/tfk/Boards/Details/200176">
-                        <div class="boardName">
-                            <span>Yrkesoppl&#230;ringsnemnda 2012 - 2015</span>
-                        </div>
-                        <div class="boardPeriod">
-                            <span>2012 - 2015</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</section>
-
-
-
-                            <div class="bannerImage">
-                        <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
+                    
+    <div class="goBackSection viewMorePage">
+        <div class="goBackButton">
+            <button onclick="window.location.href = '/Meetings/tfk'">
+                <div class="buttonImage">
+                    <img class="imagesBtn" src="/Areas/Meetings/Content/Images/back.png" alt="Klikk her for &#229; g&#229; tilbake">
                 </div>
-                <footer class="footer">
+                <div class="buttonLink">	<span aria-hidden="true"> G&#229; til startsiden </span> </div>
+            </button>
+        </div>
+        <div class="meetingTitle" id="content">
+            <div class="meetingsHeaderSec">
+                <div class="meetingTitleIcon">
+                    <img class="images" src="/Areas/Meetings/Content/Images/Board.png" alt="">
+                </div>
+                <div class="meetingTitleHeader">
+                    <h2>Alle Aktive utvalg</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section role="main" class="meetingsSection meetingsSearch">
+        <div class="findMeetings findMeetingsSearchPage viewMoreBoards">
+            <div class="meetingsHeader">
+                <img class="images" src="/Areas/Meetings/Content/Images/Search-button.png" alt="">
+                <h3>Fant 48 Utvalg </h3>
+            </div>
+            <div class="boardList">
+                <ul>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217642">
+                                <div class="boardName">
+                                    <span>Administrasjonsutvalet</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200151">
+                                <div class="boardName">
+                                    <span>Administrasjonsutvalet 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/209335">
+                                <div class="boardName">
+                                    <span>Arbeidsutvalet for Hovudutvalet for kompetanse 2011 - 2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/236944">
+                                <div class="boardName">
+                                    <span>Fellesnemnda</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/220291">
+                                <div class="boardName">
+                                    <span>Forhandlingsutvalet  2016-2019</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200173">
+                                <div class="boardName">
+                                    <span>Forhandlingsutvalet 2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217345">
+                                <div class="boardName">
+                                    <span>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2016 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200178">
+                                <div class="boardName">
+                                    <span>Fylkeskommunalt r&#229;d for personer med nedsatt funksjonsevne 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/216162">
+                                <div class="boardName">
+                                    <span>Fylkestinget</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200145">
+                                <div class="boardName">
+                                    <span>Fylkestinget 2011 - 2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/216167">
+                                <div class="boardName">
+                                    <span>Fylkesutvalet</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200147">
+                                <div class="boardName">
+                                    <span>Fylkesutvalet 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/228300">
+                                <div class="boardName">
+                                    <span>Fylkesvalstyret</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/209066">
+                                <div class="boardName">
+                                    <span>Fylkesvalstyret 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/225118">
+                                <div class="boardName">
+                                    <span>Fylkets Trafikksikkerhetsutval</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2016 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/218688">
+                                <div class="boardName">
+                                    <span>Hovudutval for administrasjonssaker 2015-2019</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217336">
+                                <div class="boardName">
+                                    <span>Hovudutval for kompetanse </span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200146">
+                                <div class="boardName">
+                                    <span>Hovudutval for kompetanse 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200148">
+                                <div class="boardName">
+                                    <span>Hovudutval for kultur 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217339">
+                                <div class="boardName">
+                                    <span>Hovudutval for kultur, idrett og folkehelse </span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200144">
+                                <div class="boardName">
+                                    <span>Hovudutval for n&#230;ringsutvikling 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217335">
+                                <div class="boardName">
+                                    <span>Hovudutval for n&#230;ringsutvikling 2015-2019</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200149">
+                                <div class="boardName">
+                                    <span>Hovudutval for samferdsel 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217337">
+                                <div class="boardName">
+                                    <span>Hovudutval for samferdsel 2015-2019</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/248749">
+                                <div class="boardName">
+                                    <span>Kinn kontrollutvalg</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2019 - 2023</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200150">
+                                <div class="boardName">
+                                    <span>Klagenemnda for skolesaker 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/249181">
+                                <div class="boardName">
+                                    <span>Midt-Telemark kontrollutvalg </span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2019 - 2023</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/249210">
+                                <div class="boardName">
+                                    <span>Nye Kristiansand kontrollutvalg</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2019 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/236946">
+                                <div class="boardName">
+                                    <span>Partssammensatt utvalg</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/239126">
+                                <div class="boardName">
+                                    <span>R&#229;d for frivillige</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/239069">
+                                <div class="boardName">
+                                    <span>Synfaringsutvalet</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2020</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217344">
+                                <div class="boardName">
+                                    <span>Telemark fylkeskommunale eldrer&#229;d</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2016 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200177">
+                                <div class="boardName">
+                                    <span>Telemark fylkeskommunale eldrer&#229;d 2011-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217338">
+                                <div class="boardName">
+                                    <span>Telemark fylkeskommunale klagenemnd</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200175">
+                                <div class="boardName">
+                                    <span>Telemark fylkeskommunale klagenemnd 2011 - 2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2011 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217341">
+                                <div class="boardName">
+                                    <span>Telemark fylkeskommunale klagenemnd for skolesaker</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/222101">
+                                <div class="boardName">
+                                    <span>Telemark interkommunale n&#230;ringsfond</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/208883">
+                                <div class="boardName">
+                                    <span>Telemark interkommunale n&#230;ringsfond 2014-2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2014 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217261">
+                                <div class="boardName">
+                                    <span>Telemark kontrollutval</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2015 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/231335">
+                                <div class="boardName">
+                                    <span>Telemark ungdomsr&#229;d - styre</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2017 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238523">
+                                <div class="boardName">
+                                    <span>Temakomit&#233;  for kultur, idrett og folkehelse</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238072">
+                                <div class="boardName">
+                                    <span>Temakomit&#233; eierskap</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238071">
+                                <div class="boardName">
+                                    <span>Temakomit&#232; kompetanse 1</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238070">
+                                <div class="boardName">
+                                    <span>Temakomit&#233; organisering av kollektivtrafikk</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238073">
+                                <div class="boardName">
+                                    <span>Temakomit&#233; politisk organisering</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/238065">
+                                <div class="boardName">
+                                    <span>Temakomit&#233; samfunnsutviklerrollen</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2018 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/217342">
+                                <div class="boardName">
+                                    <span>Yrkesoppl&#230;ringsnemnda </span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2016 - 2019</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="boardLink">
+                            <a href="/Meetings/tfk/Boards/Details/200176">
+                                <div class="boardName">
+                                    <span>Yrkesoppl&#230;ringsnemnda 2012 - 2015</span>
+                                </div>
+                                <div class="boardPeriod">
+                                    <span>2012 - 2015</span>
+                                </div>
+                            </a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+                
+        <aside role="complementary" class="searchPageDropDownContainerSection">
+            <div class="searchPageDropDownContainer" id="filter">
+                <div class="meetingsHeaderSection">
+                    <div class="meetingsHeader">
+                        <h3>Filtrer s&#248;keresultater</h3>
+                    </div>
+                </div>
+                <div class="dropdownSection">
+                    <div class="selectBoard">
+                        <label class="instructionLabel" for="boardsFilter">Velg &#229;r</label>
+                        <select class="dropdown" id="boardsFilter" tabindex="0">
+                            <option value="all">Alle</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                        </select>
+                    </div>
+                    <div class="applyFilterSection">
+                        <span class="instructionLabel filterBtnLabel"></span>
+                        <button id="filterBtn" class="filterButton filterButtonSearchPage" tabindex="0" onclick="FilterBoardsByYear('/Meetings/tfk/Boards')">
+                            <span>Bruk filter</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    
+
+
+                    <div class="bannerImage">
+                            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
+                    </div>
+                <footer role="contentinfo" class="footer">
                     <p>
 &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
                     </p>
                 </footer>
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>

@@ -2,18 +2,19 @@
 <!DOCTYPE html>
 <html lang="nb-NO">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Pragma" content="no-cache" />
     <meta charset="utf-8" />
     <meta name="google-site-verification" content="lACF0UzDt8DhMVTlUQ49KvrmjNaJkUhj6AwoeSH7bqU" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no">
     <title>
-             Politiske m&#248;ter
+             Politiske m&#248;ter - Utvalg - Administrasjonsutvalet
     </title>
     <link type='text/css' rel='stylesheet' href='/Areas/Meetings/Content/style.css' />
 
-    
-    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script> 
+
+    <script type="text/javascript" src="/Areas/Meetings/Content/site.js"></script>
         <style type="text/css">
             a:hover, h1, .on:hover td, .on:hover td a, .content h3, .home h3, h2.newstyle, h3.newstyle, .on:hover td i, .sidebar h3, .SideBarItem a.last:hover, .tabs a:hover, .OpenGovColor, a.monthSelected, a.dateFilterSelected, .sbHolder:hover .sbSelector, .sbOptions a:hover, .sbOptions a:focus, .sbOptions a.sbFocus
             {
@@ -28,7 +29,7 @@
                 background:#58595b !important;
             }
             #boards.SideBarItem a:hover, .tabs a:hover
-            {   
+            {
                 border-bottom-color: #58595b;
             }
             .highlightTabs
@@ -42,9 +43,12 @@
 
     <script src="/Scripts/jquerySelectbox?v=8uQqg3yUhDjBreJ7xO1P2lHCemw244EnA_L7pPUOBic1"></script>
 
+    <script>
+        var _gaq = _gaq || [];
+    </script>
+
         <script type="text/javascript">
 
-    var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-37639147-1']);
     _gaq.push(['_gat._anonymizeIp']);
     _gaq.push(['_set', 'title', 'Administrasjonsutvalet']); // override page title
@@ -96,7 +100,7 @@
         GaTrackEventWithLabel('Home.MeetingsMonthFilter', 'Click', value);
     }
 
-      </script>
+        </script>
     <script type="text/javascript">
 
     function TrackFileDownload(type) {
@@ -289,7 +293,7 @@
     <div class="">
         <div id="skip">
             <a href="#content">G&#229; til hovedinnhold</a>
-        </div>            
+        </div>
         <div class="headerSection" style="background-color: #fff">
             <div class="containerFluid">
                 <header class="header">
@@ -305,29 +309,26 @@
                     <div class="siteSearch">
                         <div class="searchForm">
                             <span id="searchInputLabel">S&#248;k</span>
-                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" title="S&#248;k" />
-                            <button id="searchButton" class="searchButton" tabindex="0" style="background-color: #62b3e5; border-color: #62b3e5" aria-labelledby="searchInputLabel">
-                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true"/>
+                            <input id="q" name="q" type="text" placeholder="S&#248;k" class="siteSearchField" tabindex="0" aria-labelledby="searchInputLabel" title="S&#248;k" />
+                            <button id="searchButton" class="searchButton" aria-label="S&#248;k" style="background-color: #62b3e5; border-color: #62b3e5">
+                                <img src="/Areas/Meetings/Content/Images/search.png" alt="Klikk her for &#229; s&#248;ke" aria-hidden="true" />
                             </button>
                         </div>
                     </div>
                 </header>
             </div>
-            </div>
+        </div>
         <div class="containerFluid">
             <div class="mainContainer">
-                    <div class="breadcrumb">
+                    <div class="breadcrumb" role="navigation">
                         <ul>
                                 <li> <a href="/Meetings/tfk">Hjem</a></li>
-                                <li> ></li>
                                 <li> Administrasjonsutvalet</li>
-                            <li>
                         </ul>
                     </div>
 
-                <h1></h1>
 
-
+                
 
 <div class="goBackSection boardsPage">
     <div class="goBackButton">
@@ -352,11 +353,11 @@
 </div>
 
 
-<section class="meetingsSection">
+<section role="main" class="meetingsSection">
     <div class="findMeetings findMeetingsBoardsPage">
         <div class="meetingsHeader">
             <img class="images" src="/Areas/Meetings/Content/Images/meeting.png" alt="">
-            <h2>Finn m&#248;ter - Administrasjonsutvalet</h2>
+            <h3>Finn m&#248;ter - Administrasjonsutvalet</h3>
         </div>
         <div class="meetingsContainer">
             <div class="selectYear">
@@ -388,44 +389,46 @@
             <div class="selectedDate">
                 <button id="filterBtn" class="filterButton" tabindex="0" onclick="OnBoardSelectionChange('/Meetings/tfk/Boards/Details/217642')">
                     <span>Bruk filter</span>
-                </button>          
-            </div>      
+                </button>
+            </div>
         </div>
         <div class="displaySearchResult boardDetailPage">
-            <p class="instructionLabel" id="instructionLabel">1 m&#248;ter funnet for  2015</p>
+                <p class="instructionLabel" id="instructionLabel">1 m&#248;ter funnet for  2015</p>
         </div>
-                <div class="meetingList">
-                    <ul>
-                                    <li class="boardLink">
-                                        <a href="/Meetings/tfk/Meetings/Details/326234">
-                                            <div class="meetingName">
-                                                <span>Administrasjonsutvalet (10.11.2015)</span>
-                                            </div>
-                                            <div class="meetingDate">
-                                                <span>10.11.2015</span>
-                                                <span>00:00</span>
-                                            </div>
-                                        </a>
-                                    </li>
-                    </ul>
-                </div>
-        </div>
+            <div class="meetingList">
+                <ul>
+                                <li class="boardLink">
+                                    <a href="/Meetings/tfk/Meetings/Details/326234">
+                                        <div class="meetingName">
+                                            <span>Administrasjonsutvalet (10.11.2015)</span>
+                                        </div>
+                                        <div class="meetingDate">
+                                            <span>10.11.2015</span>
+                                            <span>00:00</span>
+                                        </div>
+                                    </a>
+                                </li>
+                </ul>
+            </div>
+    </div>
 </section>
 
 
-    <aside class="membersSection" id="members">
+
+                
+    <aside  role="complementary" class="membersSection" id="members">
         <div class="members">
             <div class="membersHeaderSection">
                 <div class="membersHeader">
                     <img class="images" src="/Areas/Meetings/Content/Images/BoardRepresentatives.png" alt="">
-                    <h2>Medlemmer / varamedlemmer</h2>
+                    <h3>Medlemmer / varamedlemmer</h3>
                 </div>
             </div>
             <div class="membersList">
                     <ul>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Vidar Stang</h3>
+                                    <h4>Vidar Stang</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Arbeiderpartiet - Leder i utvalg</p>
@@ -433,7 +436,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Lise Wiik</h3>
+                                    <h4>Lise Wiik</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Arbeiderpartiet - Nestleder i utvalg</p>
@@ -441,7 +444,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Hans Edvard Askjer</h3>
+                                    <h4>Hans Edvard Askjer</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Kristelig Folkeparti - Utvalgsmedlem</p>
@@ -449,7 +452,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Gunn Marit Helgesen</h3>
+                                    <h4>Gunn Marit Helgesen</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>H&#248;yre - Utvalgsmedlem</p>
@@ -457,7 +460,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Mats Eirik Pettersen</h3>
+                                    <h4>Mats Eirik Pettersen</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Fremskrittspartiet - Utvalgsmedlem</p>
@@ -465,7 +468,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Jorunn Tisj&#248;</h3>
+                                    <h4>Jorunn Tisj&#248;</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Utvalgsmedlem</p>
@@ -473,7 +476,15 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Beate Marie Dahl Eide</h3>
+                                    <h4>Morten Kleiv</h4>
+                                </div>
+                                <div class="memberDesignation">
+                                            <p>Utvalgsmedlem</p>
+                                </div>
+                            </li>
+                            <li class="memberListItem">
+                                <div class="memberName">
+                                    <h4>Beate Marie Dahl Eide</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Senterpartiet - Varamedlem i utvalg</p>
@@ -481,7 +492,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Olav Seltveit Urb&#248;</h3>
+                                    <h4>Olav Seltveit Urb&#248;</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Senterpartiet - Varamedlem i utvalg</p>
@@ -489,7 +500,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Nina Vibeke Laukvik</h3>
+                                    <h4>Nina Vibeke Laukvik</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>H&#248;yre - Varamedlem i utvalg</p>
@@ -497,7 +508,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Geir Olav Tveit</h3>
+                                    <h4>Geir Olav Tveit</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Varamedlem i utvalg</p>
@@ -505,7 +516,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Mona Gal&#229;en</h3>
+                                    <h4>Mona Gal&#229;en</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Varamedlem i utvalg</p>
@@ -513,7 +524,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Morten R&#248;geberg Cowles</h3>
+                                    <h4>Morten R&#248;geberg Cowles</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Varamedlem i utvalg</p>
@@ -521,7 +532,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Jon Helge Bergane</h3>
+                                    <h4>Jon Helge Bergane</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Varamedlem i utvalg</p>
@@ -529,7 +540,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Knut Duesund</h3>
+                                    <h4>Knut Duesund</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
@@ -537,7 +548,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Bj&#248;rg Inger Flatland</h3>
+                                    <h4>Bj&#248;rg Inger Flatland</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Kristelig Folkeparti - Varamedlem i utvalg</p>
@@ -545,7 +556,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Mahmoud Farahmand</h3>
+                                    <h4>Mahmoud Farahmand</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>H&#248;yre - Varamedlem i utvalg</p>
@@ -553,7 +564,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Kathrine S&#230;tre Evensen</h3>
+                                    <h4>Kathrine S&#230;tre Evensen</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>H&#248;yre - Varamedlem i utvalg</p>
@@ -561,7 +572,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Heidi Therese Herum</h3>
+                                    <h4>Heidi Therese Herum</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>Senterpartiet - Varamedlem i utvalg</p>
@@ -569,7 +580,7 @@
                             </li>
                             <li class="memberListItem">
                                 <div class="memberName">
-                                    <h3>Hel&#233;n Andersen</h3>
+                                    <h4>Hel&#233;n Andersen</h4>
                                 </div>
                                 <div class="memberDesignation">
                                             <p>M&#248;tesekret&#230;r</p>
@@ -581,16 +592,19 @@
 
         </div>
     </aside>
-                            <div class="bannerImage">
-                        <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
-                </div>
-                <footer class="footer">
+
+
+
+                    <div class="bannerImage">
+                            <img src="https://si360opengov.blob.core.windows.net/d19582c7-a8fb-4a7a-954f-cb4fb31ce2dd/TFK.jpg" alt="Omr&#229;debanner" />
+                    </div>
+                <footer role="contentinfo" class="footer">
                     <p>
 &nbsp;&nbsp;Fylkesbakken 10 Postboks 2844, Skien, 3702 | <a href="http://www.telemark.no/" target="_blank">www.telemark.no</a> | Tel: +47 35 91 70 00 | e-post: <a href="mailto: post@t-fk.no ">post@t-fk.no</a>
                     </p>
                 </footer>
             </div>
         </div>
-     </div>
+    </div>
 </body>
 </html>
