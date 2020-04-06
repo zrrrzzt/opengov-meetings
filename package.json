@@ -1,7 +1,7 @@
 {
   "name": "opengov-meetings",
   "description": "Connect to 360 OpenGov Meetings",
-  "version": "5.2.1",
+  "version": "6.0.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
