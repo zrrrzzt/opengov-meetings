@@ -33,7 +33,7 @@
   },
   "url": "https://github.com/zrrrzzt/opengov-meetings#readme",
   "devDependencies": {
-    "coveralls": "3.0.13",
+    "coveralls": "3.0.14",
     "standard": "14.3.3",
     "tap": "14.10.7"
   },
