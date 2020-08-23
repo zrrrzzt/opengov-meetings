@@ -4,7 +4,7 @@
 
 # opengov-meetings
 
-A Node.js module for connecting to the [360 OpenGov Meetings](https://campaigns.tieto.com/nb/360#public) solution from [Tieto](https://www.tieto.no).
+A Node.js module for connecting to the 360 OpenGov Meetings solution from [TietoEVRY](https://www.tietoevry.com/).
 
 This API is based on screenscraping and far from rock solid. 
 
@@ -122,4 +122,5 @@ getMembers(options)
 ```
 
 ## License
+
 [MIT](LICENSE)
