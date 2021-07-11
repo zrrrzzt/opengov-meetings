@@ -9,7 +9,7 @@ tap.test('It requires an options object', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -22,7 +22,7 @@ tap.test('It requires options.host', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -35,7 +35,7 @@ tap.test('It requires options.host to be a valid url', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -49,7 +49,7 @@ tap.test('It requires options.path', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -64,7 +64,7 @@ tap.test('It requires options.agendaId', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -78,7 +78,7 @@ tap.test('It returns expected results', test => {
   return getDetails(options)
     .then(data => {
       tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned details OK')
-      test.done()
+      test.end()
     })
     .catch(error => {
       throw error
@@ -95,6 +95,6 @@ tap.test('It returns error on error', test => {
     .then(console.log)
     .catch(error => {
       tap.ok(error, 'Error returned for details')
-      test.done()
+      test.end()
     })
 })
