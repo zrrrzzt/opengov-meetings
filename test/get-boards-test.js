@@ -9,7 +9,7 @@ tap.test('It requires an options object', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -22,7 +22,7 @@ tap.test('It requires options.host', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -35,7 +35,7 @@ tap.test('It requires options.host to be a valid url', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -49,7 +49,7 @@ tap.test('It requires options.path', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -62,7 +62,7 @@ tap.test('It returns expected results', test => {
   return getBoards(options)
     .then(data => {
       tap.equal(JSON.stringify(expectedResult), JSON.stringify(data), 'Returned boards OK')
-      test.done()
+      test.end()
     })
     .catch(error => {
       throw error
@@ -78,6 +78,6 @@ tap.test('It returns error on error', test => {
     .then(console.log)
     .catch(error => {
       tap.ok(error, 'Error returned for boards')
-      test.done()
+      test.end()
     })
 })
