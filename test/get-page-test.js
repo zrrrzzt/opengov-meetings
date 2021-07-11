@@ -8,7 +8,7 @@ tap.test('It requires url', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -19,7 +19,7 @@ tap.test('It requires url to be valid', test => {
     .then(console.log)
     .catch(error => {
       tap.equal(error.message, expectedErrorMessage, expectedErrorMessage)
-      test.done()
+      test.end()
     })
 })
 
@@ -28,7 +28,7 @@ tap.test('It gets page from valid url', test => {
   return getPage(url)
     .then(data => {
       tap.ok(data, 'Data exists')
-      test.done()
+      test.end()
     }).catch(error => {
       throw error
     })
@@ -40,6 +40,6 @@ tap.test('Returns error as expected', function (test) {
     .then(console.log)
     .catch(error => {
       tap.ok(error, 'Got error, indeed')
-      test.done()
+      test.end()
     })
 })
