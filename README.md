@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.com/zrrrzzt/opengov-meetings.svg?branch=main)](https://travis-ci.com/zrrrzzt/opengov-meetings)
 [![Coverage Status](https://coveralls.io/repos/zrrrzzt/opengov-meetings/badge.svg?branch=main&service=github)](https://coveralls.io/github/zrrrzzt/opengov-meetings?branch=main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
